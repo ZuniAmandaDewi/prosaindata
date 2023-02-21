@@ -1,11 +1,10 @@
-# Welcome to your Jupyter Book
+# Welcome to My Jupyter Book
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
-
-Check out the content pages bundled with this sample book to see more.
+Nama    : Zuni Amanda Dewi
+NIM     : 200411100051
+Kelas   : Proyek Sains Data 6C
+Disini saya akan menyisipkan materi dan tugas yang sudah diberikan selama mata kuliah Proyek Sains Data.
+Semoga apa yang saya masukkan disini dapat bermanfaat bagi saya kedepannya, Amiiinn....
 
 ```{tableofcontents}
 ```
