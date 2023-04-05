@@ -1,0 +1,1413 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; Zuni Amanda Dewi</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas_psd/Salinan Pre-Processing(slang)';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/Salinan foto 3x4.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/Salinan foto 3x4.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to My Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tugas</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Crawling_data.html">Tugas 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scraping_pta.html">Tugas 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scraping_detik.html">Tugas 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%202.html">Tugas 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ujian</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/ZuniAmandaDewi/prosaindata/blob/gh-pages/_sources/tugas_psd/Salinan Pre-Processing(slang).ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ZuniAmandaDewi/prosaindata" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ZuniAmandaDewi/prosaindata/issues/new?title=Issue%20on%20page%20%2Ftugas_psd/Salinan Pre-Processing(slang).html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tugas_psd/Salinan Pre-Processing(slang).ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>nltk
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: nltk in /usr/local/lib/python3.9/dist-packages (3.8.1)
+Requirement already satisfied: joblib in /usr/local/lib/python3.9/dist-packages (from nltk) (1.1.1)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.9/dist-packages (from nltk) (4.65.0)
+Requirement already satisfied: regex&gt;=2021.8.3 in /usr/local/lib/python3.9/dist-packages (from nltk) (2022.10.31)
+Requirement already satisfied: click in /usr/local/lib/python3.9/dist-packages (from nltk) (8.1.3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>Sastrawi
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting Sastrawi
+  Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/209.7 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 KB</span> <span class=" -Color -Color-Red">9.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: Sastrawi
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed Sastrawi-1.0.1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;wordnet&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">Sastrawi.Stemmer.StemmerFactory</span> <span class="kn">import</span> <span class="n">StemmerFactory</span>
+<span class="c1"># from nltk.stem import PorterStemmer</span>
+<span class="c1"># from nltk.stem import LancasterStemmer</span>
+<span class="kn">from</span> <span class="nn">nltk.stem</span> <span class="kn">import</span> <span class="n">WordNetLemmatizer</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Unzipping corpora/stopwords.zip.
+[nltk_data] Downloading package wordnet to /root/nltk_data...
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/Pemrograman Bahasa Alami/resesi_2023 (1).csv&quot;</span><span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-3990b237-d6ab-4ba0-8d03-6ea050f56b51">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Text</th>
+      <th>Label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Most of my business customers are people of we...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>• Lomba Essay dan Infografis ACE 2023 “Inovasi...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Check out my latest video "Resesi Ekonomi 2023...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>@hariankompas 2023 ASU 🇺🇲 Resesi, 2024 ekonomi...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Sri Mulyani: AS Batal Resesi, Dunia Selamat\n\...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>Insecure Sama Otak Sndiri\nMau Learn Something...</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>Pagi2 kepikiran resesi 2023, krisis ekonomi ta...</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>Duh! OJK Sebut Resesi Ekonomi Global Bisa Data...</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>Banyak yg bahas masalah perselingkuhan, gue ma...</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>@Aku08__ @koh_alien indonesia paling parah ken...</td>
+      <td>-1</td>
+    </tr>
+  </tbody>
+</table>
+<p>132 rows × 2 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3990b237-d6ab-4ba0-8d03-6ea050f56b51')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-3990b237-d6ab-4ba0-8d03-6ea050f56b51 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-3990b237-d6ab-4ba0-8d03-6ea050f56b51');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Dup_Rows</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()]</span>
+<span class="n">datafiks</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)</span>
+<span class="n">datafiks</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-c723851f-cc16-4ca7-8a54-aa6629bc105d">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Text</th>
+      <th>Label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Most of my business customers are people of we...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>• Lomba Essay dan Infografis ACE 2023 “Inovasi...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Check out my latest video "Resesi Ekonomi 2023...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>@hariankompas 2023 ASU 🇺🇲 Resesi, 2024 ekonomi...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Sri Mulyani: AS Batal Resesi, Dunia Selamat\n\...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>Insecure Sama Otak Sndiri\nMau Learn Something...</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>Pagi2 kepikiran resesi 2023, krisis ekonomi ta...</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>Duh! OJK Sebut Resesi Ekonomi Global Bisa Data...</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>Banyak yg bahas masalah perselingkuhan, gue ma...</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>@Aku08__ @koh_alien indonesia paling parah ken...</td>
+      <td>-1</td>
+    </tr>
+  </tbody>
+</table>
+<p>131 rows × 2 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c723851f-cc16-4ca7-8a54-aa6629bc105d')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-c723851f-cc16-4ca7-8a54-aa6629bc105d button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-c723851f-cc16-4ca7-8a54-aa6629bc105d');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Remove Puncutuation</span>
+<span class="n">preprocessing</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">clean_tag</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;@\S+&#39;</span><span class="p">)</span>
+<span class="n">clean_url</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;https?:\/\/.*[</span><span class="se">\r\n</span><span class="s1">]*&#39;</span><span class="p">)</span>
+<span class="n">clean_hastag</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;#\S+&#39;</span><span class="p">)</span>
+<span class="n">clean_symbol</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;[^0-9a-zA-Z]&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">clean_punct</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">clean_tag</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">clean_url</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">clean_hastag</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">clean_symbol</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">text</span>
+<span class="c1"># Buat kolom tambahan untuk data description yang telah diremovepunctuation   </span>
+<span class="n">preprocessing</span> <span class="o">=</span> <span class="n">datafiks</span><span class="p">[</span><span class="s1">&#39;Text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">clean_punct</span><span class="p">)</span>
+<span class="n">clean</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">preprocessing</span><span class="p">)</span>
+<span class="n">clean</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-65cefa7a-ecbe-46bb-8e30-680ac4734770">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Most of my business customers are people of we...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Lomba Essay dan Infografis ACE 2023  Inovasi...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Check out my latest video  Resesi Ekonomi 2023...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2023 ASU    Resesi  2024 ekonomi dunia kolaps...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Sri Mulyani  AS Batal Resesi  Dunia Selamat  M...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>Insecure Sama Otak Sndiri Mau Learn Something ...</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>Pagi2 kepikiran resesi 2023  krisis ekonomi ta...</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>Duh  OJK Sebut Resesi Ekonomi Global Bisa Data...</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>Banyak yg bahas masalah perselingkuhan  gue ma...</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>indonesia paling parah kena resesi ekonomi 2023</td>
+    </tr>
+  </tbody>
+</table>
+<p>131 rows × 1 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-65cefa7a-ecbe-46bb-8e30-680ac4734770')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-65cefa7a-ecbe-46bb-8e30-680ac4734770 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-65cefa7a-ecbe-46bb-8e30-680ac4734770');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># def clean_lower(lwr):</span>
+<span class="c1">#     lwr = lwr.lower() # lowercase text</span>
+<span class="c1">#     return lwr</span>
+<span class="c1"># Buat kolom tambahan untuk data description yang telah dicasefolding  </span>
+<span class="n">casefolding</span> <span class="o">=</span> <span class="n">clean</span><span class="p">[</span><span class="s1">&#39;Text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">casefolding</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      most of my business customers are people of we...
+1        lomba essay dan infografis ace 2023  inovasi...
+2      check out my latest video  resesi ekonomi 2023...
+3       2023 asu    resesi  2024 ekonomi dunia kolaps...
+4      sri mulyani  as batal resesi  dunia selamat  m...
+                             ...                        
+127    insecure sama otak sndiri mau learn something ...
+128    pagi2 kepikiran resesi 2023  krisis ekonomi ta...
+129    duh  ojk sebut resesi ekonomi global bisa data...
+130    banyak yg bahas masalah perselingkuhan  gue ma...
+131      indonesia paling parah kena resesi ekonomi 2023
+Name: Text, Length: 131, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat kamus slang words dan kata Indonesia yang benar</span>
+<span class="n">slang_dict</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/louisowen6/NLP_bahasa_resources/master/combined_slang_words.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># Membuat fungsi untuk mengubah slang words menjadi kata Indonesia yang benar</span>
+<span class="k">def</span> <span class="nf">replace_slang_words</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="n">words_filtered</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">)]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">words_filtered</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">words_filtered</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">slang_dict</span><span class="p">:</span>
+            <span class="n">words_filtered</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">slang_dict</span><span class="p">[</span><span class="n">words_filtered</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+    <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words_filtered</span><span class="p">)</span>
+
+<span class="c1"># penggunaan</span>
+<span class="c1"># casefolding=[]</span>
+<span class="c1"># for i in range(len(preprocessing)):</span>
+<span class="c1">#   casefolding.append(preprocessing[i])</span>
+
+<span class="n">slang_words</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">casefolding</span><span class="p">)):</span>
+  <span class="n">slang</span> <span class="o">=</span> <span class="n">replace_slang_words</span><span class="p">(</span><span class="n">casefolding</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+  <span class="n">slang_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slang</span><span class="p">)</span>
+
+<span class="n">slang</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">slang_words</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Token&quot;</span><span class="p">])</span>
+<span class="n">slang</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyError</span>Traceback (most recent call last)
+<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3628</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3629</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3630</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.Int64HashTable.get_item</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.Int64HashTable.get_item</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: 85
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">KeyError</span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-8-4e2ad6793fe2&gt;</span> in <span class="ni">&lt;cell line: 19&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="n">slang_words</span><span class="o">=</span><span class="p">[]</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">casefolding</span><span class="p">)):</span>
+<span class="ne">---&gt; </span><span class="mi">20</span>   <span class="n">slang</span> <span class="o">=</span> <span class="n">replace_slang_words</span><span class="p">(</span><span class="n">casefolding</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span>   <span class="n">slang_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slang</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> 
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/series.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">    </span><span class="mi">956</span> 
+<span class="g g-Whitespace">    </span><span class="mi">957</span>         <span class="k">elif</span> <span class="n">key_is_scalar</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">958</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_value</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">959</span> 
+<span class="g g-Whitespace">    </span><span class="mi">960</span>         <span class="k">if</span> <span class="n">is_hashable</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/series.py</span> in <span class="ni">_get_value</span><span class="nt">(self, label, takeable)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1067</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1068</span>         <span class="c1"># Similar to Index.get_value, but we do not fall back to positional</span>
+<span class="ne">-&gt; </span><span class="mi">1069</span>         <span class="n">loc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1070</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">_get_values_for_loc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1071</span> 
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3629</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3630</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3631</span>                 <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">3632</span>             <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3633</span>                 <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
+
+<span class="ne">KeyError</span>: 85
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">indonlp</span><span class="o">==</span><span class="m">0</span>.2.0
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: indonlp==0.2.0 in /usr/local/lib/python3.9/dist-packages (0.2.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">indoNLP.preprocessing</span> <span class="kn">import</span> <span class="n">replace_slang</span>
+<span class="kn">from</span> <span class="nn">indoNLP.preprocessing</span> <span class="kn">import</span> <span class="n">replace_word_elongation</span>
+<span class="n">replace_slang</span>
+<span class="c1"># replace internet slang </span>
+<span class="k">def</span> <span class="nf">slang</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">replace_slang</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="c1"># hasil = replace_word_elongation(text)</span>
+    <span class="k">return</span> <span class="n">y</span>
+<span class="c1"># Buat kolom tambahan untuk data description yang telah dicasefolding  </span>
+<span class="n">slang</span> <span class="o">=</span> <span class="n">casefolding</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">slang</span><span class="p">)</span>
+<span class="n">slang</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-15-595cb513deb8&gt;</span> in <span class="ni">&lt;cell line: 13&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words_filtered</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> 
+<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">slang</span> <span class="o">=</span> <span class="n">casefolding</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">slang</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">slang</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/series.py</span> in <span class="ni">apply</span><span class="nt">(self, func, convert_dtype, args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4431</span>         <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+<span class="g g-Whitespace">   </span><span class="mi">4432</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">4433</span><span class="s2">         return SeriesApply(self, func, convert_dtype, args, kwargs).apply()</span>
+<span class="g g-Whitespace">   </span><span class="mi">4434</span><span class="s2"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">4435</span><span class="s2">     def _reduce(</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/apply.py</span> in <span class="ni">apply</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1086</span><span class="s2">             return self.apply_str()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1087</span><span class="s2"> </span>
+<span class="ne">-&gt; </span><span class="mi">1088</span><span class="s2">         return self.apply_standard()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1089</span><span class="s2"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1090</span><span class="s2">     def agg(self):</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/apply.py</span> in <span class="ni">apply_standard</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1141</span><span class="s2">                 # List[Union[Callable[..., Any], str]]]]]&quot;; expected</span>
+<span class="g g-Whitespace">   </span><span class="mi">1142</span><span class="s2">                 # &quot;Callable[[Any], Any]&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1143</span><span class="s2">                 mapped = lib.map_infer(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1144</span><span class="s2">                     values,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1145</span><span class="s2">                     f,  # type: ignore[arg-type]</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/_libs/lib.pyx</span> in <span class="ni">pandas._libs.lib.map_infer</span><span class="nt">()</span>
+
+<span class="nn">&lt;ipython-input-15-595cb513deb8&gt;</span> in <span class="ni">slang</span><span class="nt">(text)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span><span class="s2"> # replace internet slang</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span><span class="s2"> def slang(text):</span>
+<span class="ne">----&gt; </span><span class="mi">7</span><span class="s2">     words_filtered = [word for word in words if word not in stopwords.words(&#39;indonesian&#39;)]</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span><span class="s2">     for i in range(len(words_filtered)):</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span><span class="s2">         if words_filtered[i] in slang_dict:</span>
+
+<span class="ne">NameError</span>: name &#39;words&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="k">def</span> <span class="nf">tokenize</span><span class="p">(</span><span class="n">review</span><span class="p">):</span>
+    <span class="n">token</span> <span class="o">=</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">review</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">token</span>
+<span class="c1"># Buat kolom tambahan untuk data description yang telah dicasefolding  </span>
+<span class="n">token</span> <span class="o">=</span> <span class="n">slang</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tokenize</span><span class="p">)</span>
+<span class="n">token</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      [most, of, my, business, customers, are, peopl...
+1      [lomba, essay, dan, infografis, ace, 2023, ino...
+2      [check, out, my, latest, video, resesi, ekonom...
+3      [2023, asu, resesi, 2024, ekonomi, dunia, kola...
+4      [sri, mulyani, as, batal, resesi, dunia, selam...
+                             ...                        
+127    [insecure, sama, otak, sendiri, mau, learn, so...
+128    [pagi2, kepikiran, resesi, 2023, krisis, ekono...
+129    [duh, ojk, sebut, resesi, ekonomi, global, bis...
+130    [banyak, yang, bahas, masalah, perselingkuhan,...
+131    [indonesia, paling, parah, kena, resesi, ekono...
+Name: Text, Length: 131, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">listStopword</span> <span class="o">=</span>  <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">))</span>
+<span class="n">listStopword2</span> <span class="o">=</span>  <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">stopword</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+  <span class="n">removed</span><span class="o">=</span><span class="p">[]</span>
+  <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">t</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">listStopword</span><span class="p">:</span>
+      <span class="k">if</span> <span class="n">t</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">listStopword2</span><span class="p">:</span>
+        <span class="n">removed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">removed</span>
+
+<span class="c1"># Buat kolom tambahan untuk data description yang telah dicasefolding  </span>
+<span class="n">stopword</span><span class="o">=</span><span class="n">token</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stopword</span><span class="p">)</span>
+<span class="n">stopword</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      [business, customers, people, western, europe,...
+1      [lomba, essay, infografis, ace, 2023, inovasi,...
+2      [check, latest, video, resesi, ekonomi, 2023, ...
+3      [2023, asu, resesi, 2024, ekonomi, dunia, kola...
+4      [sri, mulyani, batal, resesi, dunia, selamat, ...
+                             ...                        
+127    [insecure, otak, learn, something, tau, cocokn...
+128    [pagi2, kepikiran, resesi, 2023, krisis, ekono...
+129     [duh, ojk, resesi, ekonomi, global, cepat, 2023]
+130    [bahas, perselingkuhan, gue, kepikiran, resesi...
+131      [indonesia, parah, kena, resesi, ekonomi, 2023]
+Name: Text, Length: 131, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factory</span> <span class="o">=</span> <span class="n">StemmerFactory</span><span class="p">()</span>
+<span class="n">stemmer</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">create_stemmer</span><span class="p">()</span>
+
+<span class="c1"># stemming process</span>
+<span class="k">def</span> <span class="nf">stemming</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+  <span class="n">hasil</span><span class="o">=</span><span class="p">[]</span>
+  <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+    <span class="n">hasil</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
+  <span class="k">return</span> <span class="n">hasil</span>
+
+<span class="c1"># Buat kolom tambahan untuk data description yang telah dicasefolding  </span>
+
+<span class="n">stemming</span><span class="o">=</span><span class="n">stopword</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stemming</span><span class="p">)</span>
+<span class="c1"># stemming = pd.DataFrame(stemming, columns=[&quot;Text&quot;])</span>
+<span class="n">gabung</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">stemming</span><span class="p">)):</span>
+  <span class="n">joinkata</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">stemming</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+  <span class="n">gabung</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">joinkata</span><span class="p">)</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">gabung</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Join Kata&#39;</span><span class="p">])</span>
+<span class="n">result</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3628</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3629</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3630</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.Int64HashTable.get_item</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.Int64HashTable.get_item</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: 85
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-82-7973fba2fa9c&gt;</span> in <span class="ni">&lt;cell line: 16&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">gabung</span><span class="o">=</span><span class="p">[]</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">stemming</span><span class="p">)):</span>
+<span class="ne">---&gt; </span><span class="mi">17</span>   <span class="n">joinkata</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">stemming</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span>   <span class="n">gabung</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">joinkata</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span> 
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/series.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">    </span><span class="mi">956</span> 
+<span class="g g-Whitespace">    </span><span class="mi">957</span>         <span class="k">elif</span> <span class="n">key_is_scalar</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">958</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_value</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">959</span> 
+<span class="g g-Whitespace">    </span><span class="mi">960</span>         <span class="k">if</span> <span class="n">is_hashable</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/series.py</span> in <span class="ni">_get_value</span><span class="nt">(self, label, takeable)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1067</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1068</span>         <span class="c1"># Similar to Index.get_value, but we do not fall back to positional</span>
+<span class="ne">-&gt; </span><span class="mi">1069</span>         <span class="n">loc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1070</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">_get_values_for_loc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1071</span> 
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3629</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3630</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3631</span>                 <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">3632</span>             <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3633</span>                 <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
+
+<span class="ne">KeyError</span>: 85
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tugas_psd"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1117 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 1 &#8212; Zuni Amanda Dewi</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas_psd/Crawling_data';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tugas 1" href="scraping_pta.html" />
+    <link rel="prev" title="Welcome to My Jupyter Book" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/Salinan foto 3x4.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/Salinan foto 3x4.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to My Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tugas</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scraping_pta.html">Tugas 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scraping_detik.html">Tugas 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%202.html">Tugas 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ujian</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="UTS.html">UTS</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/ZuniAmandaDewi/prosaindata/blob/gh-pages/_sources/tugas_psd/Crawling_data.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ZuniAmandaDewi/prosaindata" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ZuniAmandaDewi/prosaindata/issues/new?title=Issue%20on%20page%20%2Ftugas_psd/Crawling_data.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tugas_psd/Crawling_data.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tugas 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-data-twitter">Crawling Data Twitter</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="tugas-1">
+<h1>Tugas 1<a class="headerlink" href="#tugas-1" title="Permalink to this heading">#</a></h1>
+<div class="section" id="crawling-data-twitter">
+<h2>Crawling Data Twitter<a class="headerlink" href="#crawling-data-twitter" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>uninstall<span class="w"> </span>twint
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Skipping twint as it is not installed.</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>twint
+<span class="o">!</span>pip3<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>--upgrade<span class="w"> </span>git+https://github.com/twintproject/twint.git@origin/master#egg<span class="o">=</span>twint
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting twint
+  Downloading twint-2.1.20.tar.gz (31 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
+Requirement already satisfied: aiohttp in /usr/local/lib/python3.8/dist-packages (from twint) (3.8.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting aiodns
+  Downloading aiodns-3.0.0-py3-none-any.whl (5.0 kB)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from twint) (4.6.3)
+Collecting cchardet
+  Downloading cchardet-2.1.7-cp38-cp38-manylinux2010_x86_64.whl (265 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/266.0 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">266.0/266.0 KB</span> <span class=" -Color -Color-Red">8.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting elasticsearch
+  Downloading elasticsearch-8.6.2-py3-none-any.whl (385 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/385.4 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">385.4/385.4 KB</span> <span class=" -Color -Color-Red">21.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: pysocks in /usr/local/lib/python3.8/dist-packages (from twint) (1.7.1)
+Requirement already satisfied: pandas in /usr/local/lib/python3.8/dist-packages (from twint) (1.3.5)
+Collecting aiohttp_socks
+  Downloading aiohttp_socks-0.8.0-py3-none-any.whl (9.4 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting schedule
+  Downloading schedule-1.1.0-py2.py3-none-any.whl (10 kB)
+Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (from twint) (1.17.0)
+Collecting fake-useragent
+  Downloading fake_useragent-1.1.1-py3-none-any.whl (50 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/50.4 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">50.4/50.4 KB</span> <span class=" -Color -Color-Red">4.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting googletransx
+  Downloading googletransx-2.4.2.tar.gz (13 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pycares&gt;=4.0.0
+  Downloading pycares-4.3.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (288 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/289.0 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">289.0/289.0 KB</span> <span class=" -Color -Color-Red">21.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.8.2)
+Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (4.0.2)
+Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (22.2.0)
+Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (3.0.1)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (6.0.4)
+Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.3)
+Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.1)
+Collecting python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0
+  Downloading python_socks-2.1.1-py3-none-any.whl (49 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/49.7 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">49.7/49.7 KB</span> <span class=" -Color -Color-Red">3.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting elastic-transport&lt;9,&gt;=8
+  Downloading elastic_transport-8.4.0-py3-none-any.whl (59 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/59.5 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">59.5/59.5 KB</span> <span class=" -Color -Color-Red">5.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.8/dist-packages (from fake-useragent-&gt;twint) (5.12.0)
+Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.8/dist-packages (from geopy-&gt;twint) (1.52)
+Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from googletransx-&gt;twint) (2.25.1)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2022.7.1)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2.8.2)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (1.22.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.14)
+Requirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
+Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.15.0)
+Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.8/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas-&gt;twint) (1.15.0)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (2.10)
+Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests-&gt;googletransx-&gt;twint) (4.0.0)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Building wheels for collected packages: twint, googletransx
+  Building wheel for twint (setup.py) ... ?25l?25hdone
+  Created wheel for twint: filename=twint-2.1.20-py3-none-any.whl size=33929 sha256=a0546b6170ce727087218d40dc76210902ac9b6f8b49d61e0493b3b87b40bd15
+  Stored in directory: /root/.cache/pip/wheels/4e/80/ea/5b82b5140b7dec857ec0bbfe908193ebf2e5d7f2ebee297519
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for googletransx (setup.py) ... ?25l?25hdone
+  Created wheel for googletransx: filename=googletransx-2.4.2-py3-none-any.whl size=15968 sha256=117da05874c630826cbab3df2b1c038e42d1d97f58155ba9f81cb4b578cad6fc
+  Stored in directory: /root/.cache/pip/wheels/6a/54/98/96b62f08dd73eca3147e36b5099d77c3f8fedc5472bb488167
+Successfully built twint googletransx
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: python-socks, cchardet, schedule, elastic-transport, pycares, googletransx, fake-useragent, elasticsearch, aiohttp_socks, aiodns, twint
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed aiodns-3.0.0 aiohttp_socks-0.8.0 cchardet-2.1.7 elastic-transport-8.4.0 elasticsearch-8.6.2 fake-useragent-1.1.1 googletransx-2.4.2 pycares-4.3.0 python-socks-2.1.1 schedule-1.1.0 twint-2.1.20
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting twint
+  Cloning https://github.com/twintproject/twint.git (to revision origin/master) to /tmp/pip-install-st8edo02/twint_9a953b82d36647b88e1f6ee6ab8db55c
+  Running command git clone --filter=blob:none --quiet https://github.com/twintproject/twint.git /tmp/pip-install-st8edo02/twint_9a953b82d36647b88e1f6ee6ab8db55c
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">  WARNING: Did not find branch or tag &#39;origin/master&#39;, assuming revision or ref.</span>
+  Running command git checkout -q origin/master
+  Resolved https://github.com/twintproject/twint.git to commit origin/master
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
+Requirement already satisfied: aiohttp in /usr/local/lib/python3.8/dist-packages (from twint) (3.8.4)
+Requirement already satisfied: aiodns in /usr/local/lib/python3.8/dist-packages (from twint) (3.0.0)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from twint) (4.6.3)
+Requirement already satisfied: cchardet in /usr/local/lib/python3.8/dist-packages (from twint) (2.1.7)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting dataclasses
+  Downloading dataclasses-0.6-py3-none-any.whl (14 kB)
+Requirement already satisfied: elasticsearch in /usr/local/lib/python3.8/dist-packages (from twint) (8.6.2)
+Requirement already satisfied: pysocks in /usr/local/lib/python3.8/dist-packages (from twint) (1.7.1)
+Requirement already satisfied: pandas in /usr/local/lib/python3.8/dist-packages (from twint) (1.3.5)
+Requirement already satisfied: aiohttp_socks in /usr/local/lib/python3.8/dist-packages (from twint) (0.8.0)
+Requirement already satisfied: schedule in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.0)
+Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (from twint) (1.17.0)
+Requirement already satisfied: fake-useragent in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.1)
+Requirement already satisfied: googletransx in /usr/local/lib/python3.8/dist-packages (from twint) (2.4.2)
+Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.8/dist-packages (from aiodns-&gt;twint) (4.3.0)
+Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.1)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (6.0.4)
+Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (4.0.2)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.8.2)
+Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (3.0.1)
+Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (22.2.0)
+Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.3)
+Requirement already satisfied: python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp_socks-&gt;twint) (2.1.1)
+Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.8/dist-packages (from elasticsearch-&gt;twint) (8.4.0)
+Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.8/dist-packages (from fake-useragent-&gt;twint) (5.12.0)
+Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.8/dist-packages (from geopy-&gt;twint) (1.52)
+Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from googletransx-&gt;twint) (2.25.1)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2022.7.1)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2.8.2)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (1.22.4)
+Requirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
+Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.14)
+Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.15.0)
+Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.8/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas-&gt;twint) (1.15.0)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (2.10)
+Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests-&gt;googletransx-&gt;twint) (4.0.0)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Building wheels for collected packages: twint
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for twint (setup.py) ... ?25l?25hdone
+  Created wheel for twint: filename=twint-2.1.21-py3-none-any.whl size=38870 sha256=77fac4bb6199009937537f6d0564acb6bc50316b2f63d5ad0ab59acb6933f9d2
+  Stored in directory: /tmp/pip-ephem-wheel-cache-x_wx464c/wheels/82/67/14/5495652787d3c55288164de4234c0712a1f785a64f61f1ea70
+Successfully built twint
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: dataclasses, twint
+<span class=" -Color -Color-Yellow">  WARNING: The script twint is installed in &#39;/root/.local/bin&#39; which is not on PATH.</span>
+<span class=" -Color -Color-Yellow">  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.</span>
+Successfully installed dataclasses-0.6 twint-2.1.21
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>nest_asyncio
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.8/dist-packages (1.5.6)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">twint</span>
+<span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Search</span> <span class="o">=</span> <span class="s1">&#39;#prabowo&#39;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Pandas</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Limit</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">twint</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">Search</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sleeping for 1.0 secs
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sleeping for 8.0 secs
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sleeping for 27.0 secs
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">JSONDecodeError</span>Traceback (most recent call last)
+<span class="nn">/usr/local/lib/python3.8/dist-packages/twint/run.py</span> in <span class="ni">Feed</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span>                 <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">TwitterSearch</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">65</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">feed</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">init</span> <span class="o">=</span> <span class="n">feed</span><span class="o">.</span><span class="n">Json</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">66</span>                 <span class="k">break</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/twint/feed.py</span> in <span class="ni">Json</span><span class="nt">(response)</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">logme</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="vm">__name__</span><span class="o">+</span><span class="s1">&#39;:Json&#39;</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">42</span>     <span class="n">json_response</span> <span class="o">=</span> <span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="n">html</span> <span class="o">=</span> <span class="n">json_response</span><span class="p">[</span><span class="s2">&quot;items_html&quot;</span><span class="p">]</span>
+
+<span class="nn">/usr/lib/python3.8/json/__init__.py</span> in <span class="ni">loads</span><span class="nt">(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">356</span>             <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">357</span>         <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">358</span>     <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">/usr/lib/python3.8/json/decoder.py</span> in <span class="ni">decode</span><span class="nt">(self, s, _w)</span>
+<span class="g g-Whitespace">    </span><span class="mi">336</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">337</span><span class="s2">         obj, end = self.raw_decode(s, idx=_w(s, 0).end())</span>
+<span class="g g-Whitespace">    </span><span class="mi">338</span><span class="s2">         end = _w(s, end).end()</span>
+
+<span class="nn">/usr/lib/python3.8/json/decoder.py</span> in <span class="ni">raw_decode</span><span class="nt">(self, s, idx)</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span><span class="s2">         except StopIteration as err:</span>
+<span class="ne">--&gt; </span><span class="mi">355</span><span class="s2">             raise JSONDecodeError(&quot;Expecting value&quot;, s, err.value) from None</span>
+<span class="g g-Whitespace">    </span><span class="mi">356</span><span class="s2">         return obj, end</span>
+
+<span class="ne">JSONDecodeError</span>: Expecting value: line 1 column 1 (char 0)
+
+<span class="s2">During handling of the above exception, another exception occurred:</span>
+
+<span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
+<span class="s2">&lt;ipython-input-5-c12c26be3bc5&gt; in &lt;module&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span><span class="s2"> c.Pandas = True</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span><span class="s2"> c.Limit = 500</span>
+<span class="ne">----&gt; </span><span class="mi">6</span><span class="s2"> twint.run.Search(c)</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/twint/run.py</span> in <span class="ni">Search</span><span class="nt">(config, callback)</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span><span class="s2">     config.Profile = False</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span><span class="s2">     config.Profile_full = False</span>
+<span class="ne">--&gt; </span><span class="mi">327</span><span class="s2">     run(config, callback)</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span><span class="s2">     if config.Pandas_au:</span>
+<span class="g g-Whitespace">    </span><span class="mi">329</span><span class="s2">         storage.panda._autoget(&quot;tweet&quot;)</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/twint/run.py</span> in <span class="ni">run</span><span class="nt">(config, callback)</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span><span class="s2">         raise</span>
+<span class="g g-Whitespace">    </span><span class="mi">225</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">226</span><span class="s2">     get_event_loop().run_until_complete(Twint(config).main(callback))</span>
+<span class="g g-Whitespace">    </span><span class="mi">227</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">228</span><span class="s2"> def Favorites(config):</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/nest_asyncio.py</span> in <span class="ni">run_until_complete</span><span class="nt">(self, future)</span>
+<span class="g g-Whitespace">     </span><span class="mi">82</span><span class="s2">                 f._log_destroy_pending = False</span>
+<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="s2">             while not f.done():</span>
+<span class="ne">---&gt; </span><span class="mi">84</span><span class="s2">                 self._run_once()</span>
+<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="s2">                 if self._stopping:</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span><span class="s2">                     break</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/nest_asyncio.py</span> in <span class="ni">_run_once</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">118</span><span class="s2">             handle = ready.popleft()</span>
+<span class="g g-Whitespace">    </span><span class="mi">119</span><span class="s2">             if not handle._cancelled:</span>
+<span class="ne">--&gt; </span><span class="mi">120</span><span class="s2">                 handle._run()</span>
+<span class="g g-Whitespace">    </span><span class="mi">121</span><span class="s2">         handle = None</span>
+<span class="g g-Whitespace">    </span><span class="mi">122</span><span class="s2"> </span>
+
+<span class="nn">/usr/lib/python3.8/asyncio/events.py</span> in <span class="ni">_run</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">79</span><span class="s2">     def _run(self):</span>
+<span class="g g-Whitespace">     </span><span class="mi">80</span><span class="s2">         try:</span>
+<span class="ne">---&gt; </span><span class="mi">81</span><span class="s2">             self._context.run(self._callback, *self._args)</span>
+<span class="g g-Whitespace">     </span><span class="mi">82</span><span class="s2">         except (SystemExit, KeyboardInterrupt):</span>
+<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="s2">             raise</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/nest_asyncio.py</span> in <span class="ni">step</span><span class="nt">(task, exc)</span>
+<span class="g g-Whitespace">    </span><span class="mi">194</span><span class="s2">         curr_task = curr_tasks.get(task._loop)</span>
+<span class="g g-Whitespace">    </span><span class="mi">195</span><span class="s2">         try:</span>
+<span class="ne">--&gt; </span><span class="mi">196</span><span class="s2">             step_orig(task, exc)</span>
+<span class="g g-Whitespace">    </span><span class="mi">197</span><span class="s2">         finally:</span>
+<span class="g g-Whitespace">    </span><span class="mi">198</span><span class="s2">             if curr_task is None:</span>
+
+<span class="nn">/usr/lib/python3.8/asyncio/tasks.py</span> in <span class="ni">__step</span><span class="nt">(***failed resolving arguments***)</span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span><span class="s2">                 # We use the `send` method directly, because coroutines</span>
+<span class="g g-Whitespace">    </span><span class="mi">279</span><span class="s2">                 # don&#39;t have `__iter__` and `__next__` methods.</span>
+<span class="ne">--&gt; </span><span class="mi">280</span><span class="s2">                 result = coro.send(None)</span>
+<span class="g g-Whitespace">    </span><span class="mi">281</span><span class="s2">             else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">282</span><span class="s2">                 result = coro.throw(exc)</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/twint/run.py</span> in <span class="ni">run</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">197</span><span class="s2">                     elif self.config.TwitterSearch:</span>
+<span class="g g-Whitespace">    </span><span class="mi">198</span><span class="s2">                         logme.debug(__name__+&#39;:Twint:main:twitter-search&#39;)</span>
+<span class="ne">--&gt; </span><span class="mi">199</span><span class="s2">                         await self.tweets()</span>
+<span class="g g-Whitespace">    </span><span class="mi">200</span><span class="s2">                 else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">201</span><span class="s2">                     logme.debug(__name__+&#39;:Twint:main:no-more-tweets&#39;)</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/twint/run.py</span> in <span class="ni">tweets</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">135</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">136</span><span class="s2">     async def tweets(self):</span>
+<span class="ne">--&gt; </span><span class="mi">137</span><span class="s2">         await self.Feed()</span>
+<span class="g g-Whitespace">    </span><span class="mi">138</span><span class="s2">         if self.config.Location:</span>
+<span class="g g-Whitespace">    </span><span class="mi">139</span><span class="s2">             logme.debug(__name__+&#39;:Twint:tweets:location&#39;)</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/twint/run.py</span> in <span class="ni">Feed</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">97</span><span class="s2">                     sys.stderr.write(&#39;sleeping for </span><span class="si">{}</span><span class="s2"> secs</span><span class="se">\n</span><span class="s2">&#39;.format(delay))</span>
+<span class="ne">---&gt; </span><span class="mi">98</span><span class="s2">                     time.sleep(delay)</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span><span class="s2">                     self.user_agent = await get.RandomUserAgent(wa=True)</span>
+<span class="g g-Whitespace">    </span><span class="mi">100</span><span class="s2">                     continue</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">column_names</span><span class="p">():</span>
+  <span class="k">return</span> <span class="n">twint</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">panda</span><span class="o">.</span><span class="n">Tweets_df</span><span class="o">.</span><span class="n">columns</span>
+
+<span class="k">def</span> <span class="nf">twint_to_pd</span><span class="p">(</span><span class="n">columns</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">twint</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">panda</span><span class="o">.</span><span class="n">Tweets_df</span><span class="p">[</span><span class="n">columns</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">column_names</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;id&#39;, &#39;conversation_id&#39;, &#39;created_at&#39;, &#39;date&#39;, &#39;timezone&#39;, &#39;place&#39;,
+       &#39;tweet&#39;, &#39;language&#39;, &#39;hashtags&#39;, &#39;cashtags&#39;, &#39;user_id&#39;, &#39;user_id_str&#39;,
+       &#39;username&#39;, &#39;name&#39;, &#39;day&#39;, &#39;hour&#39;, &#39;link&#39;, &#39;urls&#39;, &#39;photos&#39;, &#39;video&#39;,
+       &#39;thumbnail&#39;, &#39;retweet&#39;, &#39;nlikes&#39;, &#39;nreplies&#39;, &#39;nretweets&#39;, &#39;quote_url&#39;,
+       &#39;search&#39;, &#39;near&#39;, &#39;geo&#39;, &#39;source&#39;, &#39;user_rt_id&#39;, &#39;user_rt&#39;,
+       &#39;retweet_id&#39;, &#39;reply_to&#39;, &#39;retweet_date&#39;, &#39;translate&#39;, &#39;trans_src&#39;,
+       &#39;trans_dest&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">twint_to_pd</span><span class="p">([</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;tweet&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/Prosaindata/tugas/tugas_psd/dataprabowo.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            username                                              tweet
+0    Arganta42564980  Cara mengisi akhir pekan ala Prabowo.  #prabow...
+1           ABurundy  Cara mengisi akhir pekan ala Prabowo.  #prabow...
+2        ArsenioAgam  Cara mengisi akhir pekan ala Prabowo.  #prabow...
+3       amber_benita  Cara mengisi akhir pekan ala Prabowo.  #prabow...
+4      KhoirilAnwar_  &quot;Dalam menghadapi kampanye hitam, janganlah ki...
+..               ...                                                ...
+501         JatengTV  (10) Dalam PT Perorangan, modal pendirian bada...
+502    BANGSAygSUJUD  @KurangiBodoh @prabowo @bengkeldodo @are_inism...
+503         Daffanha                   https://t.co/kJIgZPDC4R #prabowo
+504         AtapNews  Khofifah Dibidik Kubu Prabowo dan Anies Jelang...
+505    BANGSAygSUJUD  Negara lain boleh punya persenjataan hebat tet...
+
+[506 rows x 2 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/Prosaindata/tugas/tugas_psd/dataprabowo.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-ded1279a-d415-49b8-b8f6-35ce38639842">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>username</th>
+      <th>tweet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Arganta42564980</td>
+      <td>Cara mengisi akhir pekan ala Prabowo.  #prabow...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ABurundy</td>
+      <td>Cara mengisi akhir pekan ala Prabowo.  #prabow...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ArsenioAgam</td>
+      <td>Cara mengisi akhir pekan ala Prabowo.  #prabow...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>amber_benita</td>
+      <td>Cara mengisi akhir pekan ala Prabowo.  #prabow...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>KhoirilAnwar_</td>
+      <td>"Dalam menghadapi kampanye hitam, janganlah ki...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>501</th>
+      <td>JatengTV</td>
+      <td>(10) Dalam PT Perorangan, modal pendirian bada...</td>
+    </tr>
+    <tr>
+      <th>502</th>
+      <td>BANGSAygSUJUD</td>
+      <td>@KurangiBodoh @prabowo @bengkeldodo @are_inism...</td>
+    </tr>
+    <tr>
+      <th>503</th>
+      <td>Daffanha</td>
+      <td>https://t.co/kJIgZPDC4R #prabowo</td>
+    </tr>
+    <tr>
+      <th>504</th>
+      <td>AtapNews</td>
+      <td>Khofifah Dibidik Kubu Prabowo dan Anies Jelang...</td>
+    </tr>
+    <tr>
+      <th>505</th>
+      <td>BANGSAygSUJUD</td>
+      <td>Negara lain boleh punya persenjataan hebat tet...</td>
+    </tr>
+  </tbody>
+</table>
+<p>506 rows × 2 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ded1279a-d415-49b8-b8f6-35ce38639842')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-ded1279a-d415-49b8-b8f6-35ce38639842 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-ded1279a-d415-49b8-b8f6-35ce38639842');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tugas_psd"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to My Jupyter Book</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="scraping_pta.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tugas 1</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-data-twitter">Crawling Data Twitter</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
