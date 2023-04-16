@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tugas 1 &#8212; Zuni Amanda Dewi</title>
+    <title>Tugas 1 Crawling Data Twitter &#8212; Zuni Amanda Dewi</title>
   
   
   
@@ -63,7 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas_psd/Crawling_data';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Tugas 1" href="scraping_pta.html" />
+    <link rel="next" title="Tugas 1 Scraping pta.trunojoyo.ac.id" href="scraping_pta.html" />
     <link rel="prev" title="Welcome to My Jupyter Book" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -157,10 +157,10 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tugas</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scraping_pta.html">Tugas 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scraping_detik.html">Tugas 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tugas%202.html">Tugas 2</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 1 Crawling Data Twitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scraping_pta.html">Tugas 1 Scraping pta.trunojoyo.ac.id</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scraping_detik.html">Tugas 1 Crawling Detik.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%202.html">Tugas 2 Pipelines</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ujian</span></p>
 <ul class="nav bd-sidenav">
@@ -366,9 +366,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -379,19 +377,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas 1</h1>
+    <h1>Tugas 1 Crawling Data Twitter</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-data-twitter">Crawling Data Twitter</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -401,10 +391,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="tugas-1">
-<h1>Tugas 1<a class="headerlink" href="#tugas-1" title="Permalink to this heading">#</a></h1>
-<div class="section" id="crawling-data-twitter">
-<h2>Crawling Data Twitter<a class="headerlink" href="#crawling-data-twitter" title="Permalink to this heading">#</a></h2>
+  <div class="tex2jax_ignore mathjax_ignore section" id="tugas-1-crawling-data-twitter">
+<h1>Tugas 1 Crawling Data Twitter<a class="headerlink" href="#tugas-1-crawling-data-twitter" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>uninstall<span class="w"> </span>twint
@@ -427,47 +415,47 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting twint
+Collecting twint
   Downloading twint-2.1.20.tar.gz (31 kB)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
-Requirement already satisfied: aiohttp in /usr/local/lib/python3.8/dist-packages (from twint) (3.8.4)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting aiodns
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting aiohttp
+  Downloading aiohttp-3.8.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.0 MB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/1.0 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.0/1.0 MB</span> <span class=" -Color -Color-Red">52.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting aiodns
   Downloading aiodns-3.0.0-py3-none-any.whl (5.0 kB)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from twint) (4.6.3)
-Collecting cchardet
-  Downloading cchardet-2.1.7-cp38-cp38-manylinux2010_x86_64.whl (265 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/266.0 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">266.0/266.0 KB</span> <span class=" -Color -Color-Red">8.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from twint) (4.11.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting cchardet
+  Downloading cchardet-2.1.7-cp39-cp39-manylinux2010_x86_64.whl (265 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/265.4 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">265.4/265.4 kB</span> <span class=" -Color -Color-Red">30.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting elasticsearch
-  Downloading elasticsearch-8.6.2-py3-none-any.whl (385 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/385.4 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">385.4/385.4 KB</span> <span class=" -Color -Color-Red">21.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: pysocks in /usr/local/lib/python3.8/dist-packages (from twint) (1.7.1)
-Requirement already satisfied: pandas in /usr/local/lib/python3.8/dist-packages (from twint) (1.3.5)
+  Downloading elasticsearch-8.7.0-py3-none-any.whl (387 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/387.9 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">387.9/387.9 kB</span> <span class=" -Color -Color-Red">37.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: pysocks in /usr/local/lib/python3.9/dist-packages (from twint) (1.7.1)
+Requirement already satisfied: pandas in /usr/local/lib/python3.9/dist-packages (from twint) (1.5.3)
 Collecting aiohttp_socks
   Downloading aiohttp_socks-0.8.0-py3-none-any.whl (9.4 kB)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting schedule
-  Downloading schedule-1.1.0-py2.py3-none-any.whl (10 kB)
-Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (from twint) (1.17.0)
+  Downloading schedule-1.2.0-py2.py3-none-any.whl (11 kB)
+Requirement already satisfied: geopy in /usr/local/lib/python3.9/dist-packages (from twint) (2.3.0)
 Collecting fake-useragent
-  Downloading fake_useragent-1.1.1-py3-none-any.whl (50 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/50.4 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">50.4/50.4 KB</span> <span class=" -Color -Color-Red">4.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting googletransx
+  Downloading fake_useragent-1.1.3-py3-none-any.whl (50 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/50.5 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">50.5/50.5 kB</span> <span class=" -Color -Color-Red">6.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting googletransx
   Downloading googletransx-2.4.2.tar.gz (13 kB)
 </pre></div>
 </div>
@@ -475,67 +463,87 @@ Collecting fake-useragent
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pycares&gt;=4.0.0
-  Downloading pycares-4.3.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (288 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/289.0 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">289.0/289.0 KB</span> <span class=" -Color -Color-Red">21.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.8.2)
-Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (4.0.2)
-Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (22.2.0)
-Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (3.0.1)
-Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (6.0.4)
-Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.3)
-Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.1)
-Collecting python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0
-  Downloading python_socks-2.1.1-py3-none-any.whl (49 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/49.7 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">49.7/49.7 KB</span> <span class=" -Color -Color-Red">3.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+  Downloading pycares-4.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (288 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/288.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">288.7/288.7 kB</span> <span class=" -Color -Color-Red">26.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting frozenlist&gt;=1.1.1
+  Downloading frozenlist-1.3.3-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (158 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/158.8 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">158.8/158.8 kB</span> <span class=" -Color -Color-Red">21.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting multidict&lt;7.0,&gt;=4.5
+  Downloading multidict-6.0.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (114 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/114.2 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">114.2/114.2 kB</span> <span class=" -Color -Color-Red">15.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting aiosignal&gt;=1.1.2
+  Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting async-timeout&lt;5.0,&gt;=4.0.0a3
+  Downloading async_timeout-4.0.2-py3-none-any.whl (5.8 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (22.2.0)
+Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (2.0.12)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting yarl&lt;2.0,&gt;=1.0
+  Downloading yarl-1.8.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (264 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/264.6 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">264.6/264.6 kB</span> <span class=" -Color -Color-Red">27.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0
+  Downloading python_socks-2.2.0-py3-none-any.whl (52 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/53.0 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">53.0/53.0 kB</span> <span class=" -Color -Color-Red">7.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist-packages (from beautifulsoup4-&gt;twint) (2.4)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting elastic-transport&lt;9,&gt;=8
   Downloading elastic_transport-8.4.0-py3-none-any.whl (59 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/59.5 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">59.5/59.5 KB</span> <span class=" -Color -Color-Red">5.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.8/dist-packages (from fake-useragent-&gt;twint) (5.12.0)
-Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.8/dist-packages (from geopy-&gt;twint) (1.52)
-Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from googletransx-&gt;twint) (2.25.1)
-Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2022.7.1)
-Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2.8.2)
-Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (1.22.4)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.14)
-Requirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
-Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.15.0)
-Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.8/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas-&gt;twint) (1.15.0)
-Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (2.10)
-Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests-&gt;googletransx-&gt;twint) (4.0.0)
-Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/59.5 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">59.5/59.5 kB</span> <span class=" -Color -Color-Red">7.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.9/dist-packages (from fake-useragent-&gt;twint) (5.12.0)
+Requirement already satisfied: geographiclib&lt;3,&gt;=1.52 in /usr/local/lib/python3.9/dist-packages (from geopy-&gt;twint) (2.0)
+Requirement already satisfied: requests in /usr/local/lib/python3.9/dist-packages (from googletransx-&gt;twint) (2.27.1)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (2022.7.1)
+Requirement already satisfied: numpy&gt;=1.20.3 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (1.22.4)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (2.8.2)
+Requirement already satisfied: certifi in /usr/local/lib/python3.9/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
+Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.9/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.15)
+Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.9/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.15.0)
+Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.9/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from python-dateutil&gt;=2.8.1-&gt;pandas-&gt;twint) (1.16.0)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (3.4)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Building wheels for collected packages: twint, googletransx
-  Building wheel for twint (setup.py) ... ?25l?25hdone
-  Created wheel for twint: filename=twint-2.1.20-py3-none-any.whl size=33929 sha256=a0546b6170ce727087218d40dc76210902ac9b6f8b49d61e0493b3b87b40bd15
-  Stored in directory: /root/.cache/pip/wheels/4e/80/ea/5b82b5140b7dec857ec0bbfe908193ebf2e5d7f2ebee297519
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for twint (setup.py) ... ?25l?25hdone
+  Created wheel for twint: filename=twint-2.1.20-py3-none-any.whl size=33926 sha256=2f76abecfbb1b4305bf9f8bae4419f67ce3ded78351cc0eb95c9d786481512f1
+  Stored in directory: /root/.cache/pip/wheels/12/2c/16/fded468865c08c82d4e82535f33c50462a3e6e042d8f93df13
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for googletransx (setup.py) ... ?25l?25hdone
-  Created wheel for googletransx: filename=googletransx-2.4.2-py3-none-any.whl size=15968 sha256=117da05874c630826cbab3df2b1c038e42d1d97f58155ba9f81cb4b578cad6fc
-  Stored in directory: /root/.cache/pip/wheels/6a/54/98/96b62f08dd73eca3147e36b5099d77c3f8fedc5472bb488167
+  Created wheel for googletransx: filename=googletransx-2.4.2-py3-none-any.whl size=15969 sha256=7e917675c00c95dc5a1fc64f86d32f8bc190aa5186fd5cecdcdb8972049b8edd
+  Stored in directory: /root/.cache/pip/wheels/b5/28/37/a905af06d6f6c934042babb4748f01b2f9039d2d96f05a4496
 Successfully built twint googletransx
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: python-socks, cchardet, schedule, elastic-transport, pycares, googletransx, fake-useragent, elasticsearch, aiohttp_socks, aiodns, twint
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: python-socks, cchardet, schedule, multidict, frozenlist, elastic-transport, async-timeout, yarl, pycares, googletransx, fake-useragent, elasticsearch, aiosignal, aiohttp, aiodns, aiohttp_socks, twint
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed aiodns-3.0.0 aiohttp_socks-0.8.0 cchardet-2.1.7 elastic-transport-8.4.0 elasticsearch-8.6.2 fake-useragent-1.1.1 googletransx-2.4.2 pycares-4.3.0 python-socks-2.1.1 schedule-1.1.0 twint-2.1.20
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed aiodns-3.0.0 aiohttp-3.8.4 aiohttp_socks-0.8.0 aiosignal-1.3.1 async-timeout-4.0.2 cchardet-2.1.7 elastic-transport-8.4.0 elasticsearch-8.7.0 fake-useragent-1.1.3 frozenlist-1.3.3 googletransx-2.4.2 multidict-6.0.4 pycares-4.3.0 python-socks-2.2.0 schedule-1.2.0 twint-2.1.20 yarl-1.8.2
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Collecting twint
-  Cloning https://github.com/twintproject/twint.git (to revision origin/master) to /tmp/pip-install-st8edo02/twint_9a953b82d36647b88e1f6ee6ab8db55c
-  Running command git clone --filter=blob:none --quiet https://github.com/twintproject/twint.git /tmp/pip-install-st8edo02/twint_9a953b82d36647b88e1f6ee6ab8db55c
+  Cloning https://github.com/twintproject/twint.git (to revision origin/master) to /tmp/pip-install-9cz0karn/twint_5bcf07f44e114b5b889e8e476e2a4dff
+  Running command git clone --filter=blob:none --quiet https://github.com/twintproject/twint.git /tmp/pip-install-9cz0karn/twint_5bcf07f44e114b5b889e8e476e2a4dff
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">  WARNING: Did not find branch or tag &#39;origin/master&#39;, assuming revision or ref.</span>
@@ -544,54 +552,52 @@ Collecting twint
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
-Requirement already satisfied: aiohttp in /usr/local/lib/python3.8/dist-packages (from twint) (3.8.4)
-Requirement already satisfied: aiodns in /usr/local/lib/python3.8/dist-packages (from twint) (3.0.0)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from twint) (4.6.3)
-Requirement already satisfied: cchardet in /usr/local/lib/python3.8/dist-packages (from twint) (2.1.7)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting dataclasses
+Requirement already satisfied: aiohttp in /usr/local/lib/python3.9/dist-packages (from twint) (3.8.4)
+Requirement already satisfied: aiodns in /usr/local/lib/python3.9/dist-packages (from twint) (3.0.0)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from twint) (4.11.2)
+Requirement already satisfied: cchardet in /usr/local/lib/python3.9/dist-packages (from twint) (2.1.7)
+Collecting dataclasses
   Downloading dataclasses-0.6-py3-none-any.whl (14 kB)
-Requirement already satisfied: elasticsearch in /usr/local/lib/python3.8/dist-packages (from twint) (8.6.2)
-Requirement already satisfied: pysocks in /usr/local/lib/python3.8/dist-packages (from twint) (1.7.1)
-Requirement already satisfied: pandas in /usr/local/lib/python3.8/dist-packages (from twint) (1.3.5)
-Requirement already satisfied: aiohttp_socks in /usr/local/lib/python3.8/dist-packages (from twint) (0.8.0)
-Requirement already satisfied: schedule in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.0)
-Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (from twint) (1.17.0)
-Requirement already satisfied: fake-useragent in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.1)
-Requirement already satisfied: googletransx in /usr/local/lib/python3.8/dist-packages (from twint) (2.4.2)
-Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.8/dist-packages (from aiodns-&gt;twint) (4.3.0)
-Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.1)
-Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (6.0.4)
-Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (4.0.2)
-Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.8.2)
-Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (3.0.1)
-Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (22.2.0)
-Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.3)
-Requirement already satisfied: python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp_socks-&gt;twint) (2.1.1)
-Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.8/dist-packages (from elasticsearch-&gt;twint) (8.4.0)
-Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.8/dist-packages (from fake-useragent-&gt;twint) (5.12.0)
-Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.8/dist-packages (from geopy-&gt;twint) (1.52)
-Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from googletransx-&gt;twint) (2.25.1)
-Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2022.7.1)
-Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2.8.2)
-Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (1.22.4)
-Requirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
-Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.14)
-Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.15.0)
-Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.8/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas-&gt;twint) (1.15.0)
-Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (2.10)
-Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests-&gt;googletransx-&gt;twint) (4.0.0)
-Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Building wheels for collected packages: twint
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: elasticsearch in /usr/local/lib/python3.9/dist-packages (from twint) (8.7.0)
+Requirement already satisfied: pysocks in /usr/local/lib/python3.9/dist-packages (from twint) (1.7.1)
+Requirement already satisfied: pandas in /usr/local/lib/python3.9/dist-packages (from twint) (1.5.3)
+Requirement already satisfied: aiohttp_socks in /usr/local/lib/python3.9/dist-packages (from twint) (0.8.0)
+Requirement already satisfied: schedule in /usr/local/lib/python3.9/dist-packages (from twint) (1.2.0)
+Requirement already satisfied: geopy in /usr/local/lib/python3.9/dist-packages (from twint) (2.3.0)
+Requirement already satisfied: fake-useragent in /usr/local/lib/python3.9/dist-packages (from twint) (1.1.3)
+Requirement already satisfied: googletransx in /usr/local/lib/python3.9/dist-packages (from twint) (2.4.2)
+Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.9/dist-packages (from aiodns-&gt;twint) (4.3.0)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (1.8.2)
+Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (2.0.12)
+Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (1.3.3)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (6.0.4)
+Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (1.3.1)
+Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (4.0.2)
+Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (22.2.0)
+Requirement already satisfied: python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp_socks-&gt;twint) (2.2.0)
+Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist-packages (from beautifulsoup4-&gt;twint) (2.4)
+Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.9/dist-packages (from elasticsearch-&gt;twint) (8.4.0)
+Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.9/dist-packages (from fake-useragent-&gt;twint) (5.12.0)
+Requirement already satisfied: geographiclib&lt;3,&gt;=1.52 in /usr/local/lib/python3.9/dist-packages (from geopy-&gt;twint) (2.0)
+Requirement already satisfied: requests in /usr/local/lib/python3.9/dist-packages (from googletransx-&gt;twint) (2.27.1)
+Requirement already satisfied: numpy&gt;=1.20.3 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (1.22.4)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (2.8.2)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (2022.7.1)
+Requirement already satisfied: certifi in /usr/local/lib/python3.9/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
+Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.9/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.15)
+Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.9/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.15.0)
+Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.9/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from python-dateutil&gt;=2.8.1-&gt;pandas-&gt;twint) (1.16.0)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (3.4)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
+Building wheels for collected packages: twint
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for twint (setup.py) ... ?25l?25hdone
-  Created wheel for twint: filename=twint-2.1.21-py3-none-any.whl size=38870 sha256=77fac4bb6199009937537f6d0564acb6bc50316b2f63d5ad0ab59acb6933f9d2
-  Stored in directory: /tmp/pip-ephem-wheel-cache-x_wx464c/wheels/82/67/14/5495652787d3c55288164de4234c0712a1f785a64f61f1ea70
+  Created wheel for twint: filename=twint-2.1.21-py3-none-any.whl size=38866 sha256=5e5766da0cc97e0d78330345a49e9b344b7af8b0a838d77a5c9a1e1d9de16ac6
+  Stored in directory: /tmp/pip-ephem-wheel-cache-a7qwds_x/wheels/d8/d2/0f/7a146624472827e7ae5427bb9df38249a490ef724626ad56ba
 Successfully built twint
 </pre></div>
 </div>
@@ -611,7 +617,7 @@ Successfully installed dataclasses-0.6 twint-2.1.21
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.8/dist-packages (1.5.6)
+Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.9/dist-packages (1.5.6)
 </pre></div>
 </div>
 </div>
@@ -656,27 +662,27 @@ Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.8/dist-pac
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">JSONDecodeError</span>Traceback (most recent call last)
-<span class="nn">/usr/local/lib/python3.8/dist-packages/twint/run.py</span> in <span class="ni">Feed</span><span class="nt">(self)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">Feed</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">     </span><span class="mi">64</span>                 <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">TwitterSearch</span><span class="p">:</span>
 <span class="ne">---&gt; </span><span class="mi">65</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">feed</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">init</span> <span class="o">=</span> <span class="n">feed</span><span class="o">.</span><span class="n">Json</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">66</span>                 <span class="k">break</span>
 
-<span class="nn">/usr/local/lib/python3.8/dist-packages/twint/feed.py</span> in <span class="ni">Json</span><span class="nt">(response)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/feed.py</span> in <span class="ni">Json</span><span class="nt">(response)</span>
 <span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">logme</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="vm">__name__</span><span class="o">+</span><span class="s1">&#39;:Json&#39;</span><span class="p">)</span>
 <span class="ne">---&gt; </span><span class="mi">42</span>     <span class="n">json_response</span> <span class="o">=</span> <span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="n">html</span> <span class="o">=</span> <span class="n">json_response</span><span class="p">[</span><span class="s2">&quot;items_html&quot;</span><span class="p">]</span>
 
-<span class="nn">/usr/lib/python3.8/json/__init__.py</span> in <span class="ni">loads</span><span class="nt">(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">356</span>             <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">357</span>         <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">358</span>     <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="nn">/usr/lib/python3.9/json/__init__.py</span> in <span class="ni">loads</span><span class="nt">(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">345</span>             <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">346</span>         <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">347</span>     <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 
-<span class="nn">/usr/lib/python3.8/json/decoder.py</span> in <span class="ni">decode</span><span class="nt">(self, s, _w)</span>
+<span class="nn">/usr/lib/python3.9/json/decoder.py</span> in <span class="ni">decode</span><span class="nt">(self, s, _w)</span>
 <span class="g g-Whitespace">    </span><span class="mi">336</span>         <span class="s2">&quot;&quot;&quot;</span>
 <span class="ne">--&gt; </span><span class="mi">337</span><span class="s2">         obj, end = self.raw_decode(s, idx=_w(s, 0).end())</span>
 <span class="g g-Whitespace">    </span><span class="mi">338</span><span class="s2">         end = _w(s, end).end()</span>
 
-<span class="nn">/usr/lib/python3.8/json/decoder.py</span> in <span class="ni">raw_decode</span><span class="nt">(self, s, idx)</span>
+<span class="nn">/usr/lib/python3.9/json/decoder.py</span> in <span class="ni">raw_decode</span><span class="nt">(self, s, idx)</span>
 <span class="g g-Whitespace">    </span><span class="mi">354</span><span class="s2">         except StopIteration as err:</span>
 <span class="ne">--&gt; </span><span class="mi">355</span><span class="s2">             raise JSONDecodeError(&quot;Expecting value&quot;, s, err.value) from None</span>
 <span class="g g-Whitespace">    </span><span class="mi">356</span><span class="s2">         return obj, end</span>
@@ -686,75 +692,75 @@ Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.8/dist-pac
 <span class="s2">During handling of the above exception, another exception occurred:</span>
 
 <span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
-<span class="s2">&lt;ipython-input-5-c12c26be3bc5&gt; in &lt;module&gt;</span>
+<span class="nn">&lt;ipython-input-5-c12c26be3bc5&gt;</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span><span class="s2"> c.Pandas = True</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span><span class="s2"> c.Limit = 500</span>
 <span class="ne">----&gt; </span><span class="mi">6</span><span class="s2"> twint.run.Search(c)</span>
 
-<span class="nn">/usr/local/lib/python3.8/dist-packages/twint/run.py</span> in <span class="ni">Search</span><span class="nt">(config, callback)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">Search</span><span class="nt">(config, callback)</span>
 <span class="g g-Whitespace">    </span><span class="mi">325</span><span class="s2">     config.Profile = False</span>
 <span class="g g-Whitespace">    </span><span class="mi">326</span><span class="s2">     config.Profile_full = False</span>
 <span class="ne">--&gt; </span><span class="mi">327</span><span class="s2">     run(config, callback)</span>
 <span class="g g-Whitespace">    </span><span class="mi">328</span><span class="s2">     if config.Pandas_au:</span>
 <span class="g g-Whitespace">    </span><span class="mi">329</span><span class="s2">         storage.panda._autoget(&quot;tweet&quot;)</span>
 
-<span class="nn">/usr/local/lib/python3.8/dist-packages/twint/run.py</span> in <span class="ni">run</span><span class="nt">(config, callback)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">run</span><span class="nt">(config, callback)</span>
 <span class="g g-Whitespace">    </span><span class="mi">224</span><span class="s2">         raise</span>
 <span class="g g-Whitespace">    </span><span class="mi">225</span><span class="s2"> </span>
 <span class="ne">--&gt; </span><span class="mi">226</span><span class="s2">     get_event_loop().run_until_complete(Twint(config).main(callback))</span>
 <span class="g g-Whitespace">    </span><span class="mi">227</span><span class="s2"> </span>
 <span class="g g-Whitespace">    </span><span class="mi">228</span><span class="s2"> def Favorites(config):</span>
 
-<span class="nn">/usr/local/lib/python3.8/dist-packages/nest_asyncio.py</span> in <span class="ni">run_until_complete</span><span class="nt">(self, future)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/nest_asyncio.py</span> in <span class="ni">run_until_complete</span><span class="nt">(self, future)</span>
 <span class="g g-Whitespace">     </span><span class="mi">82</span><span class="s2">                 f._log_destroy_pending = False</span>
 <span class="g g-Whitespace">     </span><span class="mi">83</span><span class="s2">             while not f.done():</span>
 <span class="ne">---&gt; </span><span class="mi">84</span><span class="s2">                 self._run_once()</span>
 <span class="g g-Whitespace">     </span><span class="mi">85</span><span class="s2">                 if self._stopping:</span>
 <span class="g g-Whitespace">     </span><span class="mi">86</span><span class="s2">                     break</span>
 
-<span class="nn">/usr/local/lib/python3.8/dist-packages/nest_asyncio.py</span> in <span class="ni">_run_once</span><span class="nt">(self)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/nest_asyncio.py</span> in <span class="ni">_run_once</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">118</span><span class="s2">             handle = ready.popleft()</span>
 <span class="g g-Whitespace">    </span><span class="mi">119</span><span class="s2">             if not handle._cancelled:</span>
 <span class="ne">--&gt; </span><span class="mi">120</span><span class="s2">                 handle._run()</span>
 <span class="g g-Whitespace">    </span><span class="mi">121</span><span class="s2">         handle = None</span>
 <span class="g g-Whitespace">    </span><span class="mi">122</span><span class="s2"> </span>
 
-<span class="nn">/usr/lib/python3.8/asyncio/events.py</span> in <span class="ni">_run</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">79</span><span class="s2">     def _run(self):</span>
-<span class="g g-Whitespace">     </span><span class="mi">80</span><span class="s2">         try:</span>
-<span class="ne">---&gt; </span><span class="mi">81</span><span class="s2">             self._context.run(self._callback, *self._args)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span><span class="s2">         except (SystemExit, KeyboardInterrupt):</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="s2">             raise</span>
+<span class="nn">/usr/lib/python3.9/asyncio/events.py</span> in <span class="ni">_run</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">78</span><span class="s2">     def _run(self):</span>
+<span class="g g-Whitespace">     </span><span class="mi">79</span><span class="s2">         try:</span>
+<span class="ne">---&gt; </span><span class="mi">80</span><span class="s2">             self._context.run(self._callback, *self._args)</span>
+<span class="g g-Whitespace">     </span><span class="mi">81</span><span class="s2">         except (SystemExit, KeyboardInterrupt):</span>
+<span class="g g-Whitespace">     </span><span class="mi">82</span><span class="s2">             raise</span>
 
-<span class="nn">/usr/local/lib/python3.8/dist-packages/nest_asyncio.py</span> in <span class="ni">step</span><span class="nt">(task, exc)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/nest_asyncio.py</span> in <span class="ni">step</span><span class="nt">(task, exc)</span>
 <span class="g g-Whitespace">    </span><span class="mi">194</span><span class="s2">         curr_task = curr_tasks.get(task._loop)</span>
 <span class="g g-Whitespace">    </span><span class="mi">195</span><span class="s2">         try:</span>
 <span class="ne">--&gt; </span><span class="mi">196</span><span class="s2">             step_orig(task, exc)</span>
 <span class="g g-Whitespace">    </span><span class="mi">197</span><span class="s2">         finally:</span>
 <span class="g g-Whitespace">    </span><span class="mi">198</span><span class="s2">             if curr_task is None:</span>
 
-<span class="nn">/usr/lib/python3.8/asyncio/tasks.py</span> in <span class="ni">__step</span><span class="nt">(***failed resolving arguments***)</span>
-<span class="g g-Whitespace">    </span><span class="mi">278</span><span class="s2">                 # We use the `send` method directly, because coroutines</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span><span class="s2">                 # don&#39;t have `__iter__` and `__next__` methods.</span>
-<span class="ne">--&gt; </span><span class="mi">280</span><span class="s2">                 result = coro.send(None)</span>
-<span class="g g-Whitespace">    </span><span class="mi">281</span><span class="s2">             else:</span>
-<span class="g g-Whitespace">    </span><span class="mi">282</span><span class="s2">                 result = coro.throw(exc)</span>
+<span class="nn">/usr/lib/python3.9/asyncio/tasks.py</span> in <span class="ni">__step</span><span class="nt">(***failed resolving arguments***)</span>
+<span class="g g-Whitespace">    </span><span class="mi">254</span><span class="s2">                 # We use the `send` method directly, because coroutines</span>
+<span class="g g-Whitespace">    </span><span class="mi">255</span><span class="s2">                 # don&#39;t have `__iter__` and `__next__` methods.</span>
+<span class="ne">--&gt; </span><span class="mi">256</span><span class="s2">                 result = coro.send(None)</span>
+<span class="g g-Whitespace">    </span><span class="mi">257</span><span class="s2">             else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">258</span><span class="s2">                 result = coro.throw(exc)</span>
 
-<span class="nn">/usr/local/lib/python3.8/dist-packages/twint/run.py</span> in <span class="ni">run</span><span class="nt">(self)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">run</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">197</span><span class="s2">                     elif self.config.TwitterSearch:</span>
 <span class="g g-Whitespace">    </span><span class="mi">198</span><span class="s2">                         logme.debug(__name__+&#39;:Twint:main:twitter-search&#39;)</span>
 <span class="ne">--&gt; </span><span class="mi">199</span><span class="s2">                         await self.tweets()</span>
 <span class="g g-Whitespace">    </span><span class="mi">200</span><span class="s2">                 else:</span>
 <span class="g g-Whitespace">    </span><span class="mi">201</span><span class="s2">                     logme.debug(__name__+&#39;:Twint:main:no-more-tweets&#39;)</span>
 
-<span class="nn">/usr/local/lib/python3.8/dist-packages/twint/run.py</span> in <span class="ni">tweets</span><span class="nt">(self)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">tweets</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">135</span><span class="s2"> </span>
 <span class="g g-Whitespace">    </span><span class="mi">136</span><span class="s2">     async def tweets(self):</span>
 <span class="ne">--&gt; </span><span class="mi">137</span><span class="s2">         await self.Feed()</span>
 <span class="g g-Whitespace">    </span><span class="mi">138</span><span class="s2">         if self.config.Location:</span>
 <span class="g g-Whitespace">    </span><span class="mi">139</span><span class="s2">             logme.debug(__name__+&#39;:Twint:tweets:location&#39;)</span>
 
-<span class="nn">/usr/local/lib/python3.8/dist-packages/twint/run.py</span> in <span class="ni">Feed</span><span class="nt">(self)</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">Feed</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">     </span><span class="mi">96</span><span class="s2"> </span>
 <span class="g g-Whitespace">     </span><span class="mi">97</span><span class="s2">                     sys.stderr.write(&#39;sleeping for </span><span class="si">{}</span><span class="s2"> secs</span><span class="se">\n</span><span class="s2">&#39;.format(delay))</span>
 <span class="ne">---&gt; </span><span class="mi">98</span><span class="s2">                     time.sleep(delay)</span>
@@ -991,7 +997,6 @@ Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.8/dist-pac
   </div></div>
 </div>
 </div>
-</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1038,7 +1043,7 @@ Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.8/dist-pac
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas 1</p>
+        <p class="prev-next-title">Tugas 1 Scraping pta.trunojoyo.ac.id</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1051,20 +1056,6 @@ Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.8/dist-pac
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-data-twitter">Crawling Data Twitter</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
