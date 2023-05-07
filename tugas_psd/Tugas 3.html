@@ -63,7 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas_psd/Tugas 3';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="UTS" href="UTS.html" />
+    <link rel="next" title="Tugas 4 Topic Modelling" href="Topik%20Modelling.html" />
     <link rel="prev" title="Tugas 2 Pipelines" href="Tugas%202.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -162,6 +162,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="scraping_detik.html">Tugas 1 Crawling Detik.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas%202.html">Tugas 2 Pipelines</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 3 Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topik%20Modelling.html">Tugas 4 Topic Modelling</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ujian</span></p>
 <ul class="nav bd-sidenav">
@@ -448,7 +449,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b4e4c0dbb84be7606184cdad5281ceb21ed93a1aef0e9274a2a25918286ad633.png" src="../_images/b4e4c0dbb84be7606184cdad5281ceb21ed93a1aef0e9274a2a25918286ad633.png" />
+<img alt="../_images/234a257954e432cfde6b0c7bb8d9758e3bbb61e9f4b25b0b39990b2b30deaf64.png" src="../_images/234a257954e432cfde6b0c7bb8d9758e3bbb61e9f4b25b0b39990b2b30deaf64.png" />
 </div>
 </div>
 <p>a. Hitung manual pagerank dari graph yang anda buat</p>
@@ -502,8 +503,19 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: PyPDF2 in /usr/local/lib/python3.9/dist-packages (3.0.1)
-Requirement already satisfied: typing_extensions&gt;=3.10.0.0 in /usr/local/lib/python3.9/dist-packages (from PyPDF2) (4.5.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting PyPDF2
+  Downloading pypdf2-3.0.1-py3-none-any.whl (232 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/232.6 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">232.6/232.6 kB</span> <span class=" -Color -Color-Red">14.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: PyPDF2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed PyPDF2-3.0.1
 </pre></div>
 </div>
 </div>
@@ -516,7 +528,22 @@ Requirement already satisfied: typing_extensions&gt;=3.10.0.0 in /usr/local/lib/
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: docx2txt in /usr/local/lib/python3.9/dist-packages (0.8)
+Collecting docx2txt
+  Downloading docx2txt-0.8.tar.gz (2.8 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
+Building wheels for collected packages: docx2txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for docx2txt (setup.py) ... ?25l?25hdone
+  Created wheel for docx2txt: filename=docx2txt-0.8-py3-none-any.whl size=3977 sha256=5715985efaae8dfc17c3b7297570b180842c54c5800be5b3dfc883251dfbf30b
+  Stored in directory: /root/.cache/pip/wheels/22/58/cf/093d0a6c3ecfdfc5f6ddd5524043b88e59a9a199cb02352966
+Successfully built docx2txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: docx2txt
+Successfully installed docx2txt-0.8
 </pre></div>
 </div>
 </div>
@@ -648,7 +675,7 @@ Requirement already satisfied: docx2txt in /usr/local/lib/python3.9/dist-package
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="c1"># now read the type of document</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
 <span class="g g-Whitespace">    </span><span class="mi">846</span>         <span class="s2">&quot;&quot;&quot;</span>
 <span class="g g-Whitespace">    </span><span class="mi">847</span><span class="s2">         if not self._allow_stdin:</span>
 <span class="ne">--&gt; </span><span class="mi">848</span><span class="s2">             raise StdinNotImplementedError(</span>
@@ -1422,11 +1449,11 @@ hoped that he had forgotten his anger by then.
       </div>
     </a>
     <a class="right-next"
-       href="UTS.html"
+       href="Topik%20Modelling.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">UTS</p>
+        <p class="prev-next-title">Tugas 4 Topic Modelling</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

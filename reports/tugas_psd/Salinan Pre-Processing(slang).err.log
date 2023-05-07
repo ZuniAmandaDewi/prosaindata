@@ -1,19 +1,17 @@
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.9/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
-  File "/usr/local/lib/python3.9/dist-packages/nbclient/client.py", line 1204, in execute
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1305, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/usr/local/lib/python3.9/dist-packages/nbclient/util.py", line 84, in wrapped
-    return just_run(coro(*args, **kwargs))
-  File "/usr/local/lib/python3.9/dist-packages/nbclient/util.py", line 62, in just_run
-    return loop.run_until_complete(coro)
-  File "/usr/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
     return future.result()
-  File "/usr/local/lib/python3.9/dist-packages/nbclient/client.py", line 663, in async_execute
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 705, in async_execute
     await self.async_execute_cell(
-  File "/usr/local/lib/python3.9/dist-packages/nbclient/client.py", line 965, in async_execute_cell
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1058, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/usr/local/lib/python3.9/dist-packages/nbclient/client.py", line 862, in _check_raise_for_error
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 914, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -43,16 +41,17 @@ slang = pd.DataFrame(slang_words, columns=["Token"])
 slang
 ------------------
 
+
 [0;31m[0m
 [0;31mKeyError[0mTraceback (most recent call last)
-[0;32m/usr/local/lib/python3.9/dist-packages/pandas/core/indexes/base.py[0m in [0;36mget_loc[0;34m(self, key, method, tolerance)[0m
-[1;32m   3628[0m             [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 3629[0;31m                 [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_engine[0m[0;34m.[0m[0mget_loc[0m[0;34m([0m[0mcasted_key[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   3630[0m             [0;32mexcept[0m [0mKeyError[0m [0;32mas[0m [0merr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/core/indexes/base.py[0m in [0;36mget_loc[0;34m(self, key, method, tolerance)[0m
+[1;32m   3801[0m             [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 3802[0;31m                 [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_engine[0m[0;34m.[0m[0mget_loc[0m[0;34m([0m[0mcasted_key[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   3803[0m             [0;32mexcept[0m [0mKeyError[0m [0;32mas[0m [0merr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/usr/local/lib/python3.9/dist-packages/pandas/_libs/index.pyx[0m in [0;36mpandas._libs.index.IndexEngine.get_loc[0;34m()[0m
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/index.pyx[0m in [0;36mpandas._libs.index.IndexEngine.get_loc[0;34m()[0m
 
-[0;32m/usr/local/lib/python3.9/dist-packages/pandas/_libs/index.pyx[0m in [0;36mpandas._libs.index.IndexEngine.get_loc[0;34m()[0m
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/index.pyx[0m in [0;36mpandas._libs.index.IndexEngine.get_loc[0;34m()[0m
 
 [0;32mpandas/_libs/hashtable_class_helper.pxi[0m in [0;36mpandas._libs.hashtable.Int64HashTable.get_item[0;34m()[0m
 
@@ -70,27 +69,26 @@ The above exception was the direct cause of the following exception:
 [0m[1;32m     21[0m   [0mslang_words[0m[0;34m.[0m[0mappend[0m[0;34m([0m[0mslang[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m     22[0m [0;34m[0m[0m
 
-[0;32m/usr/local/lib/python3.9/dist-packages/pandas/core/series.py[0m in [0;36m__getitem__[0;34m(self, key)[0m
-[1;32m    956[0m [0;34m[0m[0m
-[1;32m    957[0m         [0;32melif[0m [0mkey_is_scalar[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 958[0;31m             [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_get_value[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    959[0m [0;34m[0m[0m
-[1;32m    960[0m         [0;32mif[0m [0mis_hashable[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/core/series.py[0m in [0;36m__getitem__[0;34m(self, key)[0m
+[1;32m    979[0m [0;34m[0m[0m
+[1;32m    980[0m         [0;32melif[0m [0mkey_is_scalar[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 981[0;31m             [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_get_value[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    982[0m [0;34m[0m[0m
+[1;32m    983[0m         [0;32mif[0m [0mis_hashable[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/usr/local/lib/python3.9/dist-packages/pandas/core/series.py[0m in [0;36m_get_value[0;34m(self, label, takeable)[0m
-[1;32m   1067[0m [0;34m[0m[0m
-[1;32m   1068[0m         [0;31m# Similar to Index.get_value, but we do not fall back to positional[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1069[0;31m         [0mloc[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mindex[0m[0;34m.[0m[0mget_loc[0m[0;34m([0m[0mlabel[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1070[0m         [0;32mreturn[0m [0mself[0m[0;34m.[0m[0mindex[0m[0;34m.[0m[0m_get_values_for_loc[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mloc[0m[0;34m,[0m [0mlabel[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1071[0m [0;34m[0m[0m
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/core/series.py[0m in [0;36m_get_value[0;34m(self, label, takeable)[0m
+[1;32m   1087[0m [0;34m[0m[0m
+[1;32m   1088[0m         [0;31m# Similar to Index.get_value, but we do not fall back to positional[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1089[0;31m         [0mloc[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mindex[0m[0;34m.[0m[0mget_loc[0m[0;34m([0m[0mlabel[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1090[0m         [0;32mreturn[0m [0mself[0m[0;34m.[0m[0mindex[0m[0;34m.[0m[0m_get_values_for_loc[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mloc[0m[0;34m,[0m [0mlabel[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1091[0m [0;34m[0m[0m
 
-[0;32m/usr/local/lib/python3.9/dist-packages/pandas/core/indexes/base.py[0m in [0;36mget_loc[0;34m(self, key, method, tolerance)[0m
-[1;32m   3629[0m                 [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_engine[0m[0;34m.[0m[0mget_loc[0m[0;34m([0m[0mcasted_key[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   3630[0m             [0;32mexcept[0m [0mKeyError[0m [0;32mas[0m [0merr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 3631[0;31m                 [0;32mraise[0m [0mKeyError[0m[0;34m([0m[0mkey[0m[0;34m)[0m [0;32mfrom[0m [0merr[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   3632[0m             [0;32mexcept[0m [0mTypeError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   3633[0m                 [0;31m# If we have a listlike key, _check_indexing_error will raise[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/usr/local/lib/python3.10/dist-packages/pandas/core/indexes/base.py[0m in [0;36mget_loc[0;34m(self, key, method, tolerance)[0m
+[1;32m   3802[0m                 [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_engine[0m[0;34m.[0m[0mget_loc[0m[0;34m([0m[0mcasted_key[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   3803[0m             [0;32mexcept[0m [0mKeyError[0m [0;32mas[0m [0merr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 3804[0;31m                 [0;32mraise[0m [0mKeyError[0m[0;34m([0m[0mkey[0m[0;34m)[0m [0;32mfrom[0m [0merr[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   3805[0m             [0;32mexcept[0m [0mTypeError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   3806[0m                 [0;31m# If we have a listlike key, _check_indexing_error will raise[0m[0;34m[0m[0;34m[0m[0m
 
 [0;31mKeyError[0m: 85
-KeyError: 85
 

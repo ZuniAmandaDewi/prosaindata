@@ -161,6 +161,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="scraping_pta.html">Tugas 1 Scraping pta.trunojoyo.ac.id</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scraping_detik.html">Tugas 1 Crawling Detik.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas%202.html">Tugas 2 Pipelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%203.html">Tugas 3 Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Topik%20Modelling.html">Tugas 4 Topic Modelling</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ujian</span></p>
 <ul class="nav bd-sidenav">
@@ -400,8 +402,76 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Skipping twint as it is not installed.</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found existing installation: twint 2.1.20
+Uninstalling twint-2.1.20:
+  Would remove:
+    /usr/local/bin/twint
+    /usr/local/lib/python3.10/dist-packages/twint-2.1.20.dist-info/*
+    /usr/local/lib/python3.10/dist-packages/twint/*
+Proceed (Y/n)? 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 160, in exc_logging_wrapper
+    status = run_func(*args)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/commands/uninstall.py&quot;, line 105, in run
+    uninstall_pathset = req.uninstall(
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/req/req_install.py&quot;, line 664, in uninstall
+    uninstalled_pathset.remove(auto_confirm, verbose)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/req/req_uninstall.py&quot;, line 367, in remove
+    if auto_confirm or self._allowed_to_proceed(verbose):
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/req/req_uninstall.py&quot;, line 407, in _allowed_to_proceed
+    return ask(&quot;Proceed (Y/n)? &quot;, (&quot;y&quot;, &quot;n&quot;, &quot;&quot;)) != &quot;n&quot;
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/utils/misc.py&quot;, line 191, in ask
+    response = input(message)
+KeyboardInterrupt
 
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;/usr/lib/python3.10/os.py&quot;, line 677, in __getitem__
+    value = self._data[self.encodekey(key)]
+KeyError: b&#39;COLUMNS&#39;
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
+    sys.exit(main())
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/main.py&quot;, line 70, in main
+    return command.main(cmd_args)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
+    return self._main(args)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 214, in _main
+    return run(options, args)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 197, in exc_logging_wrapper
+    logger.critical(&quot;Operation cancelled by user&quot;)
+  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1524, in critical
+    self._log(CRITICAL, msg, args, **kwargs)
+  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1624, in _log
+    self.handle(record)
+  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1634, in handle
+    self.callHandlers(record)
+  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1696, in callHandlers
+    hdlr.handle(record)
+  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 968, in handle
+    self.emit(record)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/utils/logging.py&quot;, line 177, in emit
+    self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 1679, in print
+    render_options = self.options.update(
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 977, in options
+    max_height=self.size.height,
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 1017, in size
+    columns = self._environ.get(&quot;COLUMNS&quot;)
+  File &quot;/usr/lib/python3.10/_collections_abc.py&quot;, line 824, in get
+    return self[key]
+  File &quot;/usr/lib/python3.10/os.py&quot;, line 677, in __getitem__
+    value = self._data[self.encodekey(key)]
+KeyboardInterrupt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
 </pre></div>
 </div>
 </div>
@@ -415,196 +485,97 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: twint in /usr/local/lib/python3.8/dist-packages (2.1.20)
+Requirement already satisfied: googletransx in /usr/local/lib/python3.8/dist-packages (from twint) (2.4.2)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from twint) (4.6.3)
+Requirement already satisfied: elasticsearch in /usr/local/lib/python3.8/dist-packages (from twint) (8.6.2)
+Requirement already satisfied: aiohttp-socks in /usr/local/lib/python3.8/dist-packages (from twint) (0.8.0)
+Requirement already satisfied: fake-useragent in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.1)
+Requirement already satisfied: cchardet in /usr/local/lib/python3.8/dist-packages (from twint) (2.1.7)
+Requirement already satisfied: pandas in /usr/local/lib/python3.8/dist-packages (from twint) (1.3.5)
+Requirement already satisfied: aiodns in /usr/local/lib/python3.8/dist-packages (from twint) (3.0.0)
+Requirement already satisfied: pysocks in /usr/local/lib/python3.8/dist-packages (from twint) (1.7.1)
+Requirement already satisfied: schedule in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.0)
+Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (from twint) (1.17.0)
+Requirement already satisfied: aiohttp in /usr/local/lib/python3.8/dist-packages (from twint) (3.8.4)
+Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.8/dist-packages (from aiodns-&gt;twint) (4.3.0)
+Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.1)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.8.2)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (6.0.4)
+Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (4.0.2)
+Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (22.2.0)
+Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (3.0.1)
+Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.3)
+Requirement already satisfied: python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-socks-&gt;twint) (2.1.1)
+Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.8/dist-packages (from elasticsearch-&gt;twint) (8.4.0)
+Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.8/dist-packages (from fake-useragent-&gt;twint) (5.10.2)
+Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.8/dist-packages (from geopy-&gt;twint) (1.52)
+Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from googletransx-&gt;twint) (2.25.1)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (1.21.6)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2022.7.1)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2.8.2)
+Requirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
+Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.14)
+Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.13.0)
+Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.8/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas-&gt;twint) (1.15.0)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (2.10)
+Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests-&gt;googletransx-&gt;twint) (4.0.0)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Collecting twint
-  Downloading twint-2.1.20.tar.gz (31 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting aiohttp
-  Downloading aiohttp-3.8.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.0 MB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/1.0 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.0/1.0 MB</span> <span class=" -Color -Color-Red">52.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hCollecting aiodns
-  Downloading aiodns-3.0.0-py3-none-any.whl (5.0 kB)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from twint) (4.11.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting cchardet
-  Downloading cchardet-2.1.7-cp39-cp39-manylinux2010_x86_64.whl (265 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/265.4 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">265.4/265.4 kB</span> <span class=" -Color -Color-Red">30.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting elasticsearch
-  Downloading elasticsearch-8.7.0-py3-none-any.whl (387 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/387.9 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">387.9/387.9 kB</span> <span class=" -Color -Color-Red">37.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: pysocks in /usr/local/lib/python3.9/dist-packages (from twint) (1.7.1)
-Requirement already satisfied: pandas in /usr/local/lib/python3.9/dist-packages (from twint) (1.5.3)
-Collecting aiohttp_socks
-  Downloading aiohttp_socks-0.8.0-py3-none-any.whl (9.4 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting schedule
-  Downloading schedule-1.2.0-py2.py3-none-any.whl (11 kB)
-Requirement already satisfied: geopy in /usr/local/lib/python3.9/dist-packages (from twint) (2.3.0)
-Collecting fake-useragent
-  Downloading fake_useragent-1.1.3-py3-none-any.whl (50 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/50.5 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">50.5/50.5 kB</span> <span class=" -Color -Color-Red">6.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hCollecting googletransx
-  Downloading googletransx-2.4.2.tar.gz (13 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pycares&gt;=4.0.0
-  Downloading pycares-4.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (288 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/288.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">288.7/288.7 kB</span> <span class=" -Color -Color-Red">26.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting frozenlist&gt;=1.1.1
-  Downloading frozenlist-1.3.3-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (158 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/158.8 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">158.8/158.8 kB</span> <span class=" -Color -Color-Red">21.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting multidict&lt;7.0,&gt;=4.5
-  Downloading multidict-6.0.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (114 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/114.2 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">114.2/114.2 kB</span> <span class=" -Color -Color-Red">15.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hCollecting aiosignal&gt;=1.1.2
-  Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
-Collecting async-timeout&lt;5.0,&gt;=4.0.0a3
-  Downloading async_timeout-4.0.2-py3-none-any.whl (5.8 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (22.2.0)
-Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (2.0.12)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting yarl&lt;2.0,&gt;=1.0
-  Downloading yarl-1.8.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (264 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/264.6 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">264.6/264.6 kB</span> <span class=" -Color -Color-Red">27.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hCollecting python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0
-  Downloading python_socks-2.2.0-py3-none-any.whl (52 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/53.0 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">53.0/53.0 kB</span> <span class=" -Color -Color-Red">7.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist-packages (from beautifulsoup4-&gt;twint) (2.4)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting elastic-transport&lt;9,&gt;=8
-  Downloading elastic_transport-8.4.0-py3-none-any.whl (59 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/59.5 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">59.5/59.5 kB</span> <span class=" -Color -Color-Red">7.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.9/dist-packages (from fake-useragent-&gt;twint) (5.12.0)
-Requirement already satisfied: geographiclib&lt;3,&gt;=1.52 in /usr/local/lib/python3.9/dist-packages (from geopy-&gt;twint) (2.0)
-Requirement already satisfied: requests in /usr/local/lib/python3.9/dist-packages (from googletransx-&gt;twint) (2.27.1)
-Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (2022.7.1)
-Requirement already satisfied: numpy&gt;=1.20.3 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (1.22.4)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (2.8.2)
-Requirement already satisfied: certifi in /usr/local/lib/python3.9/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
-Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.9/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.15)
-Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.9/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.15.0)
-Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.9/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from python-dateutil&gt;=2.8.1-&gt;pandas-&gt;twint) (1.16.0)
-Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (3.4)
-Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Building wheels for collected packages: twint, googletransx
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for twint (setup.py) ... ?25l?25hdone
-  Created wheel for twint: filename=twint-2.1.20-py3-none-any.whl size=33926 sha256=2f76abecfbb1b4305bf9f8bae4419f67ce3ded78351cc0eb95c9d786481512f1
-  Stored in directory: /root/.cache/pip/wheels/12/2c/16/fded468865c08c82d4e82535f33c50462a3e6e042d8f93df13
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for googletransx (setup.py) ... ?25l?25hdone
-  Created wheel for googletransx: filename=googletransx-2.4.2-py3-none-any.whl size=15969 sha256=7e917675c00c95dc5a1fc64f86d32f8bc190aa5186fd5cecdcdb8972049b8edd
-  Stored in directory: /root/.cache/pip/wheels/b5/28/37/a905af06d6f6c934042babb4748f01b2f9039d2d96f05a4496
-Successfully built twint googletransx
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: python-socks, cchardet, schedule, multidict, frozenlist, elastic-transport, async-timeout, yarl, pycares, googletransx, fake-useragent, elasticsearch, aiosignal, aiohttp, aiodns, aiohttp_socks, twint
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed aiodns-3.0.0 aiohttp-3.8.4 aiohttp_socks-0.8.0 aiosignal-1.3.1 async-timeout-4.0.2 cchardet-2.1.7 elastic-transport-8.4.0 elasticsearch-8.7.0 fake-useragent-1.1.3 frozenlist-1.3.3 googletransx-2.4.2 multidict-6.0.4 pycares-4.3.0 python-socks-2.2.0 schedule-1.2.0 twint-2.1.20 yarl-1.8.2
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting twint
-  Cloning https://github.com/twintproject/twint.git (to revision origin/master) to /tmp/pip-install-9cz0karn/twint_5bcf07f44e114b5b889e8e476e2a4dff
-  Running command git clone --filter=blob:none --quiet https://github.com/twintproject/twint.git /tmp/pip-install-9cz0karn/twint_5bcf07f44e114b5b889e8e476e2a4dff
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">  WARNING: Did not find branch or tag &#39;origin/master&#39;, assuming revision or ref.</span>
+  Cloning https://github.com/twintproject/twint.git (to revision origin/master) to /tmp/pip-install-6u1h4bqb/twint_bf77dc2385834d21a00dbe89bd64c63b
+  Running command git clone --filter=blob:none --quiet https://github.com/twintproject/twint.git /tmp/pip-install-6u1h4bqb/twint_bf77dc2385834d21a00dbe89bd64c63b
+<span class=" -Color -Color-Yellow">  WARNING: Did not find branch or tag &#39;origin/master&#39;, assuming revision or ref.</span>
   Running command git checkout -q origin/master
   Resolved https://github.com/twintproject/twint.git to commit origin/master
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
-Requirement already satisfied: aiohttp in /usr/local/lib/python3.9/dist-packages (from twint) (3.8.4)
-Requirement already satisfied: aiodns in /usr/local/lib/python3.9/dist-packages (from twint) (3.0.0)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from twint) (4.11.2)
-Requirement already satisfied: cchardet in /usr/local/lib/python3.9/dist-packages (from twint) (2.1.7)
-Collecting dataclasses
-  Downloading dataclasses-0.6-py3-none-any.whl (14 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: elasticsearch in /usr/local/lib/python3.9/dist-packages (from twint) (8.7.0)
-Requirement already satisfied: pysocks in /usr/local/lib/python3.9/dist-packages (from twint) (1.7.1)
-Requirement already satisfied: pandas in /usr/local/lib/python3.9/dist-packages (from twint) (1.5.3)
-Requirement already satisfied: aiohttp_socks in /usr/local/lib/python3.9/dist-packages (from twint) (0.8.0)
-Requirement already satisfied: schedule in /usr/local/lib/python3.9/dist-packages (from twint) (1.2.0)
-Requirement already satisfied: geopy in /usr/local/lib/python3.9/dist-packages (from twint) (2.3.0)
-Requirement already satisfied: fake-useragent in /usr/local/lib/python3.9/dist-packages (from twint) (1.1.3)
-Requirement already satisfied: googletransx in /usr/local/lib/python3.9/dist-packages (from twint) (2.4.2)
-Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.9/dist-packages (from aiodns-&gt;twint) (4.3.0)
-Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (1.8.2)
-Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (2.0.12)
-Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (1.3.3)
-Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (6.0.4)
-Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (1.3.1)
-Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (4.0.2)
-Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (22.2.0)
-Requirement already satisfied: python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp_socks-&gt;twint) (2.2.0)
-Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist-packages (from beautifulsoup4-&gt;twint) (2.4)
-Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.9/dist-packages (from elasticsearch-&gt;twint) (8.4.0)
-Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.9/dist-packages (from fake-useragent-&gt;twint) (5.12.0)
-Requirement already satisfied: geographiclib&lt;3,&gt;=1.52 in /usr/local/lib/python3.9/dist-packages (from geopy-&gt;twint) (2.0)
-Requirement already satisfied: requests in /usr/local/lib/python3.9/dist-packages (from googletransx-&gt;twint) (2.27.1)
-Requirement already satisfied: numpy&gt;=1.20.3 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (1.22.4)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (2.8.2)
-Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (2022.7.1)
-Requirement already satisfied: certifi in /usr/local/lib/python3.9/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
-Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.9/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.15)
-Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.9/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.15.0)
-Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.9/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from python-dateutil&gt;=2.8.1-&gt;pandas-&gt;twint) (1.16.0)
-Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (3.4)
-Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
+  Preparing metadata (setup.py) ... ?25l?25hdone
+Requirement already satisfied: aiohttp in /usr/local/lib/python3.8/dist-packages (from twint) (3.8.4)
+Requirement already satisfied: aiodns in /usr/local/lib/python3.8/dist-packages (from twint) (3.0.0)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from twint) (4.6.3)
+Requirement already satisfied: cchardet in /usr/local/lib/python3.8/dist-packages (from twint) (2.1.7)
+Requirement already satisfied: dataclasses in /root/.local/lib/python3.8/site-packages (from twint) (0.6)
+Requirement already satisfied: elasticsearch in /usr/local/lib/python3.8/dist-packages (from twint) (8.6.2)
+Requirement already satisfied: pysocks in /usr/local/lib/python3.8/dist-packages (from twint) (1.7.1)
+Requirement already satisfied: pandas in /usr/local/lib/python3.8/dist-packages (from twint) (1.3.5)
+Requirement already satisfied: aiohttp_socks in /usr/local/lib/python3.8/dist-packages (from twint) (0.8.0)
+Requirement already satisfied: schedule in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.0)
+Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (from twint) (1.17.0)
+Requirement already satisfied: fake-useragent in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.1)
+Requirement already satisfied: googletransx in /usr/local/lib/python3.8/dist-packages (from twint) (2.4.2)
+Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.8/dist-packages (from aiodns-&gt;twint) (4.3.0)
+Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (3.0.1)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (6.0.4)
+Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (22.2.0)
+Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (4.0.2)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.8.2)
+Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.3)
+Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.1)
+Requirement already satisfied: python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp_socks-&gt;twint) (2.1.1)
+Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.8/dist-packages (from elasticsearch-&gt;twint) (8.4.0)
+Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.8/dist-packages (from fake-useragent-&gt;twint) (5.10.2)
+Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.8/dist-packages (from geopy-&gt;twint) (1.52)
+Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from googletransx-&gt;twint) (2.25.1)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2.8.2)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2022.7.1)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (1.21.6)
+Requirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
+Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.14)
+Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.13.0)
+Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.8/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas-&gt;twint) (1.15.0)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (2.10)
+Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests-&gt;googletransx-&gt;twint) (4.0.0)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
 Building wheels for collected packages: twint
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for twint (setup.py) ... ?25l?25hdone
-  Created wheel for twint: filename=twint-2.1.21-py3-none-any.whl size=38866 sha256=5e5766da0cc97e0d78330345a49e9b344b7af8b0a838d77a5c9a1e1d9de16ac6
-  Stored in directory: /tmp/pip-ephem-wheel-cache-a7qwds_x/wheels/d8/d2/0f/7a146624472827e7ae5427bb9df38249a490ef724626ad56ba
+  Building wheel for twint (setup.py) ... ?25l?25hdone
+  Created wheel for twint: filename=twint-2.1.21-py3-none-any.whl size=38870 sha256=5aa34036b9dcabe0cfc1bfacf8d4d1348be9755bea1f31c7ca79deba6031c866
+  Stored in directory: /tmp/pip-ephem-wheel-cache-u2b072nn/wheels/82/67/14/5495652787d3c55288164de4234c0712a1f785a64f61f1ea70
 Successfully built twint
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: dataclasses, twint
+Installing collected packages: twint
 <span class=" -Color -Color-Yellow">  WARNING: The script twint is installed in &#39;/root/.local/bin&#39; which is not on PATH.</span>
 <span class=" -Color -Color-Yellow">  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.</span>
-Successfully installed dataclasses-0.6 twint-2.1.21
+Successfully installed twint-2.1.21
 </pre></div>
 </div>
 </div>
@@ -617,7 +588,10 @@ Successfully installed dataclasses-0.6 twint-2.1.21
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.9/dist-packages (1.5.6)
+Collecting nest_asyncio
+  Downloading nest_asyncio-1.5.6-py3-none-any.whl (5.2 kB)
+Installing collected packages: nest_asyncio
+Successfully installed nest_asyncio-1.5.6
 </pre></div>
 </div>
 </div>
@@ -643,131 +617,507 @@ Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.9/dist-pac
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sleeping for 1.0 secs
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sleeping for 8.0 secs
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sleeping for 27.0 secs
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">JSONDecodeError</span>Traceback (most recent call last)
-<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">Feed</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">64</span>                 <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">TwitterSearch</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">65</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">feed</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">init</span> <span class="o">=</span> <span class="n">feed</span><span class="o">.</span><span class="n">Json</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">66</span>                 <span class="k">break</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/feed.py</span> in <span class="ni">Json</span><span class="nt">(response)</span>
-<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">logme</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="vm">__name__</span><span class="o">+</span><span class="s1">&#39;:Json&#39;</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">42</span>     <span class="n">json_response</span> <span class="o">=</span> <span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="n">html</span> <span class="o">=</span> <span class="n">json_response</span><span class="p">[</span><span class="s2">&quot;items_html&quot;</span><span class="p">]</span>
-
-<span class="nn">/usr/lib/python3.9/json/__init__.py</span> in <span class="ni">loads</span><span class="nt">(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">345</span>             <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">346</span>         <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">347</span>     <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">/usr/lib/python3.9/json/decoder.py</span> in <span class="ni">decode</span><span class="nt">(self, s, _w)</span>
-<span class="g g-Whitespace">    </span><span class="mi">336</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">337</span><span class="s2">         obj, end = self.raw_decode(s, idx=_w(s, 0).end())</span>
-<span class="g g-Whitespace">    </span><span class="mi">338</span><span class="s2">         end = _w(s, end).end()</span>
-
-<span class="nn">/usr/lib/python3.9/json/decoder.py</span> in <span class="ni">raw_decode</span><span class="nt">(self, s, idx)</span>
-<span class="g g-Whitespace">    </span><span class="mi">354</span><span class="s2">         except StopIteration as err:</span>
-<span class="ne">--&gt; </span><span class="mi">355</span><span class="s2">             raise JSONDecodeError(&quot;Expecting value&quot;, s, err.value) from None</span>
-<span class="g g-Whitespace">    </span><span class="mi">356</span><span class="s2">         return obj, end</span>
-
-<span class="ne">JSONDecodeError</span>: Expecting value: line 1 column 1 (char 0)
-
-<span class="s2">During handling of the above exception, another exception occurred:</span>
-
-<span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-5-c12c26be3bc5&gt;</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span><span class="s2"> c.Pandas = True</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span><span class="s2"> c.Limit = 500</span>
-<span class="ne">----&gt; </span><span class="mi">6</span><span class="s2"> twint.run.Search(c)</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">Search</span><span class="nt">(config, callback)</span>
-<span class="g g-Whitespace">    </span><span class="mi">325</span><span class="s2">     config.Profile = False</span>
-<span class="g g-Whitespace">    </span><span class="mi">326</span><span class="s2">     config.Profile_full = False</span>
-<span class="ne">--&gt; </span><span class="mi">327</span><span class="s2">     run(config, callback)</span>
-<span class="g g-Whitespace">    </span><span class="mi">328</span><span class="s2">     if config.Pandas_au:</span>
-<span class="g g-Whitespace">    </span><span class="mi">329</span><span class="s2">         storage.panda._autoget(&quot;tweet&quot;)</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">run</span><span class="nt">(config, callback)</span>
-<span class="g g-Whitespace">    </span><span class="mi">224</span><span class="s2">         raise</span>
-<span class="g g-Whitespace">    </span><span class="mi">225</span><span class="s2"> </span>
-<span class="ne">--&gt; </span><span class="mi">226</span><span class="s2">     get_event_loop().run_until_complete(Twint(config).main(callback))</span>
-<span class="g g-Whitespace">    </span><span class="mi">227</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">228</span><span class="s2"> def Favorites(config):</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/nest_asyncio.py</span> in <span class="ni">run_until_complete</span><span class="nt">(self, future)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span><span class="s2">                 f._log_destroy_pending = False</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="s2">             while not f.done():</span>
-<span class="ne">---&gt; </span><span class="mi">84</span><span class="s2">                 self._run_once()</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="s2">                 if self._stopping:</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span><span class="s2">                     break</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/nest_asyncio.py</span> in <span class="ni">_run_once</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">118</span><span class="s2">             handle = ready.popleft()</span>
-<span class="g g-Whitespace">    </span><span class="mi">119</span><span class="s2">             if not handle._cancelled:</span>
-<span class="ne">--&gt; </span><span class="mi">120</span><span class="s2">                 handle._run()</span>
-<span class="g g-Whitespace">    </span><span class="mi">121</span><span class="s2">         handle = None</span>
-<span class="g g-Whitespace">    </span><span class="mi">122</span><span class="s2"> </span>
-
-<span class="nn">/usr/lib/python3.9/asyncio/events.py</span> in <span class="ni">_run</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">78</span><span class="s2">     def _run(self):</span>
-<span class="g g-Whitespace">     </span><span class="mi">79</span><span class="s2">         try:</span>
-<span class="ne">---&gt; </span><span class="mi">80</span><span class="s2">             self._context.run(self._callback, *self._args)</span>
-<span class="g g-Whitespace">     </span><span class="mi">81</span><span class="s2">         except (SystemExit, KeyboardInterrupt):</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span><span class="s2">             raise</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/nest_asyncio.py</span> in <span class="ni">step</span><span class="nt">(task, exc)</span>
-<span class="g g-Whitespace">    </span><span class="mi">194</span><span class="s2">         curr_task = curr_tasks.get(task._loop)</span>
-<span class="g g-Whitespace">    </span><span class="mi">195</span><span class="s2">         try:</span>
-<span class="ne">--&gt; </span><span class="mi">196</span><span class="s2">             step_orig(task, exc)</span>
-<span class="g g-Whitespace">    </span><span class="mi">197</span><span class="s2">         finally:</span>
-<span class="g g-Whitespace">    </span><span class="mi">198</span><span class="s2">             if curr_task is None:</span>
-
-<span class="nn">/usr/lib/python3.9/asyncio/tasks.py</span> in <span class="ni">__step</span><span class="nt">(***failed resolving arguments***)</span>
-<span class="g g-Whitespace">    </span><span class="mi">254</span><span class="s2">                 # We use the `send` method directly, because coroutines</span>
-<span class="g g-Whitespace">    </span><span class="mi">255</span><span class="s2">                 # don&#39;t have `__iter__` and `__next__` methods.</span>
-<span class="ne">--&gt; </span><span class="mi">256</span><span class="s2">                 result = coro.send(None)</span>
-<span class="g g-Whitespace">    </span><span class="mi">257</span><span class="s2">             else:</span>
-<span class="g g-Whitespace">    </span><span class="mi">258</span><span class="s2">                 result = coro.throw(exc)</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">run</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">197</span><span class="s2">                     elif self.config.TwitterSearch:</span>
-<span class="g g-Whitespace">    </span><span class="mi">198</span><span class="s2">                         logme.debug(__name__+&#39;:Twint:main:twitter-search&#39;)</span>
-<span class="ne">--&gt; </span><span class="mi">199</span><span class="s2">                         await self.tweets()</span>
-<span class="g g-Whitespace">    </span><span class="mi">200</span><span class="s2">                 else:</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span><span class="s2">                     logme.debug(__name__+&#39;:Twint:main:no-more-tweets&#39;)</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">tweets</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">135</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">136</span><span class="s2">     async def tweets(self):</span>
-<span class="ne">--&gt; </span><span class="mi">137</span><span class="s2">         await self.Feed()</span>
-<span class="g g-Whitespace">    </span><span class="mi">138</span><span class="s2">         if self.config.Location:</span>
-<span class="g g-Whitespace">    </span><span class="mi">139</span><span class="s2">             logme.debug(__name__+&#39;:Twint:tweets:location&#39;)</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">Feed</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span><span class="s2"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">97</span><span class="s2">                     sys.stderr.write(&#39;sleeping for </span><span class="si">{}</span><span class="s2"> secs</span><span class="se">\n</span><span class="s2">&#39;.format(delay))</span>
-<span class="ne">---&gt; </span><span class="mi">98</span><span class="s2">                     time.sleep(delay)</span>
-<span class="g g-Whitespace">     </span><span class="mi">99</span><span class="s2">                     self.user_agent = await get.RandomUserAgent(wa=True)</span>
-<span class="g g-Whitespace">    </span><span class="mi">100</span><span class="s2">                     continue</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1628322363216642049 2023-02-22 09:14:38 +0000 &lt;BANGSAygSUJUD&gt; @Alie_Fahnoor Bergerak maju, melangkah pasti, akan #Prabowo pada waktu pencoblosan 2024 😍😍😍😍🇮🇩
+1628321634632499200 2023-02-22 09:11:45 +0000 &lt;Alie_Fahnoor&gt; Semakin sering Kompas melakukan survei, elektabilitas Pak #Prabowo semakin meningkat dan Popularitas beliau semakin menanjak naik  Kita tunggu Kompas lakukan ini lagi nanti   https://t.co/3isdzR7ouQ
+1628320539889782790 2023-02-22 09:07:24 +0000 &lt;PangeranUmbi&gt; Duet antara Prabowo dan Erick Tohir.   #prabowo #prabowopresiden2024 #prabowopersatuanindonesia #trending #presiden2024 #prabowopeduli #ikutpakde #bersamajuara #capres2024 #mendingprabowo #dekade08 #pemilu2024  https://t.co/PyIFqvP3nQ
+1628320336474419200 2023-02-22 09:06:35 +0000 &lt;are_inismyname&gt; @ChaUnk_VR1 #prabowo ya
+1628317656276430848 2023-02-22 08:55:56 +0000 &lt;mypresidentid&gt; Turut berbelasungkawa atas musibah yang terjadi di Turki dan Suriah. Semoga dikuatkan 🤲🏽  #mypresident #prabowo #prabowosubianto #prabowopresiden #indonesiaadilmakmur #mendingprabowo #prabowomypresident #presiden2024 #prabowopresidenri #gerindra #fy #fypシ❤️💞❤️ #fyi #fypage #fyp  https://t.co/zmVGKKtEuD
+1628316223116308481 2023-02-22 08:50:14 +0000 &lt;DpdBali&gt; @de_gadjah Menyapa Pemuda untuk mensuport kreatifitas pemuda dalam pembuatan ogoh-ogoh. Ogoh-ogoh di Bali bukan sekedar ogoh-ogoh, namun bagian dari tradisi yang mesti dilestarikan😁🤙  #prabowo #degadjah #gerindrabali #nodrama #MilenialBersatu  https://t.co/3g2HWcLSj0
+1628316150538063872 2023-02-22 08:49:57 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1628314714555162625 2023-02-22 08:44:15 +0000 &lt;DpdBali&gt; Semoga pertemuan yg sederhana dan penuh kekeluargaan ini menjadi langkah baik untuk kita bersama.   Menghadiri Odalan Keluarga Ketua PAC Gerindra Densel, Bpk Tomy di Sesetan, Densel🤙🏻😇  #prabowo #gerindramenang #ahmadmuzani #sufmidaso #degadjah #nodrama  https://t.co/me6DFMfTw0
+1628312911717494784 2023-02-22 08:37:05 +0000 &lt;narasisenja08&gt; Pemimpin Pindo Arga ;) #quotes #puisi #narasisenja #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/SHfVRLOpA4
+1628309887599116289 2023-02-22 08:25:04 +0000 &lt;jonictakdare&gt; Memilih dan mendukung #Prabowo tidak hanya sekedar pilihan namun perjuangan untuk kembali beradab dan beretika dalam ber media sosial   Karena perilaku pendukung adalah cermin orang yg didukung (jere cah kae)
+1628307856712929280 2023-02-22 08:17:00 +0000 &lt;DodiWijaya03&gt;  https://t.co/WfqE3KmG6J  #Prabowo #prabowopersatuanindonesia | Prabowo Subianto | Pak Prabowo Konsisten | Prabowo Presiden | Menhan Malaysia | Ash Wednesday | Anak Belum Siap | David
+1628300413454913538 2023-02-22 07:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1628297549470924801 2023-02-22 07:36:02 +0000 &lt;Arganta42564980&gt; Cara mengisi akhir pekan ala Prabowo.  #prabowo #prabowopresiden2024 #prabowopersatuanindonesia #trending #presiden2024 #prabowopeduli #ikutpakde #bersamajuara #capres2024 #pemilu2024  https://t.co/8XcbBYfHP5
+1628297546207752193 2023-02-22 07:36:01 +0000 &lt;ABurundy&gt; Cara mengisi akhir pekan ala Prabowo.  #prabowo #prabowopresiden2024 #prabowopersatuanindonesia #trending #presiden2024 #prabowopeduli #ikutpakde #bersamajuara #capres2024 #pemilu2024  https://t.co/Ie0h8mTmHK
+1628297537089323008 2023-02-22 07:35:59 +0000 &lt;ArsenioAgam&gt; Cara mengisi akhir pekan ala Prabowo.  #prabowo #prabowopresiden2024 #prabowopersatuanindonesia #trending #presiden2024 #prabowopeduli #ikutpakde #bersamajuara #capres2024 #pemilu2024  https://t.co/0an0UgsTb6
+1628297535164129280 2023-02-22 07:35:59 +0000 &lt;amber_benita&gt; Cara mengisi akhir pekan ala Prabowo.  #prabowo #prabowopresiden2024 #prabowopersatuanindonesia #trending #presiden2024 #prabowopeduli #ikutpakde #bersamajuara #capres2024 #pemilu2024  https://t.co/LI2Jr5UWmQ
+1628285737438449668 2023-02-22 06:49:06 +0000 &lt;KhoirilAnwar_&gt; &quot;Dalam menghadapi kampanye hitam, janganlah kita terhasut, apalagi terjerumus ke permainan kotor. Kita harus berkampanye dengan baik.&quot; @prabowo   #prabowo #IndonesiaBerdikari  Saya pilih Prabowo for Next President  https://t.co/igjsYHxeHY
+1628274638043377664 2023-02-22 06:05:00 +0000 &lt;kuatbacacom&gt; &quot;Kita tahu 2019 itu siapa sih yang mendapatkan kursi paling banyak karena bergabung dengan Pak Prabowo. Gerindra itu di 2014 ke 2019 itu naiknya hanya dari 73 ke 75,&quot; tutur Andre. #kuatbaca #kuatbacacom #prabowo #prabowosubianto @prabowo @Gerindra    https://t.co/Jt47bb3ZVS
+1628274017215062016 2023-02-22 06:02:32 +0000 &lt;pramudia_id&gt; Gus @cakimiNOW unggul sebagai kandidat pemimpin dari kalangan NU. Sudah layak mendampingi pak prabowo di kontestasi pilpres 2024.  Salam Pramudia! . #prabowo #prabowosubianto #gusmuhaimin #cakimin #muhaiminiskandar  https://t.co/GzCB4hCYvT
+1628272657455255553 2023-02-22 05:57:08 +0000 &lt;bengkeldodo&gt; Terserah dengan kata orang yang setiap hari katakan #prabowo penghianat !!  Yang penting beliau tidak khiananti sumpah prajurit untuk setia dan jaga bangsa ini   ini juga yang menyemangati dan menginspirasi loyalis @prabowo untuk tetap ada dan mendukung beliau  https://t.co/iOfLEHOSix
+1628272292911538176 2023-02-22 05:55:41 +0000 &lt;prabowomuda08&gt; Proses Prabowo Dari Komandan Pasukan Elit - Politikus #masbowo #prabowo #prabowomuda #prabowosubianto #menhan #menteri #kemhan #menhanprabowo #pertahanan #indonesia #capres #militer #2024PrabowoPresiden #PrabowoPresiden2024 #pemilu #pilpres #pasukan #tempur #demokrasi #politikus  https://t.co/hBTKSOg51G
+1628269197263523840 2023-02-22 05:43:23 +0000 &lt;JarnasABWBpn&gt; Survey Capres Favorit Kaltim, yuk yg domisili Kaltim pilih Capres Favorit kamu    https://t.co/biprM1WQFX  #Prabowo #ganjarpranowo #AniesBaswedan #puanmaharani
+1628268521225621504 2023-02-22 05:40:41 +0000 &lt;Kemhan_RI&gt; Momen kunjungan kehormatan perdana Menteri Pertahanan Malaysia yang baru, Yang Berhormat Dato’ Seri Utama Haji Mohamad Bin Haji Hasan di Kemhan RI, Jakarta, Selasa (21/2). 🇮🇩🇲🇾  #Prabowo #PrabowoSubianto #Malaysia #TokMat #MohamadHasan  https://t.co/Lh5vf1faLf
+1628268402702954496 2023-02-22 05:40:13 +0000 &lt;Kemhan_RI&gt; Momen kunjungan kehormatan perdana Menteri Pertahanan Malaysia yang baru, Yang Berhormat Dato’ Seri Utama Haji Mohamad Bin Haji Hasan di Kemhan RI, Jakarta, Selasa (21/2). 🇮🇩🇲🇾  #Prabowo #PrabowoSubianto #Malaysia #TokMat #MohamadHasan  https://t.co/0z2U119qdI
+1628258875874082816 2023-02-22 05:02:22 +0000 &lt;BANGSAygSUJUD&gt; Jam menunjukkan pkl 14:03 Waktu Sorong, Papua  Teruslah berkarya! Teruslah berjuang!   Jangan cengeng! Jangan lebay! Jangan sok jagoan! Jangan merasa maha benar!   Cintailah sesama!  Jadilah manfaat!  Jadilah orang baik minimal tidak merecoki sesama/negara!  Semakin #Prabowo 😍😍  https://t.co/mspRrKuVqR
+1628257041373601792 2023-02-22 04:55:04 +0000 &lt;RafiGates&gt; Menhan Prabowo dampingi Presiden Jokowi melepas bantuan kemanusiaan untuk korban gempa Turki dan Suriah, sebanyak 140 ton logistik diangkut dengan 4 pesawat. #prabowo #JokowiHebat   https://t.co/BCKwRilhBV
+1628255951945080832 2023-02-22 04:50:45 +0000 &lt;DpdBali&gt; Puja Puji Menhan @prabowo dan Presiden @jokowi 🤩🥰🥰🥰  #prabowo #dpdgerindrabali #gerindramenang #ahmadmuzani #sufmidaso #degadjah #MilenialBersatu #KebangkitanIndonesiaRaya #nodrama  https://t.co/yB09Y00nfo
+1628255754594693121 2023-02-22 04:49:58 +0000 &lt;JatengTV&gt; (12) PT Perorangan memiliki kepastian hukum dan terdaftar resmi di Kemenkumham. Kedudukannya sama seperti PT biasa. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaBangkit #Jokowi  https://t.co/HRqCfZUnue
+1628253804520173568 2023-02-22 04:42:13 +0000 &lt;yantanu2_08&gt; Bahkan sejak 98 hingga 2014 mereka yg memberi tuduhan TIDAK BERANI membuktikan di peradilan militer walaupun Wiranto sudah jadi Menkumham di kabinet Jokowi  JIKA tuduhan mereka benar? Tentu #Jokowi tidak mau diusung #prabowo sahabat sendiri di pilkada DKI 2012
+1628252612775784448 2023-02-22 04:37:29 +0000 &lt;yantanu2_08&gt; Andai saja #Prabowo tidak ke Jordania,,   Lalu berapa banyak Prajurit Kodam Kostrad yg akan mati di gempur Kopassus yg setia padanya  Jadi ini maksudnya ke LN agar tidak terjadi pertumpahan darah sesama Anggota TNI
+1628252213457080321 2023-02-22 04:35:53 +0000 &lt;BANGSAygSUJUD&gt; @HanantoFerry @are_inismyname @emhamka08 @prabowo @azissubekti @bengkeldodo @DarekaRendy @Gerindra @jatmiko99604253 @Kimberley_20102 @Kosim__ Kagak percaya sama loe. Hanya percaya #Prabowo 2024 😍😍😍😍😍😍
+1628250093639053314 2023-02-22 04:27:28 +0000 &lt;BANGSAygSUJUD&gt; @MYNasution2 @bengkeldodo @KhoirilAnwar_ @Alie_Fahnoor @are_inismyname @DarekaRendy @Kimberley_20102 @Kang_Ujar @yusufagro @AKU_dgn3putra @prabowo Pokoke tetap #Prabowo gak peduli siapaun yg dukung atau mencelanya 😊💪🇮🇩❤️
+1628248204038000640 2023-02-22 04:19:57 +0000 &lt;JatengTV&gt; (13) Masih belum banyak peraturan yang mengatur perusahaan PT perorangan ini sehingga pemilik perusahaan bebas melakukan aktivitas usahanya. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1628243670091833344 2023-02-22 04:01:56 +0000 &lt;BANGSAygSUJUD&gt; @Kimberley_20102 Siapapun mendukung siapa, tetap #Prabowo pilihan kami 2024   Kami mendukung #Prabowo karena kualitas bukan ikut-ikutan suara orang 😁😀🤣
+1628242418167578625 2023-02-22 03:56:58 +0000 &lt;BANGSAygSUJUD&gt; @priboemiasli @bengkeldodo @KhoirilAnwar_ @Alie_Fahnoor @are_inismyname @DarekaRendy @Kimberley_20102 @Kang_Ujar @yusufagro @ZTWMakrifat @AKU_dgn3putra Siapapun pendukungnya #Prabowo tetap presidennya 2024 😁🤣👍👍
+1628241958174085120 2023-02-22 03:55:08 +0000 &lt;Gerindra_Krngsm&gt; Tidak ada dendam dan benci dalam kamus pak @prabowo dalam politik, semuaya tentang berlomba-lomba berbuat baik untuk negri  #prabowo #prabowosubianto #ketumgerindra #prabowomenhan #mendingprabowo #dekade08 #terusmajubersamaprabowo #prabowopresiden2024 #gerindra #gerindrabali  https://t.co/b8qIrxXcd9
+1628241043169886208 2023-02-22 03:51:30 +0000 &lt;BANGSAygSUJUD&gt; @AKU_dgn3putra @za10895528 @bengkeldodo @KhoirilAnwar_ @Alie_Fahnoor @are_inismyname @DarekaRendy @Kimberley_20102 @Kang_Ujar @yusufagro @ZTWMakrifat Pokoknya #Prabowo is the best untuk Indonesia 2024 😁😀🤣👍👍🇮🇩❤️💪🙏
+1628239740037382144 2023-02-22 03:46:19 +0000 &lt;yantanu2_08&gt; Dear @Jazilul_Fawaid  Kuyakin target terpenuhi oleh @DPP_PKB di lumbung #prabowo yg sebagian besar di Sumatera  Karena Sumatera belum familiar dg Islam Nusantara yg digagas @saidaqil seperti di Jawa  Sementara @DPP_PPP rebutan di area yg lahannya sudah sempit  https://t.co/cfUsZPDKLS
+1628238322995974148 2023-02-22 03:40:42 +0000 &lt;ngakakindonesia&gt; Uji nyali yang serem itu naksir sama orang yang friendly, bikin mikir kitain naksir kita, taunya kita yang baper. *WadidaWw . #tuanmuda #prabowo #Putin #PerfectMatch #LiverpoolRealMadrid #PancakeDay #lawak #dagelan #jakartakeras #awshitpostid #lucu #viral #trending  #kocak
+1628233277776760832 2023-02-22 03:20:39 +0000 &lt;bengkeldodo&gt; @abu_marko @KhoirilAnwar_ @Alie_Fahnoor @are_inismyname @BANGSAygSUJUD @DarekaRendy @Kimberley_20102 @Kang_Ujar @yusufagro @ZTWMakrifat @AKU_dgn3putra saya pendukung #prabowo   kami sedang belajar santun bermedsos bukan ingin dianggap paling  santun seperti anggapan anda
+1628232491625746432 2023-02-22 03:17:31 +0000 &lt;mediadigitalcpp&gt; Jajak pendapat Litbang Kompas Januari 2023 menunjukkan elektabilitas calon presiden tertinggi masih diduduki Ganjar Pranowo, disusul Prabowo Subianto, dan Anies Baswedan.  https://t.co/BQBmdh2TB2 #mediadigitalcpp #indotvlive #prabowo #aniesbaswedan #ganjarpranowo #pemilu #capres  https://t.co/NIl43MsdbE
+1628232410717622274 2023-02-22 03:17:12 +0000 &lt;bengkeldodo&gt; @Kimberley_20102 @Gerindra mau di apa-apain juga yang naik tetep #prabowo .. ini semalam Pak Prabowo masuk  https://t.co/B1gPqxBU3s
+1628230110066405377 2023-02-22 03:08:03 +0000 &lt;GerindraTabanan&gt; Bantuan ini merupakan tahap ketigad berupa logistik dengan total berat 140 ton berupa bahan makanan, pakaian, dan logistik lainnya.  #prabowo #mendingprabowo #terusmajubersamaprabowo #dekade08 #jokowi #turki #suriah #gempa  https://t.co/VXaa5uG7G1
+1628229742599245824 2023-02-22 03:06:36 +0000 &lt;bengkeldodo&gt; @abu_marko @KhoirilAnwar_ @Alie_Fahnoor @are_inismyname @BANGSAygSUJUD @DarekaRendy @Kimberley_20102 @Kang_Ujar @yusufagro @ZTWMakrifat @AKU_dgn3putra apa kuasa saya ?  saya hanya rakyat biasa ...   dan saya akan dukung #prabowo dengan cara yang baik
+1628228193701482496 2023-02-22 03:00:27 +0000 &lt;IDefenseMagz&gt; “Menjadikan Indonesia sebagai salah satu negara prioritas pertama yang dikunjungi, merupakan indikasi adanya hubungan bilateral pertahanan yang baik antara kedua negara,” ujar Menhan @prabowo.   https://t.co/klerMqaBBK  @Kemhan_RI  #idm #menhanprabowo #prabowo #indonesia #malaysia
+1628225957894164481 2023-02-22 02:51:33 +0000 &lt;are_inismyname&gt; @ChaUnk_VR1 @Kimberley_20102 #Prabowo ya😂
+1628222511589761024 2023-02-22 02:37:52 +0000 &lt;portalmediaid&gt; Survei Litbang Kompas: Elektabilitas Ganjar dan Prabowo Naik, Anies Turun Signifikan  Baca Selengkapnya:  https://t.co/6CIPwoFpbv  #BeritaTerkini #media #Online #news #BreakingNews #survei #litbang #kompas #elektabilitas #GanjarPranowo #prabowo #AniesBaswedan #Politik #Indonesia
+1628203899634221056 2023-02-22 01:23:54 +0000 &lt;Fyp70360643&gt;  https://t.co/GIOkEaLfio umur ga ada yang tau 🥺..  #prabowo #prabowosubianto #meninggal #tenggelam  #korban #brot #salambrot
+1628197242120314883 2023-02-22 00:57:27 +0000 &lt;Kemhan_RI&gt; &quot;Menjadikan Indonesia sebagai salah satu negara prioritas pertama yang dikunjungi, merupakan indikasi adanya hubungan bilateral pertahanan yang baik antara kedua negara,&quot; ujar Menhan Prabowo.  #Prabowo #PrabowoSubianto #Malaysia #TokMat #MohamadHasan
+1628186292126367745 2023-02-22 00:13:56 +0000 &lt;GrdBMS&gt; Selamat Hari Jadi Banyumas yang ke-452, semoga semakin maju dan tetap menjadi rumah yang nyaman dan aman bagi warganya. 🎉🎉🎉🎉🎉  #harijadibanyumas #harijadibanyumas452 #gerindra #prabowo #prabowosubianto #gerindrajawatengah #GerindraJateng #mendingprabowo  https://t.co/LyIwoAaIhU
+1628176004400443393 2023-02-21 23:33:04 +0000 &lt;Kaum__Jelata&gt; Selamat pagi. Selamat hari Rabu. Met beraktivitas. Mau kasih tau aja kalo untuk 2024 #Prabowo lah yg terbaik.   Untuk negara jangan coba2 memilih pemimpin yg masih mentah. Pilihlah yg sudah masak pohon @Prabowo 😁❤️🇮🇩💪  https://t.co/lMN3q8A6L7
+1628157608044662784 2023-02-21 22:19:58 +0000 &lt;JatengTV&gt; (11) Pemilik PT Perorangan bisa melakukan pemisahan kekayaan pribadi dan bisnis secara formal karena memiliki NPWP yang terpisah. #ptperorangan #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaHebat #Jokowi  https://t.co/HRqCfZUnue
+1628155328125894657 2023-02-21 22:10:54 +0000 &lt;are_inismyname&gt; @ChaUnk_VR1 Klo GGMU hrsnya samaan pilih #Prabowo 😂😂😂
+1628154225367846912 2023-02-21 22:06:31 +0000 &lt;DarekaRendy&gt; Selamat subuh.teman² sebangsa dan setanah air.🇮🇩 Pilihan boleh berbeda namun Tetap kompak dalam berbangsa #prabowo  https://t.co/L6lGFPKvj6
+1628150054791032834 2023-02-21 21:49:57 +0000 &lt;JatengTV&gt; (12) PT Perorangan memiliki kepastian hukum dan terdaftar resmi di Kemenkumham. Kedudukannya sama seperti PT biasa. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaBangkit #Jokowi  https://t.co/HRqCfZUnue
+1628119219094310912 2023-02-21 19:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1628112310798786560 2023-02-21 19:19:58 +0000 &lt;JatengTV&gt; (03) Pemilik PT Perorangan menjadi pemeran utama dalam mengatur kebijakan perusahaannya, termasuk dalam hal pengolahan data dan keuangan. #ptperorangan #sange #ciptakerja #indonesia #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1628104757494833152 2023-02-21 18:49:57 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1628082494393434113 2023-02-21 17:21:29 +0000 &lt;KhoirilAnwar_&gt; Peluk Hangat #prabowo untuk Korban Gempa Cianjur 7-12-2022  &quot;Mudah-mudahan, bapak dan ibu diberi kekuatan dan ketegaran menghadapi kesulitan itu&quot;  https://t.co/TKJkAL7rOG
+1628076258960744449 2023-02-21 16:56:42 +0000 &lt;bengkeldodo&gt; Malah Pak Prabowo yang naik 😁  #prabowo  https://t.co/cqLBFCMLLS
+1628073015434178560 2023-02-21 16:43:49 +0000 &lt;putuagenggribig&gt; JURUS PEMERINTAH ATASI INFLASI #GolkarIndonesia  #AirlanggaHartarto #UUCiptaKerja #Sambo #bharadaE #kerjanyata #aniesbaswedan #pemilu #jokowi #PSI #Gerindra #prabowo #ganjar #politikidentitas #puanmaharani #ridwankamil #pdip #nasdem #ekonomi #kpk #koalisi #pks #demokrat  https://t.co/RX5mntg9Qh
+1628072473156788225 2023-02-21 16:41:40 +0000 &lt;bengkeldodo&gt; @Chaves1305 @ZTWMakrifat @Gerindra @ferdinand_mpu @prabowo  https://t.co/OZvpHvcZ49  #prabowo
+1628057106338418688 2023-02-21 15:40:36 +0000 &lt;BANGSAygSUJUD&gt; @Chaves1305 @prabowo Kita sama #Prabowo 😍😍😍😍😍
+1628049920606478337 2023-02-21 15:12:03 +0000 &lt;bengkeldodo&gt; Memilih dan mendukung #Prabowo tidak hanya sekedar pilihan namun perjuangan untuk kembali beradab dan beretika dalam ber media sosial   Karena perilaku pendukung adalah cermin orang yg didukung (jere cah kae)  https://t.co/SPkamGO9w7
+1628049827870441472 2023-02-21 15:11:41 +0000 &lt;are_inismyname&gt; @sospolkw @bengkeldodo @ferdinand_mpu @prabowo @Gerindra Koreksi #Prabowo tdk melapor krn dr awal dia ada statement mau difitnah atau dicacimaki dia gak ambil pusing. Beda sama yg diem aja seolah menciptakan branding tersakiti😂 dr jaman jd gub sampai sekarang...
+1628044433278263296 2023-02-21 14:50:15 +0000 &lt;PacTingkir&gt; #MendingPrabowo #PrabowoSubianto #Prabowo #Gerindra  #Jateng  #JawaTengah  #GerindraJawaTengah #GerindraJateng #GerindraSala3  https://t.co/GQfFMUqTFN
+1628044087965401094 2023-02-21 14:48:52 +0000 &lt;bengkeldodo&gt; Momen Prabowo PELUK dan CIUM Anak-Anak Peserta Acara Milad Ke-45 BKPRMI  #prabowo   https://t.co/M0C2LR3POF  https://t.co/4WlEvEQ7KL
+1628043612952072198 2023-02-21 14:46:59 +0000 &lt;ANTARABengkulu&gt; Prabowo optimistis hubungan Indonesia-Malaysia makin erat - ANTARA News Bengkulu  https://t.co/2ZviI96Agj #prabowo
+1628040259610230790 2023-02-21 14:33:40 +0000 &lt;Grobog1Gerindra&gt; Survei Litbang Kompas, Prabowo Jadi Ketum Parpol Paling Disukai !!!!#mendingprabowo #prabowosubianto #prabowo #gerindra #gerindrajateng #gerindrajawatengah #gerindragrobogan  https://t.co/tU004r5Mk8
+1628036815407161345 2023-02-21 14:19:58 +0000 &lt;JatengTV&gt; (13) Masih belum banyak peraturan yang mengatur perusahaan PT perorangan ini sehingga pemilik perusahaan bebas melakukan aktivitas usahanya. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1628034088321056769 2023-02-21 14:09:08 +0000 &lt;rendrarezasapu3&gt; khusnul khotimah untuk Almarhum, semoga #kesira semakin sukses ke depannya dan 2024 #gerindra &amp;amp; pak #prabowo menang aamiin
+1628031796574306304 2023-02-21 14:00:02 +0000 &lt;Genpi_Co&gt; Pengamat mengatakan bahwa ketegasan yang dimiliki Prabowo Subianto membuat dirinya memiliki elektabilitas yang tinggi dalam survei. #Prabowo  https://t.co/r8UymhVvLf
+1628020701889458176 2023-02-21 13:15:57 +0000 &lt;bengkeldodo&gt; @KhoirilAnwar_ #prabowo di hati
+1628017985859497984 2023-02-21 13:05:09 +0000 &lt;faridhasbulla12&gt; Salam indonesia sehat #kesira program Revolusi Putih pak #prabowo semoga semakin luas.   #prabowopresident2024
+1628012496874504192 2023-02-21 12:43:20 +0000 &lt;yosephrosario_&gt; Andika mengatakan, perubahan itu dilakukan untuk mengakomodasi kondisi remaja Indonesia saat ini, &quot;Jadi saya sudah membuat revisi sedemikian rupa sehingga lebih mengakomodasi kondisi umum remaja Indonesia  #prabowo
+1628012485482778625 2023-02-21 12:43:18 +0000 &lt;yosephrosario_&gt; Asmujiono kini telah keluar dari Kopassus dan TNI. Kendati begitu, sosoknya banyak menorehkan jejak prestasi bagi institusi TNI dan tanah air.  #prabowo
+1628012473193500672 2023-02-21 12:43:15 +0000 &lt;yosephrosario_&gt; Prabowo pun begitu berbangga atas pencapaian itu. Tak ayal, prestasi yang ditorehkan Asmujiono tidak pernah beranjak dari ingatan Prabowo, bahkan ketika keduanya sama-sama tak lagi di Kopassus.  #prabowo
+1628012462137282568 2023-02-21 12:43:12 +0000 &lt;yosephrosario_&gt; Saat itu, tahun 1996, Asmujiono terpilih menjadi salah satu prajurit Kopassus yang tergabung dalam Ekspedisi Merah Putih.  #prabowo
+1628012448740704258 2023-02-21 12:43:09 +0000 &lt;yosephrosario_&gt; Prabowo sendiri juga melihat potensi yang begitu besar dalam diri Asmujiono. Akhirnya, dia meloloskan Asmujiono sebagai prajurit Korps Baret Merah.  #prabowo
+1628012435646062592 2023-02-21 12:43:06 +0000 &lt;yosephrosario_&gt; Ada yang menarik dari kisah Asmujiono masuk ke Kopassus. Menurut Prabowo, laki-laki asal Malang, Jawa Timur, itu awalnya tak memenuhi syarat saat proses seleksi. Sebabnya, tinggi Asmujiono hanya 165 cm.  #prabowo
+1628012424506007556 2023-02-21 12:43:03 +0000 &lt;yosephrosario_&gt; &quot;Misal, perang tidak lagi hanya perang fisik, tapi meliputi perang nubika; ancaman nuklir, virus, senjata kimia dan lain-lain, yang mungkin keahliannya tidak melulu bertumpu pada kekuatan fisik,&quot; kata Meutya.  #prabowo
+1628012411252015107 2023-02-21 12:43:00 +0000 &lt;yosephrosario_&gt; Sosok Asmujiono sempat disinggung oleh Ketua Komisi I DPR RI Meutya Hafid. Dia bilang, Asmujiono merupakan salah satu personel terbaik di Kopassus yang tingginya &quot;hanya&quot; 165 cm.  #prabowo
+1628012407531667457 2023-02-21 12:42:59 +0000 &lt;yosephrosario_&gt; Sosok Asmujiono, Prajurit Kopassus yang Tingginya Hanya 165 Cm Kebanggaan Prabowo  #prabowo    Nama prajurit Korps Pasukan Khusus (Kopassus) Asmujiono kembali mencuat di tengah pro kontra keputusan Jenderal Andika Perkasa menurunkan syarat tinggi badan calon prajurit TNI.  https://t.co/PJxlfWeYc3
+1628010542244974592 2023-02-21 12:35:34 +0000 &lt;andinivania4&gt; @kesiragerindra semoga khusnus khotimah untuk beliau, terima kasih kesira sudah berjasa membantu dengan ambulance #Gerindra #prabowo
+1628007264333492224 2023-02-21 12:22:33 +0000 &lt;gerindra_pati&gt; arti pemimpin menurut Bapak @prabowo , Ketua Umum Partai @Gerindra   #MendingPrabowo #PrabowoSubianto #Prabowo #gerindra #gerindrajawatengah #gerindrajateng #gerindrapati #dpcgerindrpati  https://t.co/N5c4uJEorj
+1628006703068512256 2023-02-21 12:20:19 +0000 &lt;klaten_kab&gt; Hadiri Pelantikan Pengurus HIPMI, Prabowo: Selamat Berkarya untuk Indonesia Raya.   #mendingprabowo #prabowosubianto #prabowo #gerindra #gerindrajateng #gerindrajawatengah  https://t.co/OKcFxuCZNf
+1628001704456388609 2023-02-21 12:00:27 +0000 &lt;KhoirilAnwar_&gt; #Prabowo Jadi Ketum Parpol Paling Disukai   https://t.co/dswyvr7OFl
+1627999062854074370 2023-02-21 11:49:58 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZTPEG
+1627998075250941952 2023-02-21 11:46:02 +0000 &lt;KhoirilAnwar_&gt; @bengkeldodo @Alie_Fahnoor Dukungan pemimpin sebelumnya juga bagus untuk fondasi kepemimpinan pak #prabowo di 2024.
+1627997567861784583 2023-02-21 11:44:01 +0000 &lt;prabowomuda08&gt; Tidak ada rakyat yang bahagia tanpa pemerintah yang bersih dan adil.  #masbowo #prabowo #prabowomuda #prabowosubianto #menhan #menteri #kemhan #menhanprabowo #pertahanan #indonesia #capres #militer #2024PrabowoPresiden #PrabowoPresiden2024 #viral #viralvideo #fyp #rakyat #bahagia  https://t.co/Wx5OCeEklQ
+1627997329960861697 2023-02-21 11:43:04 +0000 &lt;are_inismyname&gt; @sospolkw @bengkeldodo @ferdinand_mpu @prabowo @Gerindra Ya gal apple to apple dong orang narasinya yg dikeluarkan soal keturunan cina kok gak ada sangkut pautnya sama laiskodatnya nasdem. Logika org normal aja pasti liatnya buat kesempatan jatuhin #Prabowo
+1627996190901161984 2023-02-21 11:38:33 +0000 &lt;opsihukum&gt; Pemerintah Kirim Pesawat ke Turki, Prabowo: Perkuat Hercules TNI AU yang Berada di Sana. #opsimediatv #prabowo   https://t.co/turrd4hvUz
+1627996073666154498 2023-02-21 11:38:05 +0000 &lt;opsimediatv&gt; Pemerintah Kirim Pesawat ke Turki, Prabowo: Perkuat Hercules TNI AU yang Berada di Sana. #prabowo #opsimediatv   https://t.co/TkxeFa1SdJ
+1627995041519267841 2023-02-21 11:33:59 +0000 &lt;KhoirilAnwar_&gt; Benalu dan parasit selalu ada di tiap kelompok.  Tugas kita mengingatkan dan mengurangi pengaruhnya.  #IndonesiaBerdikari bersama #Prabowo  Santui aja mas @bengkeldodo
+1627990329550069761 2023-02-21 11:15:15 +0000 &lt;BincangPemilu&gt; Prabowo Dampingi Jokowi Lepas Bantuan Kemanusiaan untuk Turki dan Suriah  #Jokowi #prabowo #gempabumi #Turkey  https://t.co/WZdkciwrXm
+1627987893854830592 2023-02-21 11:05:35 +0000 &lt;opsihukum&gt; Prabowo Dampingi Jokowi Kirim 140 Ton Bantuan Kemanusiaan untuk Turki dan Suriah. #opsimediatv #Jokowi #prabowo #Turkey #TrendingNews   https://t.co/mXHUN9mzeM
+1627987758936641537 2023-02-21 11:05:02 +0000 &lt;dekade_08&gt; Bantuan ini merupakan tahap ketigad berupa logistik dengan total berat 140 ton berupa bahan makanan, pakaian, dan logistik lainnya.  #prabowo #mendingprabowo #terusmajubersamaprabowo #dekade08 #jokowi #turki #suriah #gempa #turkeyearthquake2023 #Turkey  https://t.co/nNFHFQT2r9
+1627987739407941637 2023-02-21 11:04:58 +0000 &lt;opsimediatv&gt; Prabowo Dampingi Jokowi Kirim 140 Ton Bantuan Kemanusiaan untuk Turki dan Suriah. #Jokowi #prabowo #Turkey #opsimediatv   https://t.co/ZMZBLISZk7
+1627986602294411264 2023-02-21 11:00:27 +0000 &lt;are_inismyname&gt; @bengkeldodo @ferdinand_mpu @prabowo @Gerindra Ya buat yg jadikan ini sebagai kesempatan buat ngejatuhin #Prabowo jgn kayak org gak berpendidikan masak gak bisa bedain mana pribadi dan pdpt partai. Buat yg merasa didzolimi gunakan hak anda utk melaporkan sesuai hukum yg berlaku jgn diam aja sembari ngarep naik elektabilitas
+1627985162247233536 2023-02-21 10:54:43 +0000 &lt;are_inismyname&gt; @OposisiOjol @rejimrampok @Kosim__ @othex_prima @ferdinand_mpu @jatmiko99604253 @yantanu2_08 @BANGSAygSUJUD @bengkeldodo @Alie_Fahnoor @emhamka08 Astagfirullah.... kejam sekali mulut bapak.  Allah gak akan mengubah keadaan suatu kaum jika org2nya tdk berubah... moga2 #Prabowo menang ya pak jd ada kesempatan utk menyesali omongan jahat bpk...
+1627981791650000896 2023-02-21 10:41:20 +0000 &lt;bengkeldodo&gt; Salam buat sahabat disana mas ...   Jangan lupa untuk dukung #prabowo
+1627981423285256193 2023-02-21 10:39:52 +0000 &lt;yantanu2_08&gt; Artinya Dari survei Litbang @kompas   Ingin katakan bahwa rakyat membutuhkan #Prabowo karena;  #LebihMandiri Bukan Petugas Partai &amp;amp; Bukan Boneka Oligarki #LebihDewasa_dan_Pengalaman #LebihSiap_dan_Mapan terbebas dari Hutang Politik yg bayar nya dengan kebijakan #JauhDariKKN
+1627978886473719808 2023-02-21 10:29:47 +0000 &lt;yantanu2_08&gt; Wah ada yg nyosor mencium ayahanda #prabowo
+1627978004554194950 2023-02-21 10:26:17 +0000 &lt;iimalmar&gt; @Gerindra Klo soal selera n gaya pakaian..pak #prabowo  sangat fashionable
+1627976418025172992 2023-02-21 10:19:59 +0000 &lt;JatengTV&gt; (07) Kelebihan lainnya dari PT Peroangan adalah mendapatkan prioritas dalam mengakses berbagai program pemerintah yang dikhususkan untuk UMKM. #ptperorangan #badanhukum #badanusaha #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1627975845439770625 2023-02-21 10:17:42 +0000 &lt;bangowo08&gt; Bang Owo pantun lagi aja nih :) #bangowo #dekade08 #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/jZDVp6NlaU
+1627974139326902273 2023-02-21 10:10:55 +0000 &lt;arnesbimo&gt; Dunia ini keras geng, kalo kau minta maaf ku maafin Tp kalo kau minta uang/saldo Aku yang minta maaf   #prabowo
+1627973706780909570 2023-02-21 10:09:12 +0000 &lt;bangowo08&gt; Roti Jala kesukaan pak Prabowo :) #bangowo #dekade08 #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/mDC5cs4eFz
+1627973702355947520 2023-02-21 10:09:11 +0000 &lt;dekade_08&gt; Ada lawan ? Aura Kasih lho ini. Sukses terus untuk seluruh pengurus HIPMI dan sukses terus untuk the one and only Aura Kasih.   #prabowo #aurakasih #hipmi #viralhariini #viralditiktok #mendingprabowo #terusmajubersamaprabowo #dekade08  https://t.co/2lXbYAC731
+1627973309211234306 2023-02-21 10:07:37 +0000 &lt;KhoirilAnwar_&gt; Salah satu akhlak/sifat baik adalah menjenguk dan mendoakan orang yang sedang sakit.   #prabowo   @bengkeldodo  https://t.co/76A2sazRFR
+1627971416263102465 2023-02-21 10:00:06 +0000 &lt;bangowo08&gt; Anak kecil keren yang udah pernah ketemu pak Prabowo :) #bangowo #dekade08 #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/HwQ7UCo2rA
+1627968118256541696 2023-02-21 09:47:00 +0000 &lt;DodiWijaya03&gt;  https://t.co/T6V2ZbGzdy  #Prabowo #prabowopersatuanindonesia | Prabowo Subianto | Pak Prabowo Konsisten | Prabowo Presiden | #PrayForTurkey | #PrayForSyria | #PrayForTurkeyAndSyria
+1627967111351107584 2023-02-21 09:43:00 +0000 &lt;WaluyoNani&gt;  https://t.co/txnWyvtQUK  #Prabowo #prabowopersatuanindonesia | Prabowo Subianto | Pak Prabowo Konsisten | Prabowo Presiden | #PrayForTurkey | #PrayForSyria | #PrayForTurkeyAndSyria
+1627965670418956288 2023-02-21 09:37:16 +0000 &lt;DpcJembrana&gt; Rapat kordinasi koordinator media gerindra se-Bali di kantor DPD gerindra bali... #de_gadjah #gerindra #dpdgerindrabali #prabowo  https://t.co/2G23VVvIiy
+1627963885000204294 2023-02-21 09:30:10 +0000 &lt;bangowo08&gt; Pantun Pak Prabowo dukung Mas Gibran :) #bangowo #dekade08 #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/AWl5LGT38V
+1627960569507741697 2023-02-21 09:17:00 +0000 &lt;delvi_iskandar&gt; @are_inismyname @SahaludinR klo mentok mbaknya pasti ngeluarin senjata ini #prabowo 🤣🤣🤣
+1627959707775426561 2023-02-21 09:13:35 +0000 &lt;BANGSAygSUJUD&gt; @123ardhan @emhamka08 @prabowo @Alie_Fahnoor @are_inismyname @bengkeldodo @DarekaRendy @Gerindra @jatmiko99604253 @Kosim__ Dakyat semakin #Prabowo 😍😍😍😍😍
+1627959220703490049 2023-02-21 09:11:38 +0000 &lt;DwiBayu62640126&gt; Prabowo Subianto Menyerahkan Bantuan Untuk Babinsa Kodam V Brawijaya   #prabowopresiden #mendingprabowo #prabowosubianto #PrabowoKita #prabowo #KitaGerindra #partaigerakanindonesiaraya #gerindramenang #partaigerindra #gerindra  https://t.co/wYS2A09rqJ
+1627958479439945728 2023-02-21 09:08:42 +0000 &lt;bangowo08&gt; Pak Prabowo diserbu Ibu-Ibu :) #bangowo #dekade08 #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/wQMvvg4eXN
+1627958374615879680 2023-02-21 09:08:17 +0000 &lt;are_inismyname&gt; @Viechar_Zoel Jodoh takdir mati seseorang ditangan Allah bukan dimulut manusia nyinyir🤣 uups... sorry #Prabowo
+1627956862409924608 2023-02-21 09:02:16 +0000 &lt;bangowo08&gt; Pak Prabowo dukung Mas Gibran :) #bangowo #dekade08 #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/XSTbAkSCFr
+1627956406807855105 2023-02-21 09:00:28 +0000 &lt;are_inismyname&gt; @Viechar_Zoel Tak sama... saya pilih #prabowo 🤣
+1627953761997189121 2023-02-21 08:49:57 +0000 &lt;JatengTV&gt; (10) Dalam PT Perorangan, modal pendirian badan hukum bersifat bebas, mulai dari Rp0 hingga maksimal Rp5 Miliar. Menarik bukan? #Indonesiamaju #jokowi #ptperorangan #badanhukum #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1627952781670903808 2023-02-21 08:46:03 +0000 &lt;mypresidentid&gt; Sinergitas upaya meningkatkan pertahanan Indonesia, Pak Bowo dan Erick Thohir.  #mypresident #prabowo #prabowosubianto #prabowopresiden #indonesiaadilmakmur #mendingprabowo #prabowomypresident #presiden2024 #prabowopresidenri #gerindra #fy #fypシ❤️💞❤️ #fyi #fypage #fypシ #fyp  https://t.co/9L9qlODtBx
+1627952735655178240 2023-02-21 08:45:52 +0000 &lt;dekade_08&gt; Ini lah cerita Pak Prabowo membangun Partai Genrindra dari awal berdiri hingga bisa seperti sekarang🥺  #prabowo #mendingprabowo #terusmajubersamaprabowo #dekade08 #gerindra #fyp  https://t.co/1wUyzTc6oG
+1627952694026698754 2023-02-21 08:45:42 +0000 &lt;are_inismyname&gt; @SahaludinR @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti Itu hak pemilih Anies klo saya tetep pilih #Prabowo tp klo pendukungnya memaksa milih dia atau mencela pilihan  ke #Prabowo ya pake filosofi pencak silat lah klo diserang ya hadapi tp gak pernah sekalipun menyerang lapak pendukung Anies atau lainnya
+1627951812199448576 2023-02-21 08:42:12 +0000 &lt;pramudia_id&gt; Selamat Siang Indonesia Kolaborasi dua kekuatan yang  akan membawa Indonesia menuju negara yang lebih maju.  Salam pramudia! #KebangkitanIndonesiaRaya #Prabowo  #GusMuhaimin #PrabowoMuhaimin  https://t.co/c2T2YZfeWb
+1627951760487710722 2023-02-21 08:42:00 +0000 &lt;DodiWijaya03&gt;  https://t.co/guygNYVaRg  #Prabowo #prabowopersatuanindonesia | Prabowo Subianto | Pak Prabowo Konsisten | Prabowo Presiden | Suju | #HUTBCA66 | Boston | baekhyun | #TheLastOfUs | #Capres2024
+1627951079873974274 2023-02-21 08:39:17 +0000 &lt;mypresidentid&gt; Bagi Pak Bowo kesalahan pembaca Undang-Undang Dasar 1945 adalah bentuk grogi…  #mypresident #prabowo #prabowosubianto #prabowopresiden #indonesiaadilmakmur #mendingprabowo #prabowomypresident #presiden2024 #prabowopresidenri #gerindra #fy #fypシ❤️💞❤️ #fyi #fypage #fypシ #fyp  https://t.co/osJFeklHpo
+1627950015233785857 2023-02-21 08:35:04 +0000 &lt;are_inismyname&gt; @SahaludinR @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti Gw pilih #Prabowo bukan utk kep pribadi, gw pilih krn sesuai dgn tujuannya utk generasi bangsa yad.  Jauhkan tuduhan gw pilih krn taglid buta tapi gw pilih yg punya visioner kedepan
+1627949350713454592 2023-02-21 08:32:25 +0000 &lt;are_inismyname&gt; @SahaludinR @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti Itulah klo semua diukur secara materi. Gw pilih #Prabowo krn progam yg diusung lebih nyata ketimbang yg belum jelas progamnya. Selain itu ini ikhtiar gw supaya pada sadar klo nyerang lewat medsos tanpa adab cuma diperalat sistem yg merawat pertikaian anak bangsa
+1627948035602014209 2023-02-21 08:27:12 +0000 &lt;bangowo08&gt; Bang Owo pantun di jalan :D #bangowo #dekade08 #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/ea0tAgCIMG
+1627947751505002497 2023-02-21 08:26:04 +0000 &lt;are_inismyname&gt; @SahaludinR @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti Buktikan dulu klo gw buzzer klo gak bisa ntar gw minta tanggung jawab tuduhan lw di yaumul hisaap... iya lupa tagarnya #Prabowo
+1627946946123153409 2023-02-21 08:22:52 +0000 &lt;are_inismyname&gt; @ChaUnk_VR1 Ogah #Prabowo aja🤣🪓🪓🪓
+1627946808831012864 2023-02-21 08:22:19 +0000 &lt;are_inismyname&gt; @SahaludinR @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti Gw ingetin #Prabowo 🤣
+1627946701024804866 2023-02-21 08:21:53 +0000 &lt;bangowo08&gt; Bang Owo malah pantun di kasir :D #bangowo #dekade08 #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/BLEURZQjzU
+1627946673464041472 2023-02-21 08:21:47 +0000 &lt;are_inismyname&gt; @SahaludinR @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti Siapa yg mempengaruhi... ini pilihan saya #Prabowo
+1627946526323671040 2023-02-21 08:21:12 +0000 &lt;are_inismyname&gt; @SahaludinR @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti #Prabowo
+1627946430420910080 2023-02-21 08:20:49 +0000 &lt;are_inismyname&gt; @BANGSAygSUJUD @SahaludinR @bengkeldodo @prabowo @Gerindra @azissubekti Jgn lupa #Prabowo
+1627946284614316032 2023-02-21 08:20:14 +0000 &lt;are_inismyname&gt; @D002832 @Kosim__ @othex_prima @ferdinand_mpu @jatmiko99604253 @Nilot__ @yantanu2_08 @BANGSAygSUJUD @bengkeldodo @Alie_Fahnoor @emhamka08 Apa.... maaf gak nyambung gw pilih #Prabowo 🤣
+1627946218952458242 2023-02-21 08:19:59 +0000 &lt;JatengTV&gt; (11) Pemilik PT Perorangan bisa melakukan pemisahan kekayaan pribadi dan bisnis secara formal karena memiliki NPWP yang terpisah. #ptperorangan #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaHebat #Jokowi  https://t.co/HRqCfZUnue
+1627945828852838402 2023-02-21 08:18:26 +0000 &lt;are_inismyname&gt; @ChaUnk_VR1 Cari aja sendiri🤪 disini khusus tagar pilih #Prabowo lw mau jg ayo...🤣
+1627945801577287680 2023-02-21 08:18:19 +0000 &lt;mypresidentid&gt; Sambutan Pak Bowo di Ulang Tahun Gerindra yang ke 15 tahun 🔥  #mypresident #prabowo #prabowosubianto #prabowopresiden #indonesiaadilmakmur #mendingprabowo #prabowomypresident #presiden2024 #prabowopresidenri #gerindra #fy #fypシ❤️💞❤️ #fyi #fypage #fypシ #fyp #indonesia  https://t.co/7EC54QBiGe
+1627945442003779585 2023-02-21 08:16:53 +0000 &lt;are_inismyname&gt; @info_mantaps @AshShobah @BANGSAygSUJUD @ZakariaRamli8 @Kosim__ @othex_prima @ferdinand_mpu @jatmiko99604253 @Nilot__ @yantanu2_08 @bengkeldodo @Alie_Fahnoor @emhamka08 Apa... pilih siapa... #Prabowo 🤣🤣🤣
+1627945254770081792 2023-02-21 08:16:09 +0000 &lt;are_inismyname&gt; @SahaludinR @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti Terserah apa kata lw... yg penting #Prabowo pilihanku🤪
+1627944927283019776 2023-02-21 08:14:51 +0000 &lt;are_inismyname&gt; @info_mantaps @AshShobah @BANGSAygSUJUD @ZakariaRamli8 @Kosim__ @othex_prima @ferdinand_mpu @jatmiko99604253 @Nilot__ @yantanu2_08 @bengkeldodo @Alie_Fahnoor @emhamka08 Yg penting pilih #Prabowo
+1627944448226373632 2023-02-21 08:12:56 +0000 &lt;are_inismyname&gt; @SahaludinR @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti Alhamdulillah... #Prabowo
+1627944320493027328 2023-02-21 08:12:26 +0000 &lt;are_inismyname&gt; @info_mantaps @AshShobah @BANGSAygSUJUD @ZakariaRamli8 @Kosim__ @othex_prima @ferdinand_mpu @jatmiko99604253 @Nilot__ @yantanu2_08 @bengkeldodo @Alie_Fahnoor @emhamka08 Pilihanku #Prabowo
+1627944168147525634 2023-02-21 08:11:50 +0000 &lt;are_inismyname&gt; @gado2pecel @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti Aku pilih #Prabowo
+1627944111260200960 2023-02-21 08:11:36 +0000 &lt;BANGSAygSUJUD&gt; @AgroFishLombok @Kosim__ @othex_prima @ferdinand_mpu @jatmiko99604253 @Nilot__ @yantanu2_08 @bengkeldodo @are_inismyname @Alie_Fahnoor @emhamka08 Siapa bilang, sayang?  Justru cinta masyarakat baik mengejar #Prabowo 😍😍😍😍😍  https://t.co/4fuj4wA1CW
+1627943981790425088 2023-02-21 08:11:05 +0000 &lt;are_inismyname&gt; @SahaludinR @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti Gak masalah yg penting pilih #Prabowo 🤣
+1627943844766687232 2023-02-21 08:10:32 +0000 &lt;Alie_Fahnoor&gt; Kenapa kami tidak diajak foto bareng mbak Aura Kasih, Pak? 🙏  Hehe  Intermezo Menjelang Sore  Salam Damai dari Pak #Prabowo untuk Indonesia Damai  Btw, mbak Aura dan mbak Ikke pas pilpres besok milih Pak Prabowo, kan?   Eeh  https://t.co/LiEVh04A3i
+1627943751107878919 2023-02-21 08:10:10 +0000 &lt;are_inismyname&gt; @BANGSAygSUJUD @SahaludinR @bengkeldodo @prabowo @Gerindra @azissubekti Biar keki para &quot;pejuang&quot; tagar bayaran kita balas pake tagar #Prabowo 🤣
+1627943321426604033 2023-02-21 08:08:28 +0000 &lt;BANGSAygSUJUD&gt; @are_inismyname @SahaludinR @bengkeldodo @prabowo @Gerindra @azissubekti Semakin #Prabowo 😍😍😍💪🇮🇩❤️🇮🇩💪
+1627943169626361856 2023-02-21 08:07:52 +0000 &lt;are_inismyname&gt; @ayahduanis @Kosim__ @othex_prima @ferdinand_mpu @jatmiko99604253 @Nilot__ @yantanu2_08 @BANGSAygSUJUD @bengkeldodo @Alie_Fahnoor @emhamka08 Tetap #prabowo  https://t.co/U4giwrdxMZ
+1627942978819076096 2023-02-21 08:07:06 +0000 &lt;are_inismyname&gt; @SahaludinR @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti Boam sama tuduhan lw... yg penting #prabowo 🤣 ayo trs aja kirim provokasimu biar tagar #prabowo  mendunia🤪🤣🤣🤣
+1627942595530985472 2023-02-21 08:05:35 +0000 &lt;are_inismyname&gt; @BANGSAygSUJUD @SahaludinR @bengkeldodo @prabowo @Gerindra @azissubekti Biar kesel sendiri balas pake tagar #Prabowo 🤣
+1627942586693586944 2023-02-21 08:05:33 +0000 &lt;TitikTerangNews&gt; Pemerintah Indonesia kembali mengirim bantuan untuk korban gempa bumi di Turki dan Suriah. Bantuan berupa 140 ton bahan makanan dan logistik lain itu diangkut dengan 4 pesawat dari Jakarta. #Jokowi #Prabowo #Indonesia  https://t.co/o9Ya0E5ykT
+1627941366994186240 2023-02-21 08:00:42 +0000 &lt;BANGSAygSUJUD&gt; @are_inismyname @SahaludinR @bengkeldodo @prabowo @Gerindra @azissubekti Sama #Prabowo 😍😍😍😍😍
+1627941093399756807 2023-02-21 07:59:37 +0000 &lt;are_inismyname&gt; @SahaludinR @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti Tapi tetap pilih #Prabowo .... 💪💪💪
+1627940694030696449 2023-02-21 07:58:01 +0000 &lt;are_inismyname&gt; @SahaludinR @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti Saya pilih dgn hati nurani pake nalar dan logika, meskipun saya jg punya ulama yg saya hormati saya tanpa bersikap taglid buta menunggu arahan. Saya percaya Allah maha memberi petunjuk. Bismillah #Prabowo
+1627940304753135617 2023-02-21 07:56:28 +0000 &lt;bangowo08&gt; Bang Owo pantun di Halte :D #bangowo #dekade08 #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/7RFB8ndzEZ
+1627939613309538305 2023-02-21 07:53:44 +0000 &lt;are_inismyname&gt; @AdjiEins @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti Maaf sekate2 lw ngomong gw pilih #Prabowo 🤣 mau sampe kriting tanganmu ngajak debat selain adu progam gw tetep bilang #Prabowo 🤪🤪
+1627938759785472000 2023-02-21 07:50:20 +0000 &lt;dekade_08&gt; Jokowi bilang ini saat menghadiri acara pelantikan Badan Pengurus Pusat Himpunan Pengusaha Mudah Indonesia (HIPMI) periode 2022-2025.  #prabowo #mendingprabowo #terusmajubersamaprabowo #dekade08 #jokowi #hipmi #bobbynasutio  https://t.co/e058WgvuuS
+1627938663756894208 2023-02-21 07:49:57 +0000 &lt;JatengTV&gt; (12) PT Perorangan memiliki kepastian hukum dan terdaftar resmi di Kemenkumham. Kedudukannya sama seperti PT biasa. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaBangkit #Jokowi  https://t.co/HRqCfZUnue
+1627937478329126912 2023-02-21 07:45:15 +0000 &lt;are_inismyname&gt; @delvi_iskandar @BANGSAygSUJUD @Kosim__ @othex_prima @ferdinand_mpu @jatmiko99604253 @Nilot__ @yantanu2_08 @bengkeldodo @Alie_Fahnoor @emhamka08 #Prabowo nape lw... meriang klo pada pilih #prabowo2024 🤪
+1627936890661015552 2023-02-21 07:42:54 +0000 &lt;are_inismyname&gt; @SahaludinR @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti #Prabowo
+1627935983118479360 2023-02-21 07:39:18 +0000 &lt;BANGSAygSUJUD&gt; @dianekasapta5 @prabowo @azissubekti @Dahnilanzar @bengkeldodo @are_inismyname @Kosim__ @Alie_Fahnoor @nurasmi69 @emhamka08 @suara_rumput Pokoke 2024 , wayahe #Prabowo Presiden
+1627930499493822464 2023-02-21 07:17:31 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1627929111103406082 2023-02-21 07:12:00 +0000 &lt;DodiWijaya03&gt;  https://t.co/6mCY4zy6rG  #Prabowo #prabowopersatuanindonesia | Prabowo Subianto | Pak Prabowo Konsisten | Prabowo Presiden | Suju | #TheLastOfUs | PTSD | GO LINE | Pembubaran | #Capres2024 | Joman
+1627925257008070656 2023-02-21 06:56:41 +0000 &lt;bangowo08&gt; Bang Owo di taman #bangowo #dekade08 #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/51X2hiy1ai
+1627923037906698240 2023-02-21 06:47:52 +0000 &lt;gerindramjk&gt; DPC Partai Gerindra Kabupaten Mojokerto melaksanakan rangkaian HUT 15 Partai Gerindra @Gerindra @prabowo  #Gowes #Sepakbola #BolaVoli #Gerindra #Prabowo #PrabowoPresiden #GerindraMenang #GerindraJatim #GerindraMojokerto #GerindraKabMojokerto #HUT15Gerindra #15thGerindra  https://t.co/UDBtANQ6iH
+1627922414876360704 2023-02-21 06:45:23 +0000 &lt;GerindraTabanan&gt; Tidak ada dendam dan benci dalam kamus pak @prabowo dalam politik, semuaya tentang berlomba-lomba berbuat baik untuk negri🥰🤍  #prabowo #dpdgerindrabali #gerindramenang #ahmadmuzani #sufmidaso #degadjah #nodrama  https://t.co/RtWBltLirE
+1627918817455403009 2023-02-21 06:31:06 +0000 &lt;DarekaRendy&gt; Salam komando🇮🇩 Mari kita ciptakan persatuan Dan kesatuan demi terciptanya INDONESIA adil &amp;amp; makmur #prabowo 🇮🇩  https://t.co/zO9LK3wiSO
+1627915861322514432 2023-02-21 06:19:21 +0000 &lt;nusabalicom&gt; Pengamat Sebut Erick Thohir Cocok dengan Ganjar Maupun Prabowo  https://t.co/hnPrmzjSe3 #prabowo #GanjarPranowo #ErickThohir #Pilpres2024 #pemilu2024 #nusabali #berita
+1627913683287560192 2023-02-21 06:10:41 +0000 &lt;ArbidaWati&gt; Woahh semua berawal dari candaan loh... Pak #Jokowi bisa saja kasi kode dibalik candaan. #prabowo #erickthohir #hipmi #politik #Indonesia    https://t.co/GpG75NFEB2
+1627911807485751297 2023-02-21 06:03:14 +0000 &lt;bangowo08&gt; Bang Owo di ruang tamu #bangowo #dekakde08 #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/G6K3GtYY46
+1627911133377232896 2023-02-21 06:00:33 +0000 &lt;bengkeldodo&gt; Sebenarnya alogaritma twitter tambah canggih saya perhatikan yang ditampilkan di timeline saya malah tidak ada postingan capres lain ... apa karena saya ga pernah nyebrang ke pendulung cah kae ?   Terimakasih mas @elonmusk  tetap #prabowo
+1627910545906216963 2023-02-21 05:58:13 +0000 &lt;dekade_08&gt; Beliau sedang video call dengan prajurit TNI AL yang sedang cidera saat pemberian gelar warga kehormatan pada Menhan Prabowo.   #prabowo #tni #tnial #kemhan #menhan #dekade08 #mendingprabowo #terusmajubersamaprabowo #viralditiktok #viralhariini  https://t.co/K4n5fHV8Wb
+1627910270613098498 2023-02-21 05:57:08 +0000 &lt;bengkeldodo&gt; @SartanaAgus @Gerindra terimakasih sudah sudah bangga dengan mereka .... kalau saya hanya bangga dengan ayah #prabowo
+1627906823398490113 2023-02-21 05:43:26 +0000 &lt;Alie_Fahnoor&gt; Now or Never, Pak   https://t.co/YnvaCmWX5f  Pengamat politik boleh mengungkapkan apapun yang diucapkan Pak Jokowi.  Tapi momentum ini bolehlah dianggap sebagai jalan Pak #Prabowo mempromosikan diri sebagai kandidat kuat untuk menang pilpres besok.
+1627901711791849472 2023-02-21 05:23:07 +0000 &lt;are_inismyname&gt; @dianekasapta5 @BANGSAygSUJUD @prabowo @azissubekti @Dahnilanzar @bengkeldodo @Kosim__ @Alie_Fahnoor @nurasmi69 @emhamka08 @suara_rumput Klo ikhlas berarti tdk mengungkit kembali, ibarat ludah yg udh dikeluarkan gak mungkin diambil utk ditelan kembali.Sumbangan berbeda dgn hutang. Jika sudah kecewa ya sdh tp jgn memaksa utk berpaling dr memilih #Prabowo
+1627900924730691584 2023-02-21 05:20:00 +0000 &lt;JatengTV&gt; (03) Pemilik PT Perorangan menjadi pemeran utama dalam mengatur kebijakan perusahaannya, termasuk dalam hal pengolahan data dan keuangan. #ptperorangan #sange #ciptakerja #indonesia #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1627900239993765888 2023-02-21 05:17:16 +0000 &lt;fajaronline&gt; Bocoran Agenda Prabowo Subianto di Sulsel, Andi Iwan Aras Bilang Begini  https://t.co/tcffdQvlUY #AndiIwanDarmawanAras #DarmawangsyahMuin #GerindraSulsel #prabowo
+1627897784388194304 2023-02-21 05:07:31 +0000 &lt;RickyTamba_&gt; POLITIK IDENTITAS BIKIN HANCUR  CurcolRitam98  feat Jayanto Setiady  Pelaku UMKM/ Generasi Muda Tionghoa Indonesia   https://t.co/4XDHKuOefS  #tionghoa #minoritas #prabowo #gerindra #2024prabowopresiden #gerindramenang #indonesiamaju #adilmakmur #indonesiaraya #nkri #indonesia  https://t.co/9XZVOJ7JRL
+1627895844526788611 2023-02-21 04:59:48 +0000 &lt;dekade_08&gt; Gerindra melakukan deklarasi pemilu damai. Kenapa? Sebab kita semua sudah ogah dengan keributan dan kita semua menginginkan Indonesia bersatu dalam damai. Pemilu 2024 adalah kompetisi.   #prabowo #dekade08 #gerindra #jaktim #mendingprabowo #terusmajubersamaprabowo  https://t.co/Prgl81X6WK
+1627895713962266624 2023-02-21 04:59:17 +0000 &lt;fajaronline&gt; Seampuh Apa Jokowi Effect untuk Prabowo di Pilpres 2024? Survei Membuktikan  https://t.co/y2xRyYMPR3 #JokowiEffect #Pilpres2024 #prabowo #SurveiCapres
+1627895574333898752 2023-02-21 04:58:44 +0000 &lt;RickyTamba_&gt; POLITIK IDENTITAS BIKIN HANCUR  CurcolRitam98  feat Jayanto Setiady  Pelaku UMKM/ Generasi Muda Tionghoa Indonesia   https://t.co/OrjHkLEpFT  #tionghoa #minoritas #prabowo #gerindra #2024prabowopresiden #gerindramenang #indonesiamaju #adilmakmur #indonesiaraya #nkri #indonesia  https://t.co/j3JXpUb361
+1627894858999533569 2023-02-21 04:55:53 +0000 &lt;bengkeldodo&gt; @Kang_Ujar @BANGSAygSUJUD @azissubekti @Artashir_ @are_inismyname @Alie_Fahnoor @AKU_dgn3putra @yosephrosario_ @emhamka08 @Gerindra @alfatih_ghazy ceenah dukung #prabowo
+1627894645312348161 2023-02-21 04:55:02 +0000 &lt;tvOneNews&gt; Wakil Ketua Umum PKB Jazilul Fawaid berharap agar Ketua Umum PKB Cak Imin terpilih menjadi presiden di Pilpres 2024  Simak berita selengkapnya di  https://t.co/GgtZcy4bbs #HardNews_Politik #NewsOne #CariBeritaditvOne #CakImin #AniesBaswedan #Prabowo  https://t.co/USfurbJLkH
+1627893364757778433 2023-02-21 04:49:57 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1627889989303562240 2023-02-21 04:36:32 +0000 &lt;GerindraJtg&gt; Keramahan Pak @prabowo saat berkunjung di sebuah Mall   #MendingPrabowo #PrabowoSubianto #Prabowo #gerindra #gerindrajawatengah #gerindrajateng  https://t.co/DlJleTuwIg
+1627889765638094851 2023-02-21 04:35:39 +0000 &lt;BANGSAygSUJUD&gt; Demi negara mari singkirkan ego, suka atau tidak suka penyebab perpecahan  Untuk rakyat buang jauh-jauh kepentingan pribadi/golongan  Negara hanya bisa dibangun dg kebersamaan  Bukan menggurui tetapi memang begitu seharusnya  Bila ada benci paksalah mencintai  Salam #Prabowo ❤️🇮🇩  https://t.co/ZU0ZwrRIKA
+1627888450916716546 2023-02-21 04:30:26 +0000 &lt;gatot439196031&gt; 3 Prinsip Bapak Prabowo #prabowopersatuanindonesia #prabowo #beritaterkini #Newsnight #Indonesia #UntukIndonesiaLebihBaik  https://t.co/cbf7vM7VQe
+1627884498988978176 2023-02-21 04:14:43 +0000 &lt;netrayID&gt; Gimana menurut kalian nih guys? Posisi lima besar semakin kesini semakin terlihat saling menggeser ya. Bagikan opini kalian di kolom komentar yuk!   #Membaca2024 #netrayid #mediamonitoring #bigdata #pemilu2024 #ahy #erickthohir #prabowo #ridwankamil #aniesbaswedan
+1627882801587691520 2023-02-21 04:07:59 +0000 &lt;fajaronline&gt; Bersama Jokowi, Prabowo Lepas 140 Ton Logistik untuk Turki dan Suriah  https://t.co/Jkb0OVZQYU #BantuanUntukTurki #GempaTurki #Jokowi #prabowo
+1627878920178765824 2023-02-21 03:52:33 +0000 &lt;bengkeldodo&gt; Mendukung dengan cara yang baik  @prabowo @Gerindra   loyalis #prabowo  https://t.co/aDNiLuU2xe
+1627878401246892033 2023-02-21 03:50:30 +0000 &lt;BincangPemilu&gt; Prabowo Subianto Kagumi Film Adagium Besutan Rizal Mantovani #adagium #prabowo #film  https://t.co/xmywhQqxOe
+1627878271370285057 2023-02-21 03:49:59 +0000 &lt;DpdBali&gt; Suatu kebanggan bisa turut serta bersama Miss Universe saat berkunjung ke Bali di The Brass, Renon, Denpasar, 20 Feb 2023🤩❤️  #prabowo #dpdgerindrabali #gerindramenang #ahmadmuzani #sufmidaso #degadjah #nodrama  https://t.co/Qxg296E6Q0
+1627876785601024000 2023-02-21 03:44:04 +0000 &lt;bengkeldodo&gt; Hanya mencoba belajar dan teladani dari salah satu sikap beliau yang mau meninggalkan ego demi persatuan  bangsa ini ..   https://t.co/J51v22Lg9F #prabowo di hati  https://t.co/Nipn9h2fqB
+1627876545795850240 2023-02-21 03:43:07 +0000 &lt;are_inismyname&gt; @BANGSAygSUJUD @bengkeldodo @prabowo @Gerindra @azissubekti memilih #Prabowo tidak hanya sekedar pilihan tapi perjuangan utk kembali beradab dan beretika dlm bersosmed...
+1627875982769266690 2023-02-21 03:40:53 +0000 &lt;GerindraTabanan&gt; Udah ada yang nonton Adagium ? Kira kira sekeren apa filmnya sampai pak Prabowo nonton ya???🤩🤩  #prabowo #adagium #adagiummovie #xxicinema #dekade08 #mendingprabowo #terusmajubersamaprabowoUdah #terusmajubersamaprabowo  https://t.co/QXhKdBQDLs
+1627875624911265793 2023-02-21 03:39:28 +0000 &lt;Kenikir27&gt; @BANGSAygSUJUD @are_inismyname @bengkeldodo @prabowo @Gerindra @azissubekti Siap.  #Prabowo
+1627875347453845504 2023-02-21 03:38:21 +0000 &lt;BANGSAygSUJUD&gt; @Kenikir27 @are_inismyname @bengkeldodo @prabowo @Gerindra @azissubekti Mari bersama Menghebatkan Indonesia bersama #Prabowo
+1627875336716447744 2023-02-21 03:38:19 +0000 &lt;rejjun&gt; @whosnieel @Coulides @Iifeofmickey aku diem aja estetik #pinterest #canva #prabowo
+1627866969927208961 2023-02-21 03:05:04 +0000 &lt;bengkeldodo&gt; @emhamka08 @prabowo @Alie_Fahnoor @are_inismyname @BANGSAygSUJUD @DarekaRendy @dekade_08 @Gerindra @Kosim__ @Dahnilanzar betul .... adab dan moral harus di utamakan #prabowo
+1627864471770382337 2023-02-21 02:55:08 +0000 &lt;Alie_Fahnoor&gt; @lutfigh0 @bengkeldodo @prabowo @iimalmar @are_inismyname @BANGSAygSUJUD @Artashir_ @dekade_08 @emhamka08 @DarekaRendy @hanjar_agung @yosephrosario_ Joe Biden usianya lebih tua dari Pak #Prabowo Loch ....!? #Fakta
+1627863438902067200 2023-02-21 02:51:02 +0000 &lt;narasisenja08&gt; Syarat Kepemimpinan oleh Imam Syafii #narasisenja #puisi #quotes #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/h4hRqhgQ2M
+1627861405243437056 2023-02-21 02:42:57 +0000 &lt;emhamka08&gt; @are_inismyname @bengkeldodo @Alie_Fahnoor @nurasmi69 @BANGSAygSUJUD @4Y4NKZ @DarekaRendy @dekade_08 @hanjar_agung @ferdinand_mpu Karena #prabowo sulit di cari salahnya sih 😁
+1627847265430962176 2023-02-21 01:46:46 +0000 &lt;indadilmakmur&gt; Pada pemilihan ketua di Solo, rame dikit-dikit. Ya anak muda biasalah rame dikit-dikit. Tapi setelah itu terpilih, semuanya bersatu kembali ini sangat baik.  - Presiden @Jokowi -  #hipmi #jokowi #prabowo #indonesia #pelantikan #pengurus #bpphipmi  https://t.co/gaqFyQv5iU
+1627838238496022530 2023-02-21 01:10:54 +0000 &lt;fajaronline&gt; Siapa Bilang Banyak yang Kecewa Prabowo Gabung Kabinet Jokowi?  https://t.co/KAZYjUUvpv #Capres2024 #prabowo #PrabowoGabungJokowi #SurveiPrabowo
+1627834125431484416 2023-02-21 00:54:33 +0000 &lt;Sorali_lali&gt; Cari pemimpin itu yang bermental baja.  Siap sedia menghadapi bahaya yang mengancam.  Pantang menyerah untuk membela kebenaran walau musuh menghantam bertubi-tubi.  Benteng pertahanan yang kuat menjadikan musuh enggan mendekat.  #prabowo sang pemimpin.   https://t.co/aqaHvvsCnB
+1627827804086886406 2023-02-21 00:29:26 +0000 &lt;pinterpolitik&gt; Politikus PPP tersebut dikabarkan tengah dibidik oleh dua kandidat calon presiden (capres), yakni Prabowo Subianto dan Anies Baswedan.   https://t.co/Cl7D3NY8Dl  #Khofifah #Prabowo #Anies #Pilpres2024 #JawaTimur #PinterPolitik #beritapolitik #politik #politikIndonesia #infografis
+1627816751496060929 2023-02-20 23:45:31 +0000 &lt;BANGSAygSUJUD&gt; @Alie_Fahnoor #Prabowo
+1627808563098972160 2023-02-20 23:12:59 +0000 &lt;are_inismyname&gt; Wa Rabbun Ghafur.... Insya Allah 2024 #Prabowo Dan dukungan tsb semakin meluas. Rasa cinta pd tanah air sudah meluas kemana2  Hanya cinta pd tanah air yg menyatukan elemen bangsa ini tdk peduli dr gol, agama, suku atau ras mana bgmn masa lalu org tdk bs dipisah dr cinta tanah air
+1627749296539070464 2023-02-20 19:17:29 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1627742368802951170 2023-02-20 18:49:57 +0000 &lt;JatengTV&gt; (10) Dalam PT Perorangan, modal pendirian badan hukum bersifat bebas, mulai dari Rp0 hingga maksimal Rp5 Miliar. Menarik bukan? #Indonesiamaju #jokowi #ptperorangan #badanhukum #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1627734821077389312 2023-02-20 18:19:57 +0000 &lt;JatengTV&gt; (11) Pemilik PT Perorangan bisa melakukan pemisahan kekayaan pribadi dan bisnis secara formal karena memiliki NPWP yang terpisah. #ptperorangan #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaHebat #Jokowi  https://t.co/HRqCfZUnue
+1627733880748003328 2023-02-20 18:16:13 +0000 &lt;Alie_Fahnoor&gt; Dengan semangat yang dicontohkan oleh para pendahulu dalam memperjuangkan kebenaran walau badan terbelenggu jeruji besi, Pak #Prabowo maju untuk mencalonkan dirinya sebagai Presiden RI 2024 dengan semangat &quot;Kita Pejuang Indonesia&quot;  Salam   https://t.co/4npbXTZeqg
+1627723388612677632 2023-02-20 17:34:32 +0000 &lt;bengkeldodo&gt; Menjadi loyalis #prabowo 💕 itu berat kamu ga akan mampu ...   biar kami saja  https://t.co/ujlEXtwBfK
+1627722320453443584 2023-02-20 17:30:17 +0000 &lt;bengkeldodo&gt; @Alie_Fahnoor jelas kok 2024 pasti #prabowo
+1627722233295806464 2023-02-20 17:29:56 +0000 &lt;Alie_Fahnoor&gt; @batambun @Kosim__ @othex_prima @ferdinand_mpu @jatmiko99604253 @yantanu2_08 @BANGSAygSUJUD @bengkeldodo @are_inismyname @emhamka08 Di kantong siapa, mas?  Yang pasti bukan di kantong Pak #Prabowo
+1627721856664113153 2023-02-20 17:28:26 +0000 &lt;Alie_Fahnoor&gt; Semakin sering disebut Nama Pak #Prabowo semakin bagus karena ini merupakan bagian dari Promosi ke Publik   https://t.co/C7WS9ER1L9  Apa yg dilakukan Pak Jokowi merupakan Promo Gratis bagi kandidat calon Presiden mendatang &amp;amp; Nama Beliau disebut lagi sebagai salah satu calon.
+1627720228980535296 2023-02-20 17:21:58 +0000 &lt;BANGSAygSUJUD&gt; @Muslim_AntiPKI9 @Alie_Fahnoor @Kosim__ @othex_prima @ferdinand_mpu @jatmiko99604253 @yantanu2_08 @bengkeldodo @are_inismyname @emhamka08 Gak ada yg salah karena 2024 Presidennya #Prabowo  Ini bocoran, rahasia, Diam-diam ya! 😁💪❤️🇮🇩
+1627719665085739008 2023-02-20 17:19:44 +0000 &lt;bengkeldodo&gt; @Alie_Fahnoor pasti mas #prabowo
+1627718301592993792 2023-02-20 17:14:19 +0000 &lt;bengkeldodo&gt; @ZTWMakrifat @Chaves1305 @prabowo kenapa kalau semua loyalisnya memanggil ayah ke #prabowo ?
+1627717931030417408 2023-02-20 17:12:50 +0000 &lt;BANGSAygSUJUD&gt; @Alie_Fahnoor Mantap iki #Prabowo 💪🇮🇩❤️💪
+1627716253220732930 2023-02-20 17:06:10 +0000 &lt;bengkeldodo&gt; @NazarRizky17 @prabowo @iimalmar @are_inismyname @BANGSAygSUJUD @Alie_Fahnoor @Artashir_ @dekade_08 @emhamka08 @DarekaRendy @hanjar_agung @yosephrosario_ ya dan semoga 2024 #prabowo presiden
+1627715843902820352 2023-02-20 17:04:33 +0000 &lt;bengkeldodo&gt; Silahkan cek tweet saya yang bisa menilai saya adalah orang lain bukan saya 🙏  Kalau karena saya dukung #prabowo terus tidak bisa sejalan ya artinya sudah garis ..  saya sedang belajar mencontoh beliau @Sinical9
+1627715647106093057 2023-02-20 17:03:46 +0000 &lt;Alie_Fahnoor&gt; Siapapun nama yang akan mendampingi Pak #Prabowo mesti yg mampu mendongkrak perolehan suara di Pilpres nanti Semangat   https://t.co/ZDEHEBabPb  Dengan disebutnya beberapa nama sbg kandidat potensial calon Presiden, Nama beliau menjadi salah satu yg akan lolos di KPU Pusat. Semoga
+1627714513075318784 2023-02-20 16:59:16 +0000 &lt;bengkeldodo&gt; @Emi821415421 @prabowo @iimalmar @are_inismyname @BANGSAygSUJUD @Alie_Fahnoor @Artashir_ @dekade_08 @emhamka08 @DarekaRendy @hanjar_agung @yosephrosario_ ngomong #prabowo presiden 2024
+1627697427947073536 2023-02-20 15:51:22 +0000 &lt;Kosim__&gt; Mengerikan jika AB jadi presiden , baca tweet pendukungnya karena biasa sembelih &amp;amp; bunuh hewan kurban , ngeri dong nanti bisa ada hukum penggal   bukan pendukung #prabowo si @AKU_dgn3putra   @ferdinand_mpu @ch_chotimah2 @yusuf_dumdum itu lasekar ente bukan beb @WagimanDeep212_  https://t.co/NGAS0Wmy6S
+1627694619181084672 2023-02-20 15:40:12 +0000 &lt;BANGSAygSUJUD&gt; @emhamka08 @prabowo @Alie_Fahnoor @are_inismyname @bengkeldodo @DarekaRendy @Kosim__ @UmarSandi5 @Gerindra Disegani dunia #Prabowo
+1627693382079508482 2023-02-20 15:35:18 +0000 &lt;Kosim__&gt; Ya Allah hanya berbeda pilihan orang ini sampai terucap kata2 ini ...   Orang dibawah bukan pendukung #prabowo  https://t.co/4FbjCKloZ3
+1627691676805533696 2023-02-20 15:28:31 +0000 &lt;Gerindra_Krngsm&gt; Senin 20 Februari 2023, Telah Dilaksanakan Rapat Koordinasi Media Bali di Kantor DPD Partai Gerindra Provinsi Bali🥰❤️   #prabowo #prabowosubianto #ketumgerindra #prabowomenhan #mendingprabowo #dekade08 #terusmajubersamaprabowo #prabowopresiden2024 #gerindra #gerindrabali  https://t.co/Wqsk2R8hMJ
+1627682692652503040 2023-02-20 14:52:49 +0000 &lt;emhamka08&gt; @yantanu2_08 @BANGSAygSUJUD @ZakariaRamli8 @Kosim__ @othex_prima @ferdinand_mpu @jatmiko99604253 @Nilot__ @bengkeldodo @are_inismyname @Alie_Fahnoor @MerryRiana Aku nembak cewek berkali2...diterima.tapi diajak nikah gak mau..ehh gak nyambung ya😂. Mau tiga kali Atau brapa kali..yg jelas 2024 #prabowo presiden.titik gak pakai koma.😁
+1627682278397874178 2023-02-20 14:51:10 +0000 &lt;are_inismyname&gt; @LaukDown @Kosim__ @Kimberley_20102 @prabowo @florieliciouss @Ken_Atie @DarekaRendy @BANGSAygSUJUD @bengkeldodo @yosephrosario_ @emhamka08 @ferdinand_mpu @CakMartinez @4Y4NKZ @AKU_dgn3putra Ya udh up to u aja.... mau ngoceh kayak apapun jg gak bakal ketemu krn dasarnya cuma kritik tp gak mau terima masukkan balik. Whatever you say Tetap #Prabowo... case closed Bye
+1627681973237092353 2023-02-20 14:49:57 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1627681181390229506 2023-02-20 14:46:49 +0000 &lt;kab_gerindratgl&gt; Menhan RI, Prabowo Subianto melaksanakan upacara pengangkatan sebagai warga kehormatan Korps Marinir di Ksatrian Sutedi Senaputra Yonarhanud-2 Mar Karangpilang Surabaya, Jawa Timur  #mendingprabowo #prabowosubianto #prabowo #gerindrajateng #gerindrajawatengah #gerindra #kemenhan  https://t.co/VXSrHbNVJ8
+1627679355030880258 2023-02-20 14:39:33 +0000 &lt;damarwuIan&gt; Update Survei Prabowo: Menteri dengan Kinerja Paling Moncer dan Sosok Pemersatu  https://t.co/DjzR4dy2Yn #Pilpres2024 #prabowo #SurveiMenteri #SurveiSpin
+1627679185618739202 2023-02-20 14:38:53 +0000 &lt;damarwuIan&gt; Sandiaga Uno Gelorakan Prabowo Presiden di Banten #prabowo  https://t.co/PwO2KuoXrW
+1627674422504214528 2023-02-20 14:19:57 +0000 &lt;gerindra_ktmgl&gt; Menteri Pertahanan Republik Indonesia (Menhan RI) Prabowo Subianto melaksanakan upacara pengangkatan sebagai warga kehormatan Korps Marinir #mendingprabowo #prabowosubianto #prabowo #gerindrajateng #gerindrajawatengah #gerindra #kemenhan  https://t.co/AWQNpkEVlF
+1627662642210013186 2023-02-20 13:33:09 +0000 &lt;gerindra_pati&gt; Jokowi Percaya Prabowo  #mendingprabowo #prabowo #gerindra #gerindrajawatengah #gerindrajateng #gerindrapati  https://t.co/BWHPLZDgOu
+1627662149689671680 2023-02-20 13:31:11 +0000 &lt;Grobog1Gerindra&gt; Pesan Pak @prabowo untuk anak-anak muda  #mendingprabowo #prabowo #gerindra #gerindrajawatengah #gerindrajateng #gerindragrobogan  https://t.co/T7T2JnQgCX
+1627661465946845184 2023-02-20 13:28:28 +0000 &lt;DarekaRendy&gt; Selamat malam teman² sebangsa dan setanah air.semoga kita selalu di beri kebahagiaan oleh Allah.swt #prabowo 🇮🇩  https://t.co/xSzAKQdC72
+1627660249430913024 2023-02-20 13:23:38 +0000 &lt;yantanu2_08&gt; Semua yg diusung dan dibesarkan oleh #prabowo seperti Jokowi Ahok, Ridwan Kamil, Anies Baswedan harus diambil oleh SP @NasDem untuk berhadap2an dengan #prabowo @Gerindra  SP ini mmg jahat gak punya otak mental copy paste pikiran orang karena @NasDem MISKIN IDE GAGASAN
+1627653748725288962 2023-02-20 12:57:48 +0000 &lt;GrdBMS&gt; Menteri Pertahanan Republik Indonesia (Menhan RI) Prabowo Subianto melaksanakan upacara pengangkatan sebagai warga kehormatan Korps Marinir.  #mendingprabowo #prabowosubianto #prabowo #gerindrajateng #gerindrajawatengah #gerindra #kemenhan  https://t.co/murRRqD9mg
+1627652809788370944 2023-02-20 12:54:04 +0000 &lt;yantanu2_08&gt; Ini alasan yang mendasari Kenapa #prabowo menerima dengan bangga ajakan #jokowi untuk bersama sama membangun bangsa, tak lain dan tak bukan hanya untuk #persatuannasional  Kalau tidak sekarang untuk #persatuannasional lalu kapan lagi - #prabowopresiden2024  https://t.co/xJWL3hMWX4
+1627647906336632835 2023-02-20 12:34:35 +0000 &lt;narasisenja08&gt; Pada hujan ;) #quotes #puisi #narasisenja #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/a9pVG1Jn0j
+1627643739362701314 2023-02-20 12:18:02 +0000 &lt;BANGSAygSUJUD&gt; @bengkeldodo @prabowo @iimalmar @are_inismyname @Alie_Fahnoor @Artashir_ @dekade_08 @emhamka08 @DarekaRendy @hanjar_agung @yosephrosario_ Hati seputih salju #Prabowo 😍😍😍😍😍
+1627643254907731969 2023-02-20 12:16:06 +0000 &lt;bengkeldodo&gt; Ayah @prabowo memiliki hati seluas samudra beliau tidak menyisakan ruang sedikitpun untuk sakit hati apalagi dendam ...  yg ia lakukan semata untuk bangsa #Ikhlas tak pernah tertulis   #prabowo  #prabowo2024  https://t.co/dyDP28ACuS
+1627641634786807808 2023-02-20 12:09:40 +0000 &lt;dekade_08&gt; Ayo buruan daftar! Kapan lagi kan main game bisa daoat hadiah 250 JUTA Rupiah.  ini link pendaftarannya:  https://t.co/XNyxEIJ6Mq  #prabowo #mendingprabowo #terusmajubersamaprabowo #dekade08 #mobilelegends #tournament #pubg #freefire #esports  https://t.co/YP6dCe8bqQ
+1627635872639356929 2023-02-20 11:46:46 +0000 &lt;narasisenja08&gt; Pemimpin pindo jaladri ;) #quotes #puisi #narasisenja #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/3LEv21ASAA
+1627635042129428480 2023-02-20 11:43:28 +0000 &lt;narasisenja08&gt; Pemimpin harus pindo candra ;) #quotes #puisi #narasisenja #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/0Cuu90SHPB
+1627632936936947713 2023-02-20 11:35:06 +0000 &lt;dekade_08&gt; Jangan kayak gini ke orang tua terutama ibu yaa apalagi di contoh ya🥲 kita ngga boleh bersikap kayak si Kevin🥺  #prabowo #mendingprabowo #terusmajubersamaprabowo #ibu #dekade08 #drama  https://t.co/1qeQNjiwvu
+1627631983013797888 2023-02-20 11:31:19 +0000 &lt;BANGSAygSUJUD&gt; @Chan11Vero Semakin #Prabowo 😍😍😍😍😍
+1627629376450985986 2023-02-20 11:20:57 +0000 &lt;klaten_kab&gt; Prabowo Tokoh Paling Pantas Teruskan Program Pembangunan Jokowi.   #mendingprabowo #prabowosubianto #prabowo #gerindra #gerindrajateng #gerindrajawatengah  https://t.co/ozoJCyBokQ
+1627624683020627972 2023-02-20 11:02:18 +0000 &lt;Kosim__&gt; @dekade_08 @TheExploited007 @bengkeldodo @Alie_Fahnoor @are_inismyname @BANGSAygSUJUD @DarekaRendy @yosephrosario_ @hanjar_agung @nurasmi69 @ferdinand_mpu Pokoknya semua salah #prabowo
+1627624528796069890 2023-02-20 11:01:42 +0000 &lt;Kosim__&gt; Pamitan ke Jokowi, Anies: Ini Adalah Adab dan Etika Kepada Atasan   Ke #Prabowo ga pamit mau nyapres ?   https://t.co/0xQb93cAok
+1627623105802960897 2023-02-20 10:56:02 +0000 &lt;Alie_Fahnoor&gt; Bekerja Dalam Diam dan Memberi Bukti    https://t.co/qoo0uAON2J  Salah satu gembrakan Pak #Prabowo di bidang Pendidikan dengan memberikan kesempatan putra-putri Indonesia untuk memberikan tenaga dan pikiran nya untuk negeri
+1627622365197918209 2023-02-20 10:53:06 +0000 &lt;Kosim__&gt; Kata siapa ? kok baper posting ini nyamber di postingan saya ??? hahahah #prabowo
+1627620722884616194 2023-02-20 10:46:34 +0000 &lt;Kosim__&gt; Hari ini daku hanya akan posting #prabowo yang berhubungan dengan pelukan   gak gak gak gak
+1627620096528252929 2023-02-20 10:44:05 +0000 &lt;Kosim__&gt; Prabowo jelas memeluk penuh kehangatan karena ia adalah seorang ayah untuk seluruh rakyat Indonesia  dan bukan sembarang peluk wanita yang bukan muhrimnya  #prabowo   no baper ya  https://t.co/qdzMsOli4B
+1627618323302354944 2023-02-20 10:37:02 +0000 &lt;Kosim__&gt; Kembali Jenguk Pengungsi, Prabowo Peluk Hangat Korban Gempa Cianjur   https://t.co/rLYGRP9xEb  #prabowo
+1627618120696487937 2023-02-20 10:36:14 +0000 &lt;Kosim__&gt; Pak Prabowo Peluk Erat dan Cium Para Generasi Masa Depan Bangsa.  Jalan Selalu Ada Menuju Adil Makmurnya Bangsa  Aamiin  #prabowo #gerindra  https://t.co/WtiDpB8TN5
+1627615879709200389 2023-02-20 10:27:20 +0000 &lt;Kosim__&gt; Prabowo duit ada dan beliau Ketum Parpol  juga punya kendaraan politik alias Parpol   Satu lagi bukan kacung oligarki !!!!  #prabowo  https://t.co/pbMaWcXAdl
+1627615344536981504 2023-02-20 10:25:12 +0000 &lt;Pantaucom_&gt; “Beliau itu bisa saya katakan guru saya, mentor saya. Saya kenal sejak beliau masih kolonel,” ujar Mardiono, Senin (20/2/2023).  Baca Selengkapnya di  https://t.co/P2XP6ncU1j  #pantaucom #ppp #mardiono #prabowo #viral #indonesia  https://t.co/yETbmKvpJ5
+1627612917809156096 2023-02-20 10:15:33 +0000 &lt;Kosim__&gt; Prabowo orang paling Ikhlas kepada rakyat   Gus Dur  #prabowo
+1627600730298408960 2023-02-20 09:27:08 +0000 &lt;dekade_08&gt; Udah ada yang nonton Adagium ? Film ini menarik karena berkisah tentang 3 anak muda dari latar belakang yang berbeda.   #prabowo #adagium #adagiummovie #xxicinema #dekade08 #mendingprabowo #terusmajubersamaprabowo  https://t.co/QIrKppBKlm
+1627597380169367552 2023-02-20 09:13:49 +0000 &lt;AblehYupi&gt; Prabowo tidak mengambil gajinya, mengapa ya.... #prabowopersatuanindonesia #prabowo #beritaterkini #Indonesia #UntukIndonesiaLebihBaik #BreakingNews  https://t.co/hfxYkYONzX
+1627596602851602432 2023-02-20 09:10:44 +0000 &lt;TradingDoge1&gt; Pendukung pak jokowi menjdi pendukung pak peabowo, siap ya??? #prabowopersatuanindonesia #prabowo #indoviralLink #beritaterkini #BreakingNews #NewsUpdates  https://t.co/5vVhqSdbcw
+1627595132865490944 2023-02-20 09:04:53 +0000 &lt;RamalanKiRiman&gt; Pak jokowi punya menyri, siapa ya???....  #prabowopersatuanidonesia #prabowo #beritaterkini #Indonesia #NewsUpdate #BreakingNews  https://t.co/3hoTRmSVxT
+1627592802875097088 2023-02-20 08:55:38 +0000 &lt;kuatbacacom&gt; Nah sekarang Ferdy Sambo divonis hukuman mati. Menurut Sobat Baca, si doi kena karma bukan? . #kuatbaca #kuatbacacom #kuatknow #prabowosubianto #joman #prabowo #prabowo08 #jokowimania #jokowi
+1627591802734907393 2023-02-20 08:51:39 +0000 &lt;ILaduzing&gt; Real atou fake parabowo dan gajinya...dengar infonya ya gays... #prabowopersatuanindonesia #prabowo  #IndonesiaKuat #Newsnight #beritaViral #UntukIndonesiaLebihBaik  https://t.co/m4KmWQFO0H
+1627590855879196672 2023-02-20 08:47:53 +0000 &lt;gerindra_sragen&gt; 3. Desa Patihan, Kec. Sidoharjo, Kab. Sragen.. Semoga bisa bermanfaat untuk para korban bencana banjir.. Aamiin   #prabowosubianto #prabowo  #gerindra #jokowi #gerindrajateng #gerindrajawatengah #GerindraMenang #gerindrasragen #sragen #sragenkita #sragenhits #sragenasri
+1627590708772360192 2023-02-20 08:47:18 +0000 &lt;RamalanKiRiman&gt; Lucu ketemu pens prabowo #prabowopersatuanindonesia #prabowo #Indonesia #beritaterkina #NewsUpdate #BreakingNews #IndonesiaKuat  https://t.co/P9BXZ0Use7
+1627583658730344448 2023-02-20 08:19:17 +0000 &lt;PrabowoPI&gt; Demi kedaulatan negara prabowo engga ambil gajih... #prabowopersatuanindonesia #prabowo #beritaterkini #Newsnight #beritabolaterbaru #Newsnight #Indonesia  https://t.co/h4gzi0ZpYM
+1627582108133883905 2023-02-20 08:13:08 +0000 &lt;BANGSAygSUJUD&gt; @siivanf @bengkeldodo @Artashir_ @are_inismyname @Alie_Fahnoor @yosephrosario_ @hanjar_agung @NgkongRoses @DarekaRendy @Kenikir27 @ferdinand_mpu @prabowo Justru 2 X pilpres kemarin yg bukan jamannya, nah 2024 justru Zamannya #Prabowo  Wes Wayahe #PrabowoPresiden2024 💪❤️🇮🇩😍😊🙏
+1627579431249408002 2023-02-20 08:02:30 +0000 &lt;dekade_08&gt; Gerindra dan PPP pernah memiliki sejarah. Dua partai ini pernah bersama-sama di pemilu 2014 saat berjuang memenangkan Prabowo - Hatta Rajasa.   #prabowo #jokowi #ppp #dekade08 #mendingprabowo #terusmajubersamaprabowo  https://t.co/xXijp7WYIe
+1627578418127831040 2023-02-20 07:58:28 +0000 &lt;cokro_tv&gt; KELOMPOK 212 BINGUNG, MEREKA TIDAK DILIRIK PRABOWO, JUGA DICUEKIN ANIES  @syafiqhasyim_de  #cokrotv #GakPakeBaper #aniesbaswedan #prabowo   Full Video Youtube:  https://t.co/VwSefl56Sq  https://t.co/Ino5jg7KmB
+1627576534172332032 2023-02-20 07:50:59 +0000 &lt;narasisenja08&gt; Menanti datangnya pemimpin penerus ;) #quotes #puisi #narasisenja #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/afFdfLjx6h
+1627575828258381824 2023-02-20 07:48:11 +0000 &lt;paradedotid&gt; Deklarasi GERRAK PPRI 24’ Dukung Prabowo Subianto Presiden 2024   https://t.co/Q1W2NdKO2t  #GERRAK #Prabowo
+1627575275461672960 2023-02-20 07:45:59 +0000 &lt;_bangtatto&gt; prabowo merasa lebih muda mengapa??? #prabowopersatuanindonesia #prabowo #beritaterkini #indonesiaviral #NewsUpdate #beritaterkini  https://t.co/M1XToB0pHY
+1627574843217678337 2023-02-20 07:44:16 +0000 &lt;bengkeldodo&gt; @mirendraya_PS @Gerindra @prabowo yes #prabowo
+1627573320601440256 2023-02-20 07:38:13 +0000 &lt;ILaduzing&gt; isra&#39;miraj prabowo untuk umat islam #prabowopersatuanindonesia #prabowo #Newsnight #beritaterkini #IndonesiaButuhAnakMuda  https://t.co/1dcXIr7oMu
+1627571487757729792 2023-02-20 07:30:56 +0000 &lt;BANGSAygSUJUD&gt; Sekilas info #Prabowo semakin di hati ❤💞 ❤💛💙  https://t.co/rOHs9UdRTK
+1627570246264684545 2023-02-20 07:26:00 +0000 &lt;DodiWijaya03&gt;  https://t.co/kL3hdJe73y  #Prabowo #prabowopersatuanindonesia | Prabowo Subianto | Pak Prabowo Konsisten | Prabowo Presiden | No Way Home | Kakao | Tatum | Aldebaran | #Capres2024 | Survei SPIN
+1627568310203342849 2023-02-20 07:18:18 +0000 &lt;narasisenja08&gt; Asa yang Satu ;) #quotes #puisi #narasisenja #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/HFPzOPFBey
+1627565228333613056 2023-02-20 07:06:03 +0000 &lt;narasisenja08&gt; Langit Lazuardi Membiru ;) #quotes #puisi #narasisenja #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/5hYRMhsI5D
+1627563604009713665 2023-02-20 06:59:36 +0000 &lt;narasisenja08&gt; Laut menyimpan Misteri ;) #quotes #puisi #narasisenja #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/pS34v1YC2C
+1627563451806539778 2023-02-20 06:59:00 +0000 &lt;DodiWijaya03&gt;  https://t.co/yIbarPDp82  #Prabowo #prabowopersatuanindonesia | Prabowo Subianto | Pak Prabowo Konsisten | Prabowo Presiden | No Way Home | Kakao | Tatum | Aldebaran | Gerindra | Banten | #Capres2024 | Pemilu 2024
+1627563451664207872 2023-02-20 06:59:00 +0000 &lt;WaluyoNani&gt;  https://t.co/lsJdAfG08x  #Prabowo #prabowopersatuanindonesia | Prabowo Subianto | Pak Prabowo Konsisten | Prabowo Presiden | Kapolda Jambi | Kunti | Unlocked | Esemka | Gerindra | Banten | #Capres2024 | Pemilu
+1627562355797405697 2023-02-20 06:54:38 +0000 &lt;narasisenja08&gt; Indahnya negeriku ;) #quotes #puisi #narasisenja #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/gle73YkRPX
+1627560537856045056 2023-02-20 06:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1627559847217729537 2023-02-20 06:44:40 +0000 &lt;PrabowoPI&gt; Calonnya menjadi mentrinya hanya di indoesia, pengen tau siapa.... #prabowopersatuanindonesia #prabowo #beritaterkini #IndonesiaKuat #NewsUpdate #BreakingNews #beritaViral  https://t.co/eOZVYTC1wQ
+1627557786627510272 2023-02-20 06:36:29 +0000 &lt;klaten_kab&gt; Sekjen PDIP Tanggapi Relawan JoMan  Dukung Prabowo.   #mendingprabowo #prabowosubianto #prabowo #gerindra #gerindrajateng #gerindrajawatengah  https://t.co/HHZNjYjGbN
+1627554643483193345 2023-02-20 06:24:00 +0000 &lt;DodiWijaya03&gt;  https://t.co/bLmwsHMnQm  #Prabowo #prabowopersatuanindonesia | Prabowo Subianto | Pak Prabowo Konsisten | Prabowo Presiden | No Way Home | Kakao | dahyun | Aldebaran | Gerindra | Jaktim | #Capres2024 | Pemilu Damai
+1627554391913021440 2023-02-20 06:23:00 +0000 &lt;WaluyoNani&gt;  https://t.co/r41aRxaPzL  #Prabowo #prabowopersatuanindonesia | Prabowo Subianto | Pak Prabowo Konsisten | Prabowo Presiden | Kunti | Kapolda Jambi | Unlocked | Esemka | Gerindra | Jaktim | #Capres2024 | Pemilu Damai
+1627554143585062913 2023-02-20 06:22:00 +0000 &lt;amber_benita&gt; Praboawo hartanya segini loh..... #prabowopersatuankndonesia #prabowo #Indonesia #NewsUpdate #befritaterkini #IndonesiaButuhAnakMuda  https://t.co/JTofLFsmo0
+1627553628188991489 2023-02-20 06:19:58 +0000 &lt;JatengTV&gt; (07) Kelebihan lainnya dari PT Peroangan adalah mendapatkan prioritas dalam mengakses berbagai program pemerintah yang dikhususkan untuk UMKM. #ptperorangan #badanhukum #badanusaha #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1627551941403475976 2023-02-20 06:13:15 +0000 &lt;dekade_08&gt; @idollah69 @BANGSAygSUJUD @bengkeldodo @Alie_Fahnoor @are_inismyname @DarekaRendy @yosephrosario_ @Kosim__ @hanjar_agung @nurasmi69 @ferdinand_mpu ya boleh aja. Tapi saya dan keluarga serta keluarga keluarga lain tetap pilih #prabowo .... Menangkan Prabowo di 2024 Guys/Sis....
+1627551464158793729 2023-02-20 06:11:22 +0000 &lt;AzuraAdhitama1&gt; Kekayaan prabowo yang tidak diketahui orang2, kmu pengen tau... #prabowoparsatuanindonesia #prabowo #beritaterkini #BreakingNews #NewsUpdate #IndonesiaKuat  https://t.co/qpXWGR49hs
+1627551245803331584 2023-02-20 06:10:30 +0000 &lt;dekade_08&gt; Gemas ya tapi bobby ngga mau diem banget🤣❤️  #prabowo #mendingprabowo #terusmajubersamaprabowo #dekade08 #titieksoeharto #bobby #cat #kucing  https://t.co/mUt94Hldvp
+1627548756760727552 2023-02-20 06:00:36 +0000 &lt;BANGSAygSUJUD&gt; @idollah69 @bengkeldodo @Alie_Fahnoor @are_inismyname @DarekaRendy @dekade_08 @yosephrosario_ @Kosim__ @hanjar_agung @nurasmi69 @ferdinand_mpu Alhamdulillah, yg dua kali sebelumnya kalah, takdir akan berubah. 2024 #Prabowo terpilih menjadi Presiden RI dg berbagai kelebihannya yg tak dimiliki capres lain dari segenap aspek. Keilmuan, wawasan, pergaulan internasional, strategi politik juga perang 👍💪🇮🇩❤️💪
+1627548506499207171 2023-02-20 05:59:36 +0000 &lt;ArsenioAgam&gt; Parabowo berkorban hartapun tidak diperhitungkan, tingkat kekayaan seberapa ya.... #prabowopersatuanindonesia #prabowo #BreakingNews #beritaterkini #indonesiaviral #IndonesiaKuat  https://t.co/m1FhkyRAMk
+1627548151963062272 2023-02-20 05:58:12 +0000 &lt;nusabalicom&gt; Gerindra Siap Perjuangkan Harga Sembako Turun Jelang Ramadhan   https://t.co/IQ7kz4ORQ4  #berita #nusabali #Gerindra #Sembako #Prabowo
+1627547759221018625 2023-02-20 05:56:38 +0000 &lt;nusabalicom&gt; Sekjen PDIP Tanggapi Relawan  Joman Dukung Prabowo Subianto  https://t.co/YVw0XTG1WC #PDIPerjuangan #berita #nusabali #Pemilu2024 #Pilpres2024 #Prabowo #Gerindra
+1627544851649789952 2023-02-20 05:45:05 +0000 &lt;jpnncom&gt; Sandiaga Uno Gelorakan Prabowo Presiden di Banten #prabowo  https://t.co/JVc6cxZf9d
+1627540178641502208 2023-02-20 05:26:31 +0000 &lt;gatot439196031&gt; Perjuangan 0ak prabowo berlanjut #prabowopersatuanindonesia #prabowo #beritaterkini #Newsnight #Indonesia #UntukIndonesiaLebihBaik  https://t.co/QjlOdvCp8I
+1627533263597359106 2023-02-20 04:59:02 +0000 &lt;Sorali_lali&gt; Nantikan Abang kembali Dindaku sayang😍 @tni_ad  #prabowo   https://t.co/MezG9jSpv4
+1627530976472756224 2023-02-20 04:49:57 +0000 &lt;JatengTV&gt; (10) Dalam PT Perorangan, modal pendirian badan hukum bersifat bebas, mulai dari Rp0 hingga maksimal Rp5 Miliar. Menarik bukan? #Indonesiamaju #jokowi #ptperorangan #badanhukum #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1627529175165968385 2023-02-20 04:42:48 +0000 &lt;dekade_08&gt; Sejak dulu Prabowo tidak pernah berpikir fragmentaris. Cara berpikir prabowo disusun di atas nilai-nilai universal tentang Indonesia, tentang rakyatnya.   #prabowo #fahrihamza #dekade08 #mendingprabowo #terusmajubersamaprabowo #jalantengah #pemersatu #pilpres2024  https://t.co/IBi6RZrmzp
+1627527716093165569 2023-02-20 04:37:00 +0000 &lt;WaluyoNani&gt;  https://t.co/R98ivzlgM4  #Prabowo #prabowopersatuanindonesia | Prabowo Subianto | Pak Prabowo Konsisten | Prabowo Presiden | #TaxiDriver2 | Kapolda Jambi | Unlocked | Jerome | Gerindra | Banten | #Capres2024
+1627527714575118337 2023-02-20 04:36:59 +0000 &lt;BANGSAygSUJUD&gt; Indonesia 2024,membutuhkan Presiden : 1. Berilmu tinggi, berwawasan luas dan mumpuni, ada pd pak #Prabowo  2. Disegani asing dan mampu melindungi negara dari gempuran luar/dalam, ada pd jendral #Prabowo  3. Berkasih sayang seperti orang tua kpd anaknya, ada pd ayah @prabowo  https://t.co/ygRMHn3fa6
+1627527115422965760 2023-02-20 04:34:36 +0000 &lt;fajaronline&gt; Update Survei Prabowo: Menteri dengan Kinerja Paling Moncer dan Sosok Pemersatu  https://t.co/H5Qhr47wA0 #Pilpres2024 #prabowo #SurveiMenteri #SurveiSpin
+1627526847818010624 2023-02-20 04:33:33 +0000 &lt;SaharaaSindy&gt; Jujura dan benar itu sulit tapi pak prabowo mengahruskan???.... #prabowopersatuanindonesia #prabowo #Indonesia #beritaterkini #IndonesiaMaju #Newsnight #indo  https://t.co/eIKEgDCrXr
+1627524335979352064 2023-02-20 04:23:34 +0000 &lt;SudaryonoSudar&gt; Prabowo datang bersama Ketua Harian DPP Gerindra Sufmi Dasco Ahmad.    #DengarAmatiReaksi #APPSI #PAPERA #PedagangPasar #Gerindra #Prabowo #PrabowoPresiden #MasDar #politik #partai #politika #politician #politiker #kommunalpolitik #politicsnews #partaibesar  https://t.co/DylnlybIyX
+1627520647013478400 2023-02-20 04:08:54 +0000 &lt;BANGSAygSUJUD&gt; @are_inismyname @AKU_dgn3putra @NohCeukenohhh @emhamka08 @Kosim__ @prabowo @florieliciouss @Ken_Atie @Kimberley_20102 @DarekaRendy @bengkeldodo @yosephrosario_ @ferdinand_mpu @CakMartinez @4Y4NKZ Dan semakin #Prabowo 😍😍😍😍😍
+1627520559193145344 2023-02-20 04:08:33 +0000 &lt;are_inismyname&gt; @BANGSAygSUJUD @AKU_dgn3putra @NohCeukenohhh @emhamka08 @Kosim__ @prabowo @florieliciouss @Ken_Atie @Kimberley_20102 @DarekaRendy @bengkeldodo @yosephrosario_ @ferdinand_mpu @CakMartinez @4Y4NKZ Pilihan tetap #Prabowo 😂
+1627520482097647622 2023-02-20 04:08:15 +0000 &lt;GrdBMS&gt; Fitnah itu memang kejam, tetapi bagaimana dapat menyikapi fitnah itu  dengan bijak adalah sikap seorang Kesatria.  #prabowo #prabowosubianto #Gerindra #GerindraJateng #gerindrajawatengah #mendingprabowo  https://t.co/fyTdJVcBls
+1627518409532375040 2023-02-20 04:00:01 +0000 &lt;pinterpolitik&gt; Layaknya lagu dari Yovie &amp;amp; Nuno yang berjudul “Dia Milikku” (2007), Gubernur Jawa Timur (Jatim) Khofifah Indar Parawansa tampaknya sedang jadi rebutan.  #Khofifah #Prabowo #Anies #Pilpres2024 #JawaTimur #PinterPolitik #beritapolitik #politik #politikIndonesia #infografis  https://t.co/ablseH6QjS
+1627517657309413376 2023-02-20 03:57:01 +0000 &lt;fajaronline&gt; Jokowi dan Prabowo Makin Lengket, Figur Oposisi Dicueki  https://t.co/2OzzLsAX8X #headline #Jokowi #Pilpres2024 #prabowo
+1627516504081317888 2023-02-20 03:52:27 +0000 &lt;emhamka08&gt; @bengkeldodo #Prabowo keSAyqngqn..
+1627511524632965121 2023-02-20 03:32:39 +0000 &lt;bengkeldodo&gt; Apa caption terbaik untuk foto ini sahabat ...   Yang rt like aku folbek wes dan yang sudah salfol aku anpol 😁😁😁😁  mau kasih GA adanya.baut mau ?  #prabowo  https://t.co/GL32baGbJw
+1627508708434644992 2023-02-20 03:21:28 +0000 &lt;are_inismyname&gt; @Ozen59183347 @bengkeldodo @Alie_Fahnoor @BANGSAygSUJUD @DarekaRendy @dekade_08 @yosephrosario_ @Kosim__ @hanjar_agung @nurasmi69 @ferdinand_mpu Laku lah buktinya gw masih ngedukung.... #Prabowo 😂
+1627508334726369282 2023-02-20 03:19:59 +0000 &lt;JatengTV&gt; (13) Masih belum banyak peraturan yang mengatur perusahaan PT perorangan ini sehingga pemilik perusahaan bebas melakukan aktivitas usahanya. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1627505441138941958 2023-02-20 03:08:29 +0000 &lt;JemberNetwork&gt; Prabowo Subianto ditemukan tewas tenggelam di Sungai Musi, berikut ini kronologinya. #Prabowo #PrabowoSubianto  https://t.co/1jLrsVtpeL
+1627504844151074816 2023-02-20 03:06:07 +0000 &lt;bengkeldodo&gt; Amien mengatakan, nama Prabowo  masuk ke dalam bursa capres yang hendak diusung Partai Ummat ....   https://t.co/a0BiQrd2T6  #prabowo #prabow2024  https://t.co/v9WoSQ3WDW
+1627503744580726784 2023-02-20 03:01:44 +0000 &lt;BANGSAygSUJUD&gt; @DarekaRendy @prabowo Apa daya jika cinta sudah melekat pada ayah #Prabowo 😍😍😍😍😍
+1627501082263056384 2023-02-20 02:51:10 +0000 &lt;TradingDoge1&gt; Berjalan bersama meemajukan...prabowo melakukan apa ya.... #prabowopersatuanindonesia #prabowo #Indonesia #beritaterkini #indoviralLink  https://t.co/5miatfliwE
+1627498493970628608 2023-02-20 02:40:53 +0000 &lt;PRABOW0_08&gt; #prabowo #babinsa  https://t.co/CZco62b2BH
+1627497021660876800 2023-02-20 02:35:02 +0000 &lt;ratna_sabilla3&gt; Prabowo untuk melanjutkan perjalanan membangung kesejahtraan melakukan.... #prabowopersatuanindonesia #prabowo #beritaterkini #Indonesia #NewsUpdate #beritaterkini  https://t.co/mEZ6d4WDKd
+1627496695281102850 2023-02-20 02:33:44 +0000 &lt;PRABOW0_08&gt; Untold Story : Sisi Lain Prabowo Yang Paling Dimusuhi Banyak Jenderal  #prabowo  utasan :
+1627496088717631488 2023-02-20 02:31:19 +0000 &lt;PRABOW0_08&gt; Teruslah berdoa untuk keselamatan seluruh rakyat Indonesia dari segala cobaan dan goda&#39;an. #prabowo  https://t.co/mzUjYKg4fP
+1627495408338632704 2023-02-20 02:28:37 +0000 &lt;ILaduzing&gt; Perubahan untuk indoesia prabowo berusaha bersama..... #prabowoperstuanindonesia #prabowo  #indonesiaviral #beritabolaterbaru #IndonesiaHarusBersamaOrangBaik  https://t.co/lD8YnJ3A7p
+1627493841959010304 2023-02-20 02:22:23 +0000 &lt;_BangOwo&gt; Prabowo membangun untuk masyarakat bersama???.... #prabowopersatuanindonesia #prabowo #beritaterkini #indonesiadamai #beritaterkini  #beritaViral #indonesian  https://t.co/XAj9JAq4KD
+1627487895866179589 2023-02-20 01:58:46 +0000 &lt;dekade_08&gt; 2024 adalah momentum untuk menjadikan Indonesia naik kelas. Khususnya dari sisi demokrasi. Segregasi tak boleh disebabkan oleh sekedar perbedaan pilihan politik, harus ada gagasan gagasan besar di sana.   #prabowo #rockygerung #demokrasi #dekade08 #mendingprabowo  https://t.co/Ac0Ubyn9DP
+1627487412837580800 2023-02-20 01:56:51 +0000 &lt;DpdBali&gt; Ayo segera daftarkan diri kalian 🥰  GRATIS❣️❣️❣️   #prabowo #dpdgerindrabali #gerindramenang #ahmadmuzani #sufmidaso #degadjah #MilenialBersatu #KebangkitanIndonesiaRaya #nodrama  https://t.co/ErUiAE7sZL
+1627487134612586496 2023-02-20 01:55:44 +0000 &lt;gerindra_pati&gt; Pesan Pak Prabowo Subianto , Ketua Umum Partai Gerakan Indonesia Raya (Gerindra) untuk anak-anak muda  #mendingprabowo #prabowo #gerindra #gerindrajawatengah #gerindrajateng #gerindrapati  https://t.co/2MC53FRnfP
+1627486457303793664 2023-02-20 01:53:03 +0000 &lt;DpdBali&gt; Prabowo Mania 08 👏🏻🤩  #prabowo #dpdgerindrabali #gerindramenang #ahmadmuzani #sufmidaso #degadjah #MilenialBersatu #KebangkitanIndonesiaRaya #nodrama  https://t.co/kmcsXXZpn9
+1627479965154553856 2023-02-20 01:27:15 +0000 &lt;mypresidentid&gt; Sepekan Pak Bowo: Menutup Pekan dengan menonton konser Dewa 19.  #mypresident #prabowo #prabowosubianto #prabowopresiden #indonesiaadilmakmur #mendingprabowo #prabowomypresident #presiden2024 #prabowopresidenri #gerindra #fy #fypシ❤️💞❤️ #fyi #fypage #fypシ #fyp #indonesia  https://t.co/HY7JlLYJNN
+1627477350303801344 2023-02-20 01:16:52 +0000 &lt;bengkeldodo&gt; @Gerindra @indadilmakmur wong ganteng aslik ..  #prabowo kesayangan 💕💕💕
+1627474775491878912 2023-02-20 01:06:38 +0000 &lt;mypresidentid&gt; Pak Bowo Presiden RI 2024 🔥  #mypresident #prabowo #prabowosubianto #prabowopresiden #indonesiaadilmakmur #mendingprabowo #prabowomypresident #presiden2024 #prabowopresidenri #gerindra #fy #fypシ❤️💞❤️ #fyi #fypage #fypシ #fyp #indonesia  https://t.co/SxZAU71J4h
+1627471986753699846 2023-02-20 00:55:33 +0000 &lt;mypresidentid&gt; Pengakuan anggota Babinsa tentang kemajuan TNI sejak Pak Bowo menjabat Menhan…  #mypresident #prabowo #prabowosubianto #prabowopresiden #indonesiaadilmakmur #mendingprabowo #prabowomypresident #presiden2024 #prabowopresidenri #gerindra #fy #fypシ❤️💞❤️ #fyi #fypage #fypシ #fyp  https://t.co/K3zJAgGPaw
+1627470580453875712 2023-02-20 00:49:57 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1627469878973321216 2023-02-20 00:47:10 +0000 &lt;Uzatpraja&gt; Siapa Bakal Calon Presiden Pilihan anda??  A. PRABOWO SUBIANTO B. ANIES BASWEDAN C. GANJAR PRANOWO  #AniesBaswedan #prabowo #Ganjar
+1627465929046257664 2023-02-20 00:31:28 +0000 &lt;andrikingo77&gt; Berarti bener nih gaada pamitnya banget Anies ke Prabowo yaa? Kok bisa sihh udah dibantuin loh padahal di Jakarta #aniesbaswedan #prabowo #gerindra #lupajanji #gubernurjakarta #jakarta #nasdem #macet #banjir #rumahdp0 #aniesgagal  https://t.co/lkBjyszIUn
+1627454619864674304 2023-02-19 23:46:32 +0000 &lt;are_inismyname&gt; @florieliciouss @zein_aniq @Yopiluthfi2 @Kosim__ @prabowo @Ken_Atie @Kimberley_20102 @DarekaRendy @BANGSAygSUJUD @bengkeldodo @yosephrosario_ @emhamka08 @ferdinand_mpu @CakMartinez @4Y4NKZ @AKU_dgn3putra Udh mbah gak ush diterusin.... sebagai umat akhir jaman lebih baik cuek gak ush ditanggepin yg bs menimbulkan fitnah. Yg penting pilih #prabowo 😂
+1627447940246814720 2023-02-19 23:20:00 +0000 &lt;JatengTV&gt; (07) Kelebihan lainnya dari PT Peroangan adalah mendapatkan prioritas dalam mengakses berbagai program pemerintah yang dikhususkan untuk UMKM. #ptperorangan #badanhukum #badanusaha #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1627431021322072064 2023-02-19 22:12:46 +0000 &lt;BANGSAygSUJUD&gt; @emhamka08 @prabowo @Alie_Fahnoor @are_inismyname @bengkeldodo @DarekaRendy @Gerindra @jatmiko99604253 @Kosim__ Ya iyalah. Ibarat kata. #Prabowo ini berkualitas unggul 😁💪❤️🇮🇩
+1627429087563354112 2023-02-19 22:05:05 +0000 &lt;BANGSAygSUJUD&gt; @Subadi_Sigit_W @bengkeldodo @Alie_Fahnoor @are_inismyname @DarekaRendy @dekade_08 @yosephrosario_ @Kosim__ @hanjar_agung @nurasmi69 @ferdinand_mpu Sekarang kami yg jagokan #Prabowo  Dua kali Pilpres sebelumnya kami bersama Jkw  Dan akan banyak kami kami kami lainnya yg akan bergabung bersama beliau 😊💪🇮🇩❤️
+1627379340643274752 2023-02-19 18:47:24 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1627364882319560707 2023-02-19 17:49:57 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1627344491584847874 2023-02-19 16:28:56 +0000 &lt;bengkeldodo&gt; Dari mereka berdualah seharusnya kita mau belajar   Bahwa dalam setiap kompetisi ada yang menang dan ada yang kalah   Kompetisi sudah selesai ayo sudahi saling caci dan hujat ada yg lebih utama persatuan indONEsia  #Prabowo  https://t.co/il0nHRENNw
+1627344383510192134 2023-02-19 16:28:30 +0000 &lt;IdChannel9&gt; Prabowo Subianto mendapat dukungan dari 64 ketua Kelompok Relawan Jokowi Jawa Barat.... #Prabowo #Relawanprawira  https://t.co/rtvjpnqaEX
+1627341286960422914 2023-02-19 16:16:12 +0000 &lt;RuangSejahtera_&gt; Wacana kib dan kir melebur, gimana netizen? Kayanya nih @airlangga_hrt - prabowo maju, wong peluangnya besar dan kuat toh? #airlanggahartarto #golkarindonesia #kib #kir #prabowo #pemilu2024 #infopolitik #golkar #gerindra #caprescawapres2024 #politikviral #politikindonesia  https://t.co/w3AykNydEo
+1627333953962250241 2023-02-19 15:47:03 +0000 &lt;jpnncom&gt; ?Elektabilitas Prabowo Makin Moncer, Ganjar dan Anies? Begini Datanya #Prabowo  https://t.co/rOJ9A1v069
+1627329539297906688 2023-02-19 15:29:31 +0000 &lt;bengkeldodo&gt; @agomala @Alie_Fahnoor @are_inismyname @BANGSAygSUJUD @DarekaRendy @dekade_08 @yosephrosario_ @Kosim__ @hanjar_agung @nurasmi69 @ferdinand_mpu harus dong #Prabowo
+1627320336651030528 2023-02-19 14:52:57 +0000 &lt;Kosim__&gt; Mentan Klaim 3 Food Estate Sukses, Ini Lokasinya  https://t.co/zi49jXMLWZ   #prabowo #foodestate
+1627318432621531137 2023-02-19 14:45:23 +0000 &lt;Kosim__&gt; Proyek Food Estate Prabowo Panen, Hasilnya Bisa 3-4x Lipat    https://t.co/P0UhMfrZZB   #prabowo #foodestate
+1627318213309792258 2023-02-19 14:44:30 +0000 &lt;Kosim__&gt; Panen Serentak Tiga Kawasan Food Estate   https://t.co/34xzAAhVKW  #Prabowo #foodestate
+1627317906471292928 2023-02-19 14:43:17 +0000 &lt;Kosim__&gt; SIAP PANEN, PETANI FOOD ESTATE RAIH 6 TON PER HEKTARE  #prabowo    https://t.co/mOyN3G5o6G
+1627317590459813891 2023-02-19 14:42:02 +0000 &lt;BANGSAygSUJUD&gt; @Kosim__ @DarekaRendy @Nilot__ @jatmiko99604253 @are_inismyname @AlvinVi52468704 @Alie_Fahnoor @bengkeldodo @emhamka08 Makin TOP berkelanjutan Capres idamanku #Prabowo 😁😍😍😍😍❤️🇮🇩❤️❤️
+1627317361933193216 2023-02-19 14:41:07 +0000 &lt;Kosim__&gt; Siap Panen, Petani di Lahan Food Estate Raih Hasil Menggembirakan #prabowo #foodestate   https://t.co/l24ugfKayw  https://t.co/LZaKCPMsNb
+1627315975258537986 2023-02-19 14:35:37 +0000 &lt;damarwuIan&gt; @Kosim__ @ferdinand_mpu @othex_prima @jatmiko99604253 @Nilot__ @yantanu2_08 @BANGSAygSUJUD @are_inismyname @yosephrosario_ @Alie_Fahnoor @DarekaRendy Lha ini berhasi , kok #prabowo sering diserang masalah ini kayyaknya pada malas baca
+1627314858164367361 2023-02-19 14:31:10 +0000 &lt;damarwuIan&gt; @florieliciouss @azissubekti @prabowo @bengkeldodo @Ken_Atie Alhamdulillah #prabowo ternyata
+1627312398821646336 2023-02-19 14:21:24 +0000 &lt;florieliciouss&gt; @azissubekti @prabowo @bengkeldodo Matur nuwun pak @azissubekti . Gak bisa ke lain hati , gak mau hanya ikut²an arus.   Kl copas kt mbak @Ken_Atie : The last stand smpe beliau gak running lg   #Prabowo
+1627312040149942280 2023-02-19 14:19:59 +0000 &lt;JatengTV&gt; (11) Pemilik PT Perorangan bisa melakukan pemisahan kekayaan pribadi dan bisnis secara formal karena memiliki NPWP yang terpisah. #ptperorangan #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaHebat #Jokowi  https://t.co/HRqCfZUnue
+1627311136453591041 2023-02-19 14:16:23 +0000 &lt;Kosim__&gt; Meski dinilai tidak berhasil di beberapa daerah, namun Prabowo menegaskan bahwa proyek ini masih dilanjutkan.  #Prabowo
+1627311134671003650 2023-02-19 14:16:23 +0000 &lt;Kosim__&gt; Proyek &#39;Food Estate&#39; Jokowi Gagal? Prabowo Angkat Bicara  https://t.co/AtDGMFacyZ   Menhan Prabowo membantah keras tudingan atas gagalnya proyek lumbung pangan atau food estate yang tengah digencarkan oleh Presiden Joko Widodo (Jokowi).   #prabowo
+1627308670861312000 2023-02-19 14:06:35 +0000 &lt;Kosim__&gt; &quot;Revolusi Putih&quot; Prabowo yang Akhirnya Dijalankan Anies-Sandi di DKI  Klik untuk baca:  https://t.co/acEv494VLo  #prabowo #revolusiputih  https://t.co/U7ldeVovxE
+1627307889059852290 2023-02-19 14:03:29 +0000 &lt;Kosim__&gt; Panen Bawang Merah Program “Food Estate” Capai 15,7 Ton/Ha, Petani Dipastikan Untung    https://t.co/ATcrMwfskH   #prabowo #foodestate  https://t.co/Enr8JhrAHD
+1627307276481740806 2023-02-19 14:01:03 +0000 &lt;Kosim__&gt; Proyek Food Estate Prabowo Panen, Hasilnya Bisa 3-4x Lipat    https://t.co/ONt3flPAaA   #prabowo #foodestate
+1627306444751245312 2023-02-19 13:57:44 +0000 &lt;Kosim__&gt; Warning Prabowo ke Prajurit TNI: Harus Dekat dengan Rakyat  #prabowo  #TNI #rakyat    https://t.co/KRSDpDWw1b
+1627300311621857282 2023-02-19 13:33:22 +0000 &lt;florieliciouss&gt; Bukan gak tahu.. bedain antara program Pemerintah sm Program CaPres. Drtd kan yg lo kejar Prabowo sbg Capres. Bedain Prabowo sbg Menhan sm BaCapres aja gak bisa  💥🍳  Byeee 😘  #Prabowo
+1627294576447979520 2023-02-19 13:10:35 +0000 &lt;BANGSAygSUJUD&gt; @yosephrosario_ @bengkeldodo @are_inismyname @Alie_Fahnoor #Prabowo meraih cinta umat lintas generasi, lintas kelompok dan lintas agama ❤💞❤💞❤💞
+1627294130052407296 2023-02-19 13:08:48 +0000 &lt;bengkeldodo&gt; @yosephrosario_ itulah yang membuat kita militan #prabowo dukung selalu mas
+1627293698345279488 2023-02-19 13:07:05 +0000 &lt;yosephrosario_&gt; kepercayaan mereka terlalu dalam untuk menitipkan masa depan Bangsa ini kepadamu, semoga Allah Swt selalu memberimu kesehatan dan selalu membimbing Bapak di jalan kebenaran.  #Prabowo
+1627293693584769026 2023-02-19 13:07:04 +0000 &lt;yosephrosario_&gt; Pak Prabowo...begitu banyak Rakyat yang mencintai anda, saya mohon jangan engkau sia-siakan amanah Rakyat jika engkau sudah menjadi RI I,  #Prabowo
+1627293689738579971 2023-02-19 13:07:03 +0000 &lt;yosephrosario_&gt; Sedalam palung pun kuburan yang kau siapkan untukku, Aku tidak akan berperang dengan kalian karena kalian adalah saudaraku, Aku hanya berperang, jika kalian menjadi pengkhianat dan menjadi perampok bangsa ini.  #Prabowo
+1627293683623292929 2023-02-19 13:07:02 +0000 &lt;yosephrosario_&gt; yang membuat saya terharu ketika membaca puisi Pak Prabowo untuk anak Negri :Sekeras halilintar pun genderang perang yang kau tabuhkan padaku, Sebusuk bangkai pun sumpah serapah yang kalian semburkan padaku, Setajam sembilu pun pedang yang kalian hunuskan padaku,  #Prabowo
+1627293680133627905 2023-02-19 13:07:01 +0000 &lt;yosephrosario_&gt; TIDAK PENDENDAM  Bertahun-tahun Pak Prabowo menerima fitnahan, cacian dan makian dari orang-orang yang tidak menyukainya, ia selalu bersikap sabar, bahkan ketika Spanduk dan Potonya di robek orang, Pak Prabowo hanya bilang ke simpatisanya untuk tidak membalasnya.  #Prabowo
+1627293674144145410 2023-02-19 13:07:00 +0000 &lt;yosephrosario_&gt; Ketika Capres lain naik bajai ke KPU, Prabowo memakai Lexus,  menurut saya itu adalah sikap apa adanya, karna memang sehari-harinya mengunakan Lexus.  #Prabowo
+1627293670612561920 2023-02-19 13:06:59 +0000 &lt;yosephrosario_&gt; Pak Prabowo tampil adanya, ia menunggangi kuda, karna memang sudah Hobinya berkuda, bahkan Kuda-Kuda dan rumahnya sering digunakan untuk Latihan para Atlet Nasional.  #Prabowo
+1627293667013828609 2023-02-19 13:06:58 +0000 &lt;yosephrosario_&gt; APA ADANYA  Sikap inilah yang jarang dimiliki para Pemimpin Bangsa ini,  ketika banyak dari pejabat kita yang ramai-ramai melakukan pencitraan untuk meraih simpati Rakyat,  #Prabowo
+1627293663574523906 2023-02-19 13:06:57 +0000 &lt;yosephrosario_&gt; ucapanya ia buktikan dengan memprakasai dan memberangkatkan Tim Kopasus ke selatan Nepal pada  tanggal 26 april 1997,Indonesia menjadi Negara pertama di Asia Tenggara yang berhasil mengibarkan Bendera Merah-Putih di Pucak Everst.  #Prabowo
+1627293659610910723 2023-02-19 13:06:56 +0000 &lt;yosephrosario_&gt; Salah satu ucapanya yang membakar semangat para Pemuda adalah&quot;kita tidak boleh kalah dengan Bangsa Lain&quot;,  #Prabowo
+1627293654716157953 2023-02-19 13:06:55 +0000 &lt;yosephrosario_&gt; RASA NASIONALISME  Rasa Nasionalisme yang dimiliki Pak Prabowo menurut saya tidak bisa diragukan lagi, kata-kata dan Prilakunya tergambar dan bisa membangkitkan rasa semangat jiwa-jiwa yang mencintai Bangsanya.  #Prabowo
+1627293651666870272 2023-02-19 13:06:54 +0000 &lt;yosephrosario_&gt; Ada Teladan dari Kepribadian Prabowo Subianto  Pak Prabowo,,meski engkau bukanlah manusia yang sempurna ahlak seperti Nabi, tapi ada beberapa teladan dari kepribadian yang  engkau miliki dan menurut saya, ini patut dicontoh oleh generasi Bangsa Indonesia.  #Prabowo  https://t.co/ldQcG2Dw0H
+1627293382853943297 2023-02-19 13:05:50 +0000 &lt;BANGSAygSUJUD&gt; @Sorali_lali @prabowo Yuk #Prabowo in aja 😁😀👍👍🇮🇩❤️💪💪
+1627292110746701826 2023-02-19 13:00:47 +0000 &lt;bengkeldodo&gt; @BANGSAygSUJUD @sapasiap @emhamka08 @are_inismyname @prabowo @nurasmi69 @Kosim__ @yantanu2_08 @jatmiko99604253 @Alie_Fahnoor @Nilot__ ya ... ga kayak kita lho pendukung #Prabowo aku real semua tamoak wajah cuma ga senyum kelihatan gigi
+1627287254854139907 2023-02-19 12:41:29 +0000 &lt;BANGSAygSUJUD&gt; Tak pikir2, statusku koq selalu tentang pak @prabowo ya?   Mau buat status lain seperti dulu rasanya koq gak mood  Apakah ini yg namanya cinta? ❤💞  #Prabowo semakin dicintai dan mencintai ❤💛💙  https://t.co/bGcQfbMNRl
+1627269919867027456 2023-02-19 11:32:36 +0000 &lt;KhoirilAnwar_&gt; Kalimat penutup pak #Prabowo dalam debat capres 2019 adalah #IndonesiaBerdikari . Insyaallah makin dekat tercapai bersama pak Prabowo.  @bengkeldodo
+1627266745831686147 2023-02-19 11:20:00 +0000 &lt;JatengTV&gt; (03) Pemilik PT Perorangan menjadi pemeran utama dalam mengatur kebijakan perusahaannya, termasuk dalam hal pengolahan data dan keuangan. #ptperorangan #sange #ciptakerja #indonesia #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1627261728731037698 2023-02-19 11:00:03 +0000 &lt;jpnncom&gt; Sekjen Gerindra Berharap Warga Banten Tetap Memilih Prabowo di Pilpres 2024 #Prabowo  https://t.co/sPxmHVlW2J
+1627257483071983617 2023-02-19 10:43:11 +0000 &lt;bengkeldodo&gt; Darori Wonodipuro Serahkan Bantuan Kendaraan Roda Tiga, Ini Delapan Kelompok Tani yang Menerima    https://t.co/lq1c6GJlqM…   #prabowo #gerindra #kebumen
+1627256197362651137 2023-02-19 10:38:05 +0000 &lt;bengkeldodo&gt; Sesudah Jokowi itu Prabowo kata Wan  Sehan ....   #prabowo #prabowo2024  https://t.co/ftJRT3GbNd
+1627254791801044992 2023-02-19 10:32:29 +0000 &lt;bengkeldodo&gt; @Anugrah02527180 @florieliciouss @prabowo @aniesbaswedan Pendukung #prabowo santun dan ga suka ngrusuhi ...
+1627254671411924992 2023-02-19 10:32:01 +0000 &lt;florieliciouss&gt; @hanjar_agung @arisqaputra1 @prabowo @bengkeldodo Ttp santun dgn jari2 kita ya bang . Demi #prabowo
+1627254213574291457 2023-02-19 10:30:12 +0000 &lt;florieliciouss&gt; Aku dukung @Prabowo bukan Abujanda dll. Buat aku mereka hanya sebutir pasir di langkah Prabowo. Cuma pendukung biasa. Msh bnyk orang baik juga yg gabung.  Yakin mbak di BaCaPres lain gak ada manusia2 &#39;aneh&#39; ? Pasti ada nantinya.  Jd aku ttp fokus ke #prabowo nya aja. Makasih 🙂
+1627254205445701636 2023-02-19 10:30:10 +0000 &lt;Alie_Fahnoor&gt; Semoga kita tidak melihat adanya kampanye hitam baik dari kader Partai #Gerindra atau dari Partai lain.  Kita adu konsep. Seperti Dalil vs Dalil [ teori vs teori ] { visi vs visi }  Salam #Prabowo   https://t.co/Bc2cz4BceY
+1627253654339346434 2023-02-19 10:27:58 +0000 &lt;bengkeldodo&gt; @KhoirilAnwar_ @prabowo @hattarajasa @sandiuno #prabowo maning
+1627252551858147336 2023-02-19 10:23:35 +0000 &lt;bengkeldodo&gt; @Boniza789 @yosephrosario_ @Alie_Fahnoor @BANGSAygSUJUD @are_inismyname Alhamdulillah kita sejalan #prabowo
+1627249143008862208 2023-02-19 10:10:03 +0000 &lt;klaten_kab&gt; Sodara Muda Harus tau!!!!!  #mendingprabowo #prabowosubianto #prabowo #gerindra #gerindrajateng #gerindrajawatengah  https://t.co/xboaz0Jy0F
+1627239387422683136 2023-02-19 09:31:17 +0000 &lt;yantanu2_08&gt; @emhamka08 @4Y4NKZ @Alie_Fahnoor @BANGSAygSUJUD @bengkeldodo @ferdinand_mpu @Kosim__ @Kimberley_20102 @Mey98235 Para Relawan pimpinan Eurico Guterres (Mantan Pejuang Timor timur)  Dulu beliau pernah saling baku tembak dengan #prabowo dan Kini jadi sahabat #prabowo   Politik #prabowo menganut aliran #AHIMSA Mahatma Gandhi, mengalahkan musuh dengan cara MERANGKUL BUKAN MENGGEBUK  https://t.co/HQ6IWfyRbu
+1627239314911555584 2023-02-19 09:30:59 +0000 &lt;IdChannel9&gt; Gerindra deklarasikan pemilu damai 2024... #Gerindra #pemilu2024 #prabowo   https://t.co/xg8OVRhsl6
+1627236545781706755 2023-02-19 09:19:59 +0000 &lt;JatengTV&gt; (07) Kelebihan lainnya dari PT Peroangan adalah mendapatkan prioritas dalam mengakses berbagai program pemerintah yang dikhususkan untuk UMKM. #ptperorangan #badanhukum #badanusaha #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1627236217720033280 2023-02-19 09:18:41 +0000 &lt;Alie_Fahnoor&gt; Bekerja dalam senyap dan memberi bukti    https://t.co/HXLqdvA8Y2  Menhan #Prabowo mengatakan bahwa perjanjian kerjasama pertahanan atau DCA antara Indonesia dan Perancis dengan prinsip saling menguntungkan di berbagai bidang yang menjadi kepentingan kedua negara.
+1627233406248706049 2023-02-19 09:07:31 +0000 &lt;JembertodayN&gt;  https://t.co/lSZEUDZ4Vp Sedianya Ketua Umum Partai Gerindra datang ke Jember. Tema kegiatan HUT Gerindra ke 15 di Jember, Mlaku Bareng Prabowo.  #gerindra #hutgerindra #prabowo #Pilpres2024
+1627228553178939393 2023-02-19 08:48:14 +0000 &lt;BANGSAygSUJUD&gt; @yantanu2_08 @4Y4NKZ @Alie_Fahnoor @bengkeldodo @emhamka08 @ferdinand_mpu @Kosim__ @Kimberley_20102 @Mey98235 Nah lho, makin JOS #Prabowo
+1627218960398848005 2023-02-19 08:10:07 +0000 &lt;BANGSAygSUJUD&gt; Nemu seperti ini dan ini suara dari sosok yg selama ini dianggap selalu kontra pemerintah  #Prabowo berjiwa kenegarawanan, &quot;Negara harus diurus bersama!&quot;  Rasa hormat dan cintaku semakin dalam kepada ayah @prabowo ❤️🇮🇩🙏  https://t.co/V8pnXbLdVf
+1627218550221070337 2023-02-19 08:08:29 +0000 &lt;RickyTamba_&gt; Gerindra Deklarasi Pemilu Damai 2024 di Jaktim, Yakin Prabowo Menang   https://t.co/X1vnrJWGdf  @prabowo @Don_dasco @habiburokhman @Gerindra  #Prabowo #Dasco #Habiburokhman #Gerindra #2024PrabowoPresiden #GerindraMenang #IndonesiaMaju #AdilMakmur #IndonesiaRaya #Indonesia  https://t.co/g4RMVbvuuA
+1627217330110615553 2023-02-19 08:03:38 +0000 &lt;RickyTamba_&gt; PILPRES 2024 PELUANG TERBAIK PRABOWO | CARI PRESIDEN EPS. 4   https://t.co/18H4BVUJ8A  Ricky Tamba (Ketua DPP Gerindra Bidang Pemetaan, Basis Pemilih dan TPS) yakin Pilpres 2024 peluang terbesar Prabowo Subianto (Ketua Umum Gerindra) untuk menang #prabowo #gerindra #Indonesia  https://t.co/JhtITAmDM4
+1627208847575363584 2023-02-19 07:29:55 +0000 &lt;bangtato08&gt; kekompakan NU #bangtato #NU #nahdlatululama #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/8dWY4Fg5Wk
+1627198432632000517 2023-02-19 06:48:32 +0000 &lt;Sorali_lali&gt; Siapa nantinya pemimpin yang mampu mensejahterakan rakyat? Dialah sosok yang dekat dengan rakyat!👉 #prabowo
+1627197269278863365 2023-02-19 06:43:55 +0000 &lt;kesiragerindra&gt; Dokumentasi Giat Bakti Sosial Revolusi Putih Bersama Kesira Gerindra Papua Barat, dan Bapak Bupati Kab. Teluk Wondama Ir. HENDRIK S. MAMBOR, MM   #kesira #kesiragerindra #gerindrakesira #prabowo #prabowosubianto #menhanprabowo #prabowopresiden2024 #2024prabowopresiden  https://t.co/voPyiVbwkT
+1627190616382754816 2023-02-19 06:17:29 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1627190615984439297 2023-02-19 06:17:29 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1627189911605624833 2023-02-19 06:14:41 +0000 &lt;fajaronline&gt; Survei SPIN: Prabowo Capres Pilihan Rakyat, Ganjar dan Anies Makin Ketinggalan  https://t.co/fQpYGHZ7q7 #AniesBaswedan #Capres2024 #ganjar #prabowo
+1627189640024457216 2023-02-19 06:13:36 +0000 &lt;bengkeldodo&gt; yes olret .....   #prabowo
+1627183441526804485 2023-02-19 05:48:58 +0000 &lt;tribunjambiku&gt; Jokowi Mania Dukung Prabowo Disindir, Sekjen PDI-P: Pagi Kedelai Sore Tempe, Biasa Berubah-ubah    https://t.co/jqUpCHso6D via @tribunjambiku   #jokowidodo #prabowo #joman
+1627179068256047104 2023-02-19 05:31:36 +0000 &lt;Sorali_lali&gt; Sudah mulai ada pergerakan mendata warga untuk pemilu mendatang.  Tentukan pilihanmu mana calon presiden yang terbaik menurutmu  Kami tetap bersama #prabowo
+1627178168225501184 2023-02-19 05:28:01 +0000 &lt;florieliciouss&gt; Bismillah... Ijinkan suara saya kali ini bersama @prabowo.  Maaf buat teman² yg berlawanan dgn pilihan Bakal Capresnya. Segala macam caci maki gak akan saya tanggapi.   Mari berpolitik secara dewasa. Krn twit kita cerminan dr sosok yg kita dukung  Have a nice Sunday 😘  #prabowo  https://t.co/AZukwHNscz
+1627171402171416582 2023-02-19 05:01:08 +0000 &lt;Alie_Fahnoor&gt; Dalam suasana peringatan Isra&#39; dan Mi&#39;raj, saya mengajak seluruh unsur dan komponen bangsa untuk meneladani Nabi Muhammad saw dan momentum untuk meningkatkan keimanan serta ketakwaan dgn senantiasa meneladani akhlak mulia beliau saw.  Salam  #Prabowo  https://t.co/XzEOhmHAoK
+1627171356105383941 2023-02-19 05:00:57 +0000 &lt;pramudia_id&gt; Selamat berakhir pekan sahabat, semoga akhir pekan ini bahagia bersama keluarga, sahabat dan orang tercinta. salam hangat  untuk keluarga.  Tetap semangat dan Salam Pramudia!  #KebangkitanIndonesiaRaya #prabowo #prabowosubianto #gusmuhaimin #muhaiminiskandar #gerindra #pkb  https://t.co/3LonasRRqF
+1627170890101432320 2023-02-19 04:59:06 +0000 &lt;bangtato08&gt; Persatuan Indonesia :) #bangtato #hut #gerindra #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/usv2dRBwMD
+1627167341678305280 2023-02-19 04:45:00 +0000 &lt;bangtato08&gt; Ultah Gerindra nih yee 😃 #bangtato #hut #gerindra #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/zrTcQHpeKv
+1627161278207922176 2023-02-19 04:20:54 +0000 &lt;BANGSAygSUJUD&gt; @RrgDevino @prabowo Amin. InsyaAllah 2024 menjadi Presiden RI #Prabowo
+1627156648983928832 2023-02-19 04:02:30 +0000 &lt;bangtato08&gt; Pantun lagi yuk :D #bangtato #pantun #prabowo #prabowosubianto #prabowopersatuanindonesia  https://t.co/DuoMbESK4t
+1627153489716740096 2023-02-19 03:49:57 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1627153423241183232 2023-02-19 03:49:41 +0000 &lt;BANGSAygSUJUD&gt; @emhamka08 @prabowo @Gerindra @bengkeldodo @are_inismyname @azissubekti @Dahnilanzar @Nilot__ @sapasiap @NgkongRoses Akurat. Hanya #Prabowo calon pemimpin paling matang dari segala sisi. Baik keilmuan, wawasan, pengalaman maupun mental
+1627152401873637376 2023-02-19 03:45:38 +0000 &lt;BANGSAygSUJUD&gt; Bukan saatnya meninggikan KEAKUAN tetapi salinglah BERENDAH HATI  Mari bahu membahu membangun negeri dengan MATA HATI agar Indonesia menjadi bangsa yg DIRAHMATI  Tantangan ke depan jauh lebih berat dan kekuatan terdahsyat kita adalah GOTONG ROYONG dan CINTA 💪🇮🇩❤️  Salam #Prabowo  https://t.co/NvXNpYBFgE
+1627149118002057216 2023-02-19 03:32:35 +0000 &lt;BANGSAygSUJUD&gt; @DarekaRendy @prabowo Semakin #Prabowo
+1627127053077352448 2023-02-19 02:04:54 +0000 &lt;yantanu2_08&gt; Seperti Immanuel Ebenezer dong dukung #prabowo yg pasti pasti saja   Lsbih siap, lebih mandiri dan lebih mapan
+1627121397230374913 2023-02-19 01:42:26 +0000 &lt;yantanu2_08&gt; Lucu aja ada orang ngaku dukung #prabowo tapi hatersnya Jokowi bahkan kritik teman koalisi Gerindra  Ketahuan degh dari postingan nya  terafiliasi kelompok kadrun #BapakPolitikIdentitas   #WaspadaPENYUSUP
+1627119309830127617 2023-02-19 01:34:08 +0000 &lt;GerindraTabanan&gt; Prabowo hadiri hari jadi PPP bersama Sandiaga.  #prabowo #mendingprabowo #terusmajubersaprabowo #dekade08  https://t.co/G1WhKLO2Tn
+1627115457785524224 2023-02-19 01:18:50 +0000 &lt;yantanu2_08&gt; Semoga kamu @Kimberley_20102 Bukan bagian dari PENYUSUP   Fans #Prabowo tidak terafiliasi kelompok kadrun Khilafah #BapakPolitikIdentitas   BUKAN hatersnya Jokowi tidak pernah kritik teman koalisi   Belajar dari fans puan &amp;amp; fans GP yg  tidak sekalipun menghujat #prabowo
+1627111221941145600 2023-02-19 01:02:00 +0000 &lt;kuatbacacom&gt; &quot;Rahasia, konfidensial. Saya kira wajar kalau berkala saya melapor ke panglima saya, Pak Presiden,&quot; jelas Prabowo. #kuatbaca #kuatabcacom #prabowo #jokowi #presidenjokowi #prabowosubianto @prabowo    https://t.co/xdE0F6G1x9
+1627100978460913664 2023-02-19 00:21:17 +0000 &lt;yantanu2_08&gt; Makanya kalau dukung #prabowo tidak terafiliasi pada golongan #BapakPolitikIdentitas meninggalkan pola pikir khilafah Wahabi serta  tidak menghujat Jokowi serta teman koalisi    Politik Prabowo satu satunya politik Jalan Tengah  Dan aku BENTENG NKRI pemakan otak kadrun 🤪
+1627100573614108672 2023-02-19 00:19:41 +0000 &lt;andrikingo77&gt; Waduh kok bisa-bisanya yaa Sandiaga pindah partai gitu aja, kaya gaada ingetnya jasa partai yang sebelumnya.. #kacanglupakulit #sandiagauno #sandiwara #ppp #gerindra #pindahpartai #sandiwaraterus #prabowo  #rumahdp0 #jakarta  https://t.co/ntpHupDLzv
+1627098842033422338 2023-02-19 00:12:48 +0000 &lt;yantanu2_08&gt; Yg jelas dan pasti FPI, Islam palsu aliran wahabi, napi Teroris jelas nyata mereka kelompok pembeci #prabowo serta koalisi yg bertujuan ganti dgn negara Khilafah  Jadi HERAN kamu mau dukung Prabowo tapi membenci teman koalisi  Jangan jangan kamu penyusup 😂
+1627095044355395584 2023-02-18 23:57:43 +0000 &lt;yantanu2_08&gt; ATHEIS memandang PIKIRAN adalah TUHAN yg nyata menempatkan PIKIRAN pada sila ke 1 Beda dgn Agama pengikut TUHAN tapi TUHAN yg ga punya OTAK SEHINGGA AGAMA tidak punya kemanusiaan bertentangan dgn sila ke 2  #prabowo BUKAN tunggangan politik KAUM khilafah yg kritik teman koalisi
+1627093090493431808 2023-02-18 23:49:57 +0000 &lt;JatengTV&gt; (12) PT Perorangan memiliki kepastian hukum dan terdaftar resmi di Kemenkumham. Kedudukannya sama seperti PT biasa. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaBangkit #Jokowi  https://t.co/HRqCfZUnue
+1627077022320332806 2023-02-18 22:46:06 +0000 &lt;Alie_Fahnoor&gt; Apapun keputusan Pak #Prabowo nanti, kami tetap mendukung untuk menjadikan Bapak sebagai Presiden RI 2024    https://t.co/2gziF2cnuF  Penunjukkan Ibu Khofifah - Ketua Umum PP Muslimat NU ] menjadi salah satu alasan &amp;amp; pertimbangan beliau sbg &quot;partner&quot; pemilihan presiden besok
+1627054127779037185 2023-02-18 21:15:07 +0000 &lt;BANGSAygSUJUD&gt; @bengkeldodo #Prabowo semakin dicintai lagi mencintai ❤💛💙
+1627044497715765248 2023-02-18 20:36:51 +0000 &lt;bengkeldodo&gt; Pemimpin Itu Mau Mendengar    https://t.co/BfDyzpNsbY…   #prabowo #prabowosubianto  https://t.co/7GmrpR3pVV
+1627001856735195136 2023-02-18 17:47:25 +0000 &lt;ER_R_OR&gt; Semangat Juang #Ir_soekarno Ada Pada diri #prabowo
+1626992608408137729 2023-02-18 17:10:40 +0000 &lt;bengkeldodo&gt; Memilih pemimpin juga  harus melihat  BIBIT BEBET BOBOT   #Prabowo
+1626981562276540419 2023-02-18 16:26:46 +0000 &lt;otong_idn&gt; Cuma berita gaes  #megawati #prabowo #prabowosubianto #tewas #tenggelam #sungaimusi #berita  https://t.co/9LWqvCaWIp
+1626979256306913280 2023-02-18 16:17:37 +0000 &lt;bengkeldodo&gt; Waktu dan tempat kami persilakan   https://t.co/SMbH5sx81c  #Prabowo  https://t.co/uISo0HR8nO
+1626971387662577664 2023-02-18 15:46:21 +0000 &lt;amber_benita&gt; Demi rakyat prabowo bersama grindra melakukan.... #prabowoperstuanindonesia #Prabowo #indonesian #NewsUpdate #berita  https://t.co/tVRcIsIUJY
+1626969345036537856 2023-02-18 15:38:14 +0000 &lt;bacautas&gt; Haloo @bengkeldodo 😃👋 Selamat membaca! &quot;Ketika Prabowo Menampar Perwira Pasukan Elit AS Hingga Tersungkur.  #Prabowo ...&quot;  https://t.co/AvxELLuemt
+1626969217366122497 2023-02-18 15:37:43 +0000 &lt;__CalonPresiden&gt; #airlanggahartarto #golkarindonesia giselle fenomenal sih next level banget di twitter blue! #GALA #هند_القحطاني #akamemorialservice #Prabowo #TXTonCCMA2022 #MCDOYOUNG_CCMA2022  https://t.co/CeAHNpIXYm
+1626968813366575104 2023-02-18 15:36:07 +0000 &lt;yosephrosario_&gt; Dalam keadaan panik, pada 15 Mei 1996 OPM membunuh dua anggota Tim Lorentz, Navy dan Matheis dibantai dengan kapak. Sisa sandera bisa diselamatkan dan melarikan diri setelah bertemu dengan Tim Satgas yang telah mengikuti mereka berhari-hari.  #Prabowo
+1626968810271145985 2023-02-18 15:36:06 +0000 &lt;yosephrosario_&gt; Selanjutnya, Brigjen Prabowo langsung menggerakkan pasukan begitu mendengar lampu hijau. OPM yang terdesak terus bergerak masuk hutan.  #Prabowo
+1626968806513086464 2023-02-18 15:36:05 +0000 &lt;yosephrosario_&gt; “Jika Kamu meremehkan negara dan pasukan saya, saya bisa menembak kepalamu! Kami mengusir penjajah hanya dengan Bambu Runcing, kami adalah bangsa yang besar, jika kamu tidak suka, sekarang juga kamu angkat kaki dari negara saya!” bentak Prabowo.  #Prabowo
+1626968803035996161 2023-02-18 15:36:04 +0000 &lt;yosephrosario_&gt; Usai Briefing, seorang prajurit melaporkan apa yang dikatakan oleh Letkol Green kepada Prabowo Subianto. Brigjen Prabowo yang tidak terima dengan ucapan Letkol Green langsung mendatangi Perwira Delta Force tersebut dan menamparnya hingga tersungkur.  #Prabowo
+1626968799433097216 2023-02-18 15:36:04 +0000 &lt;yosephrosario_&gt; Saat Briefing dengan beberapa Perwira Kopassus, tiba-tiba Letkol Green mengatakan: “Hanya James Bond yang bisa membebaskan sandera-sandera itu”.  #Prabowo
+1626968786841780224 2023-02-18 15:36:01 +0000 &lt;yosephrosario_&gt; Amerika menawarkan bantuan ke Kopassus untuk ikut dalam Operasi Pembebasan Sandera Tim Lorentz di Mapenduma, Papua. Salah satu yang ikut serta dalam Tim Amerika adalah seorang Perwira menengah bernama Letkol Green.  #Prabowo
+1626968775965949953 2023-02-18 15:35:58 +0000 &lt;yosephrosario_&gt; Selain itu, ada pasukan Batalyon Lintas Udara Kostrad 330 dan pasukan penjejak yang terdiri dari putra-putra Irian milik Kodam Cendrawasih.  #Prabowo
+1626968771591286789 2023-02-18 15:35:57 +0000 &lt;yosephrosario_&gt; Untuk membebaskan sandera di Mapenduma, Mabes TNI menggelar satgas. Komandan Jenderal Kopassus Brigjen Prabowo Subianto ditunjuk menjadi komandan. Tim Kopassus yang dikerahkan berasal dari Grup 5 Antiteror.  #Prabowo
+1626968767665405953 2023-02-18 15:35:56 +0000 &lt;yosephrosario_&gt; Peristiwa itu menjadi sorotan internasional karena melibatkan warga negara asing. Selama penyanderaan, para sandera digiring blusukan ke belantara Papua.  #Prabowo
+1626968764284805121 2023-02-18 15:35:55 +0000 &lt;yosephrosario_&gt; Kala itu, pada 8 Januari 1996 sayap militer Organisasi Papua Merdeka (OPM) yang dipimpin Kelly Kwalik Mederka menculik 95 diculik anggota Tim Ekspedisi Lorentz. Komandan OPM Kelly Kwalik berusaha menukar 12 sandera itu dengan kemerdekaan Papua.  #Prabowo
+1626968760568676353 2023-02-18 15:35:54 +0000 &lt;yosephrosario_&gt; Saat Briefing Operasi Mapenduma, Komandan Jenderal Kopassus Brigjen Prabowo Subianto pernah menampar seorang Perwira Delta Force dari pasukan Elit USA hingga tersungkur karena perkataannya yang menghina Kopassus dan TNI.  #Prabowo
+1626968757682970624 2023-02-18 15:35:54 +0000 &lt;yosephrosario_&gt; Ketika Prabowo Menampar Perwira Pasukan Elit AS Hingga Tersungkur.  #Prabowo  https://t.co/tM5SAdqcFf
+1626966334302199809 2023-02-18 15:26:16 +0000 &lt;kab_gerindratgl&gt; Disini ada calon-calon Presiden dan Wakil Presiden, yang saya kenal ada Pak Prabowo.  #mendingprabowo #prabowosubianto #prabowo #gerindra #gerindrajateng #gerindrajawatengah  https://t.co/vneEzZbZsU
+1626963081699135488 2023-02-18 15:13:20 +0000 &lt;AzuraAdhitama1&gt; Dari rakyat untuk rakyat, prabowo betpidato apa ya #prabowopersatuanindonesia #Prabowo #UntukIndonesiaSejahtera  #NewsUpdate #beritaterkini  #Indonesia  https://t.co/qzFxmTTnMI
+1626960708931059712 2023-02-18 15:03:55 +0000 &lt;ArsenioAgam&gt; Prabowo bersama grindra untuk masyarakat... #prabowopersatuanindonesia #Prabowo #grindra #BersamaMelayaniRakyat #Indonesia  https://t.co/ZkHTKG53YQ
+1626952840467066880 2023-02-18 14:32:39 +0000 &lt;BANGSAygSUJUD&gt; @abuharai @prabowo Sy bersatu dg keyakinan sy. #Prabowo mengajarkan kpd kita untuk berbesar hati. Tak kecewa saat apa yg kita perjuangkan luput dan tak tinggi hati saat berhasil. Rasa syukur adalah rasa terindah. Rasa syukur adalah kunci dan diwujudkan dalam bentuk menjadi manfaat bagi negara
+1626949653156757505 2023-02-18 14:19:59 +0000 &lt;JatengTV&gt; (03) Pemilik PT Perorangan menjadi pemeran utama dalam mengatur kebijakan perusahaannya, termasuk dalam hal pengolahan data dan keuangan. #ptperorangan #sange #ciptakerja #indonesia #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
+1626945088827039746 2023-02-18 14:01:51 +0000 &lt;BANGSAygSUJUD&gt; @Yopiluthfi2 Standart sy malah ibu saya. Beliau di dua kali Pilpres tak mendukung #Prabowo tapi kini justru menyarankan sy mendukung PS. Dan beliau yakin PS lah yg mampu membawa Indonesia adil makmur dg segenap kelebihannya yg kini cahayanya semakin ditampakkan Allah. Ini menurut ibu saya
+1626939299982880769 2023-02-18 13:38:50 +0000 &lt;pramudia_id&gt; Apa harapan kalian kepada pemimpin Indonesia yang akan datang??  Salam Pramudia! #KebangkitanIndonesiaRaya . #Prabowo #PrabowoSubianto  #MuhaiminIskandar #GusMuhaimin #Gerindra #PKB  https://t.co/slFFZgwuYo
+1626938813644943360 2023-02-18 13:36:54 +0000 &lt;SudaryonoSudar&gt; Isra dan Miraj mengingatkan kita akan perjuangan dan ketabahan Nabi Muhammad SAW dalam menyebarkan agama Islam. Mari kita ikuti teladan beliau dalam menjaga keyakinan dan memperjuangkan kebaikan. #DengarAmatiReaksi #APPSI #PAPERA #PedagangPasar #Gerindra #Prabowo #PrabowoPresiden  https://t.co/tv3dE8XM6E
+1626931436912807937 2023-02-18 13:07:36 +0000 &lt;yantanu2_08&gt; Dear the beauty best mentor @MerryRiana   Ditunggu dong potcast nya bersama #prabowo dong
+1626929716627374080 2023-02-18 13:00:45 +0000 &lt;Nilot__&gt; @bengkeldodo @prabowo @BANGSAygSUJUD @are_inismyname @Alie_Fahnoor @AKU_dgn3putra @annourcharity @yosephrosario_ @emhamka08 @Kosim__ @4Y4NKZ Sllu dukung @prabowo   #Prabowo
+1626926842900004864 2023-02-18 12:49:20 +0000 &lt;gerindra_pati&gt; #mendingprabowo #prabowo #gerindra #gerindrajawatengah #gerindrajateng #gerindrapati  https://t.co/KbazH6ZdWO
+1626924327953403904 2023-02-18 12:39:21 +0000 &lt;bengkeldodo&gt; @BANGSAygSUJUD @prabowo @Gerindra @azissubekti @are_inismyname @Dahnilanzar @Alie_Fahnoor @Kosim__ @sapasiap @NgkongRoses @yantanu2_08 @emhamka08 sudah tepat dukung #Prabowo
+1626902210142674945 2023-02-18 11:11:27 +0000 &lt;bengkeldodo&gt; #Prabowo
+1626899382670094336 2023-02-18 11:00:13 +0000 &lt;BANGSAygSUJUD&gt; @Ken_Atie @prabowo #Prabowo semakin dicinta ❤💞
+1626897588489424898 2023-02-18 10:53:06 +0000 &lt;bengkeldodo&gt; @Ken_Atie @prabowo #prabowo kesayangan
+1626897072028024833 2023-02-18 10:51:02 +0000 &lt;bengkeldodo&gt; Pendapat Joman setelah bertemu @prabowo   #Prabowo  https://t.co/so1Fd2fcNC
+1626895495707914241 2023-02-18 10:44:47 +0000 &lt;BANGSAygSUJUD&gt; @bengkeldodo @prabowo @are_inismyname @Alie_Fahnoor @AKU_dgn3putra @annourcharity @yosephrosario_ @emhamka08 @Kosim__ @4Y4NKZ @Nilot__ Semakin #Prabowo 💪🇮🇩❤️💪
+1626889250275983362 2023-02-18 10:19:58 +0000 &lt;JatengTV&gt; (11) Pemilik PT Perorangan bisa melakukan pemisahan kekayaan pribadi dan bisnis secara formal karena memiliki NPWP yang terpisah. #ptperorangan #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaHebat #Jokowi  https://t.co/HRqCfZUnue
+1626884781865848833 2023-02-18 10:02:12 +0000 &lt;bengkeldodo&gt; Ayah @prabowo tidak pernah menyimpan dendam di hatinya .. finah keji pernah menimpa dirinya   Dan #Prabowo tetap hormati kepada mereka semua ...   #Prabowo kesayangan 💕  https://t.co/fo6XkEQGLy
+1626881700906291200 2023-02-18 09:49:58 +0000 &lt;JatengTV&gt; (12) PT Perorangan memiliki kepastian hukum dan terdaftar resmi di Kemenkumham. Kedudukannya sama seperti PT biasa. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaBangkit #Jokowi  https://t.co/HRqCfZUnue
+1626880998146461698 2023-02-18 09:47:10 +0000 &lt;bengkeldodo&gt; Video lama yang mengingatkan kita betapa kejamnya fitnah beliau terima framing Prabowo ngamuk   Faktanya  @prabowo memarahi pengawalnya karena menghalangi masyarakat yg ingin berjabat tangan   Reflek Seorang Pemimpin yang cinta rakyat jangan dorong rakyat   #Prabowo #Prabowo2024  https://t.co/YWm3gwq7kH
+1626875920882581505 2023-02-18 09:27:00 +0000 &lt;BANGSAygSUJUD&gt; @Kosim__ @Arfan_gmn @TheHunterToken @HendraJ58938266 @heriawanadiwan4 @NewOpang @ferdinand_mpu @AKU_dgn3putra @4HurufNamaKu Rasa kita sama #Prabowo 💪❤️🇮🇩🙏
+1626872628903575553 2023-02-18 09:13:55 +0000 &lt;bengkeldodo&gt; @AyatMamas @prabowo @dekade_08 @DarekaRendy @Dahnilanzar @bawang_baik @BANGSAygSUJUD @are_inismyname @4Y4NKZ @Alie_Fahnoor @yosephrosario_ aku wes juga dan arep maning #Prabowo
+1626864519543951360 2023-02-18 08:41:41 +0000 &lt;bengkeldodo&gt; @Chaves1305 Memang kadang ga semua harua di ceritakan dan diberitahukan .. amanah   #Prabowo
+1626864143788814336 2023-02-18 08:40:12 +0000 &lt;bengkeldodo&gt; @OnlyFrens @prabowo Secara diplomatis tentunya ... tapi parajurit tidak mengebal kata pensiun ... dulu masih muda   #Prabowo
+1626863513108123648 2023-02-18 08:37:41 +0000 &lt;bengkeldodo&gt; @are_inismyname #prabowobergerak #Prabowo
+1626860628337098753 2023-02-18 08:26:14 +0000 &lt;dekade_08&gt; Pak Prabowo dan Bang Sandiaga Uno Hadiri Harlah PPP sama sama. Mana lagi yang mau adu domba???   #prabowo #jokowi #indonesia #PPP #partaippp #isramiraj #IsraMiraj2023 #isramiraj1444h #dekade08 #mendingprabowo #terusmajubersamaprabowo  https://t.co/ahwyKIYMR9
+1626859540464689152 2023-02-18 08:21:54 +0000 &lt;bengkeldodo&gt; @Kemal2sk @hanjar_agung @prabowo isinya omongan pengamat ya bebas semau 2 dia nulis   tetap #Prabowo
+1626855337340047360 2023-02-18 08:05:12 +0000 &lt;Alie_Fahnoor&gt; Apakah karena kinerja dan integritas Pak #Prabowo, min?  Eeh    https://t.co/0AbhT63L0T
+1626854795406618625 2023-02-18 08:03:03 +0000 &lt;papandu08&gt; 4.000 jiwa warga NTB, berterima kasih atas bantuan yang diberikan oleh Kemenhan #prabowo #kemenhan #menhan #NTB  https://t.co/A3Rnbua73I
+1626849179141308416 2023-02-18 07:40:44 +0000 &lt;KrisyantoOni&gt; #prabowo  https://t.co/XsHW8OCEsG
+1626848503115952129 2023-02-18 07:38:03 +0000 &lt;faktualid_com&gt; Relawan Jokowi Batal Dukung Ganjar, Semoga Tulus Dukung Prabowo #Jokowi #GanjarPranowo #prabowo  https://t.co/094BGoHkBV
+1626839735183511553 2023-02-18 07:03:12 +0000 &lt;dekade_08&gt; Memperingati Isra Miraj 1444 H.   Semoga keberkahan, kebaikan, dan keridhaan Allah SWT selalu menyertai kita selalu.  #prabowo #mendingprabowo #terusmajubersamaprabowo #dekade08 #isramiraj #IsraMiraj2023 #isramiraj1444h  https://t.co/dEaggrnV91
+1626830042427949056 2023-02-18 06:24:41 +0000 &lt;fazcryp&gt; Walau Belum Ideal, Gerindra Tetap Berterima Kasih ONH Ditetapkan Rp 49 Juta  #ONH #gerindra #prabowo #achmadmuzani   @Gerindra @Fraksi_Gerindra    https://t.co/7rp2iAXbRh
+1626825736689524736 2023-02-18 06:07:35 +0000 &lt;VIVAcoid&gt; Dukungan elemen relawan Jokowi Mania atau Joman, membuat energi Prabowo Subianto berlipat-lipat sebagai Capres 2024 dari Partai Gerindra.  Selengkapnya:  https://t.co/7NgVvsmxC0  ____ #Vivacoid #Jokowi #Prabowo  https://t.co/4Bg9F3NZ4B
+1626825566220591104 2023-02-18 06:06:54 +0000 &lt;warna_nusa&gt; Singgung Menteri BUMN Erick Thohir, Jokowi Bahas Soal Rangkap Jabatan! Sempat Colek Luhut dan Prabowo?  #erickthohir #Jokowi #prabowo #luhut  https://t.co/EWjb9eUjpY
 </pre></div>
 </div>
 </div>
