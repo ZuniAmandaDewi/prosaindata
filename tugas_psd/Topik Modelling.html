@@ -593,7 +593,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-600aa37c-7cf2-4a99-8e0e-57ef93924c36">
+  <div id="df-ffd72bab-63e0-42c6-9b81-dbe46b158d48">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -756,7 +756,7 @@ document.write(`
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-600aa37c-7cf2-4a99-8e0e-57ef93924c36')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ffd72bab-63e0-42c6-9b81-dbe46b158d48')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -807,12 +807,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-600aa37c-7cf2-4a99-8e0e-57ef93924c36 button.colab-df-convert');
+          document.querySelector('#df-ffd72bab-63e0-42c6-9b81-dbe46b158d48 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-600aa37c-7cf2-4a99-8e0e-57ef93924c36');
+          const element = document.querySelector('#df-ffd72bab-63e0-42c6-9b81-dbe46b158d48');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -840,50 +840,6 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
-<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-6-d5df0069828e&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, readonly)</span>
-<span class="g g-Whitespace">    </span><span class="mi">101</span> <span class="k">def</span> <span class="nf">mount</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">,</span> <span class="n">force_remount</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout_ms</span><span class="o">=</span><span class="mi">120000</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">102</span><span class="w">   </span><span class="sd">&quot;&quot;&quot;Mount your Google Drive at the specified mountpoint path.&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">103</span>   <span class="k">return</span> <span class="n">_mount</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">104</span>       <span class="n">mountpoint</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">105</span>       <span class="n">force_remount</span><span class="o">=</span><span class="n">force_remount</span><span class="p">,</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral, readonly)</span>
-<span class="g g-Whitespace">    </span><span class="mi">130</span>   <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">131</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">132</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">133</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">134</span>     <span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
-<span class="g g-Whitespace">    </span><span class="mi">174</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span>
-<span class="g g-Whitespace">    </span><span class="mi">175</span>   <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">176</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
-<span class="g g-Whitespace">     </span><span class="mi">94</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">96</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">97</span>       <span class="k">continue</span>
-<span class="g g-Whitespace">     </span><span class="mi">98</span>     <span class="k">if</span> <span class="p">(</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="pre-processing">
 <h2>Pre-Processing<a class="headerlink" href="#pre-processing" title="Permalink to this heading">#</a></h2>
@@ -895,11 +851,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting Sastrawi
-  Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 kB</span> <span class=" -Color -Color-Red">7.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hInstalling collected packages: Sastrawi
-Successfully installed Sastrawi-1.0.1
+Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packages (1.0.1)
 </pre></div>
 </div>
 </div>
@@ -940,7 +892,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-5e95c477-7005-463a-b70e-14fdf6e0507a">
+  <div id="df-1e7b30b2-9198-4dc5-b7a1-9433e39a8f9f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1103,7 +1055,7 @@ Successfully installed Sastrawi-1.0.1
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-5e95c477-7005-463a-b70e-14fdf6e0507a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-1e7b30b2-9198-4dc5-b7a1-9433e39a8f9f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1154,12 +1106,12 @@ Successfully installed Sastrawi-1.0.1
 
       <script>
         const buttonEl =
-          document.querySelector('#df-5e95c477-7005-463a-b70e-14fdf6e0507a button.colab-df-convert');
+          document.querySelector('#df-1e7b30b2-9198-4dc5-b7a1-9433e39a8f9f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-5e95c477-7005-463a-b70e-14fdf6e0507a');
+          const element = document.querySelector('#df-1e7b30b2-9198-4dc5-b7a1-9433e39a8f9f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1202,7 +1154,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c45c80ac-6ef5-46a7-845d-e3c52e1c36ae">
+  <div id="df-66294d8b-9109-4060-ad3b-1e80c317ff44">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1305,7 +1257,7 @@ Successfully installed Sastrawi-1.0.1
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c45c80ac-6ef5-46a7-845d-e3c52e1c36ae')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-66294d8b-9109-4060-ad3b-1e80c317ff44')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1356,12 +1308,12 @@ Successfully installed Sastrawi-1.0.1
 
       <script>
         const buttonEl =
-          document.querySelector('#df-c45c80ac-6ef5-46a7-845d-e3c52e1c36ae button.colab-df-convert');
+          document.querySelector('#df-66294d8b-9109-4060-ad3b-1e80c317ff44 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c45c80ac-6ef5-46a7-845d-e3c52e1c36ae');
+          const element = document.querySelector('#df-66294d8b-9109-4060-ad3b-1e80c317ff44');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1396,7 +1348,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6d0cbedb-31b5-4011-a20a-6e304b9a13fd">
+  <div id="df-20f0eba6-277a-40f0-a5ef-a96c679f2e32">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1499,7 +1451,7 @@ Successfully installed Sastrawi-1.0.1
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6d0cbedb-31b5-4011-a20a-6e304b9a13fd')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-20f0eba6-277a-40f0-a5ef-a96c679f2e32')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1550,12 +1502,12 @@ Successfully installed Sastrawi-1.0.1
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6d0cbedb-31b5-4011-a20a-6e304b9a13fd button.colab-df-convert');
+          document.querySelector('#df-20f0eba6-277a-40f0-a5ef-a96c679f2e32 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6d0cbedb-31b5-4011-a20a-6e304b9a13fd');
+          const element = document.querySelector('#df-20f0eba6-277a-40f0-a5ef-a96c679f2e32');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1585,9 +1537,15 @@ Successfully installed Sastrawi-1.0.1
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Collecting indoNLP
-  Downloading indoNLP-0.3.4-py3-none-any.whl (121 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">121.9/121.9 kB</span> <span class=" -Color -Color-Red">4.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hInstalling collected packages: indoNLP
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading indoNLP-0.3.4-py3-none-any.whl (121 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/121.9 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">121.9/121.9 kB</span> <span class=" -Color -Color-Red">10.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: indoNLP
 Successfully installed indoNLP-0.3.4
 </pre></div>
 </div>
@@ -1625,7 +1583,7 @@ Successfully installed indoNLP-0.3.4
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4dbadadd-358b-4e03-b9b1-7b4d4cf804e1">
+  <div id="df-96b7e298-9a0b-488d-bc98-bbfeadf41217">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1728,7 +1686,7 @@ Successfully installed indoNLP-0.3.4
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4dbadadd-358b-4e03-b9b1-7b4d4cf804e1')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-96b7e298-9a0b-488d-bc98-bbfeadf41217')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1779,12 +1737,12 @@ Successfully installed indoNLP-0.3.4
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4dbadadd-358b-4e03-b9b1-7b4d4cf804e1 button.colab-df-convert');
+          document.querySelector('#df-96b7e298-9a0b-488d-bc98-bbfeadf41217 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4dbadadd-358b-4e03-b9b1-7b4d4cf804e1');
+          const element = document.querySelector('#df-96b7e298-9a0b-488d-bc98-bbfeadf41217');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1896,21 +1854,41 @@ Successfully installed indoNLP-0.3.4
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;tgb&#39;, &#39;josssss&#39;]
-[&#39;prabowo&#39;, &#39;mahfud&#39;, &#39;md&#39;, &#39;vs&#39;, &#39;ganjar&#39;, &#39;sandiaga&#39;, &#39;vs&#39;, &#39;anies&#39;, &#39;ahy&#39;]
-[&#39;pilih&#39;, &#39;cawapres&#39;, &#39;tajir&#39;, &#39;sanggup&#39;, &#39;bayar&#39;, &#39;mahar&#39;, &#39;besar&#39;]
-[&#39;ppp&#39;, &#39;sih&#39;, &#39;romlahhhhh&#39;, &#39;senyam&#39;, &#39;senyum&#39;, &#39;mantan&#39;, &#39;koruptor&#39;, &#39;dosa&#39;, &#39;jijik&#39;]
-[&#39;ganjar&#39;, &#39;pasang&#39;, &#39;mahmud&#39;, &#39;abbas&#39;, &#39;prabowo&#39;, &#39;pasang&#39;, &#39;airlangga&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;prabowo&#39;, &#39;mahfud&#39;, &#39;md&#39;, &#39;vs&#39;, &#39;ganjar&#39;, &#39;sandiaga&#39;, &#39;vs&#39;, &#39;anies&#39;, &#39;ahy&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;pilih&#39;, &#39;cawapres&#39;, &#39;tajir&#39;, &#39;sanggup&#39;, &#39;bayar&#39;, &#39;mahar&#39;, &#39;besar&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ppp&#39;, &#39;sih&#39;, &#39;romlahhhhh&#39;, &#39;senyam&#39;, &#39;senyum&#39;, &#39;mantan&#39;, &#39;koruptor&#39;, &#39;dosa&#39;, &#39;jijik&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ganjar&#39;, &#39;pasang&#39;, &#39;mahmud&#39;, &#39;abbas&#39;, &#39;prabowo&#39;, &#39;pasang&#39;, &#39;airlangga&#39;]
 [&#39;pilih&#39;, &#39;anies&#39;, &#39;rekam&#39;, &#39;jejak&#39;, &#39;jelek&#39;, &#39;jelek&#39;, &#39;gubernur&#39;, &#39;dki&#39;]
-[&#39;partai&#39;, &#39;ppp&#39;, &#39;ketiak&#39;, &#39;tugas&#39;, &#39;partai&#39;, &#39;pdip&#39;]
-[&#39;nasihat&#39;, &#39;dukung&#39;, &#39;capres&#39;, &#39;antusias&#39;, &#39;kenal&#39;, &#39;kalo&#39;, &#39;kecewa&#39;, &#39;dblkg&#39;, &#39;antusias&#39;, &#39;over&#39;, &#39;doa&#39;, &#39;baik&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;partai&#39;, &#39;ppp&#39;, &#39;ketiak&#39;, &#39;tugas&#39;, &#39;partai&#39;, &#39;pdip&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;nasihat&#39;, &#39;dukung&#39;, &#39;capres&#39;, &#39;antusias&#39;, &#39;kenal&#39;, &#39;kalo&#39;, &#39;kecewa&#39;, &#39;dblkg&#39;, &#39;antusias&#39;, &#39;over&#39;, &#39;doa&#39;, &#39;baik&#39;]
 [&#39;romy&#39;, &#39;senyum&#39;, &#39;penjara&#39;]
-[&#39;anis&#39;, &#39;khofifah&#39;, &#39;oke&#39;, &#39;om&#39;, &#39;ye&#39;, &#39;ganjar&#39;, &#39;sandiaga&#39;, &#39;oke&#39;, &#39;prabowo&#39;, &#39;cak&#39;, &#39;imin&#39;, &#39;ok&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;anis&#39;, &#39;khofifah&#39;, &#39;oke&#39;, &#39;om&#39;, &#39;ye&#39;, &#39;ganjar&#39;, &#39;sandiaga&#39;, &#39;oke&#39;, &#39;prabowo&#39;, &#39;cak&#39;, &#39;imin&#39;, &#39;ok&#39;]
 [&#39;sibuk&#39;, &#39;cawapres&#39;, &#39;lupa&#39;, &#39;indonesia&#39;, &#39;raya&#39;]
-[&#39;ahok&#39;, &#39;maju&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ahok&#39;, &#39;maju&#39;]
 [&#39;cocok&#39;, &#39;nya&#39;, &#39;p&#39;, &#39;mahfud&#39;, &#39;pasang&#39;, &#39;p&#39;, &#39;ganjar&#39;]
-[&#39;ganjar&#39;, &#39;mafud&#39;, &#39;md&#39;, &#39;mendokrat&#39;, &#39;suara&#39;, &#39;pilih&#39;, &#39;rakyat&#39;, &#39;butuh&#39;, &#39;sosok&#39;, &#39;mafud&#39;, &#39;md&#39;, &#39;hukum&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ganjar&#39;, &#39;mafud&#39;, &#39;md&#39;, &#39;mendokrat&#39;, &#39;suara&#39;, &#39;pilih&#39;, &#39;rakyat&#39;, &#39;butuh&#39;, &#39;sosok&#39;, &#39;mafud&#39;, &#39;md&#39;, &#39;hukum&#39;]
 [&#39;iya&#39;, &#39;kalo&#39;, &#39;nya&#39;, &#39;rakyat&#39;, &#39;satuny&#39;, &#39;yin&#39;, &#39;imbang&#39;]
-[&#39;panatik&#39;, &#39;p&#39;, &#39;surya&#39;, &#39;darma&#39;, &#39;ali&#39;, &#39;roma&#39;, &#39;kurmuzi&#39;, &#39;kena&#39;, &#39;ogah&#39;, &#39;deh&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;panatik&#39;, &#39;p&#39;, &#39;surya&#39;, &#39;darma&#39;, &#39;ali&#39;, &#39;roma&#39;, &#39;kurmuzi&#39;, &#39;kena&#39;, &#39;ogah&#39;, &#39;deh&#39;]
 [&#39;koalisi&#39;, &#39;tgb&#39;]
 [&#39;capres&#39;, &#39;butuh&#39;, &#39;rakyat&#39;, &#39;indonesia&#39;, &#39;capres&#39;, &#39;capres&#39;, &#39;tiga&#39;]
 [&#39;suara&#39;]
@@ -1932,7 +1910,7 @@ Successfully installed indoNLP-0.3.4
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-34032dad-95cd-4537-8b63-da4e7a7848b1">
+  <div id="df-62a8e0fd-2f74-416f-b7f2-ea8106e9eba1">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2035,7 +2013,7 @@ Successfully installed indoNLP-0.3.4
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-34032dad-95cd-4537-8b63-da4e7a7848b1')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-62a8e0fd-2f74-416f-b7f2-ea8106e9eba1')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2086,12 +2064,12 @@ Successfully installed indoNLP-0.3.4
 
       <script>
         const buttonEl =
-          document.querySelector('#df-34032dad-95cd-4537-8b63-da4e7a7848b1 button.colab-df-convert');
+          document.querySelector('#df-62a8e0fd-2f74-416f-b7f2-ea8106e9eba1 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-34032dad-95cd-4537-8b63-da4e7a7848b1');
+          const element = document.querySelector('#df-62a8e0fd-2f74-416f-b7f2-ea8106e9eba1');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2176,7 +2154,7 @@ Successfully installed indoNLP-0.3.4
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-58320345-d97e-48d3-bc4c-d28d28bbbc3d">
+  <div id="df-347f7a99-5b5d-4e4c-9e82-50e8c403e630">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2680,7 +2658,7 @@ Successfully installed indoNLP-0.3.4
 </table>
 <p>19 rows × 90 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-58320345-d97e-48d3-bc4c-d28d28bbbc3d')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-347f7a99-5b5d-4e4c-9e82-50e8c403e630')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2731,12 +2709,12 @@ Successfully installed indoNLP-0.3.4
 
       <script>
         const buttonEl =
-          document.querySelector('#df-58320345-d97e-48d3-bc4c-d28d28bbbc3d button.colab-df-convert');
+          document.querySelector('#df-347f7a99-5b5d-4e4c-9e82-50e8c403e630 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-58320345-d97e-48d3-bc4c-d28d28bbbc3d');
+          const element = document.querySelector('#df-347f7a99-5b5d-4e4c-9e82-50e8c403e630');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2831,7 +2809,7 @@ Successfully installed indoNLP-0.3.4
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-fd6a92d0-c07e-4e14-a018-7f2d52c96c51">
+  <div id="df-7151f906-eb58-4da7-bc3c-6c8bc81121ec">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -3034,7 +3012,7 @@ Successfully installed indoNLP-0.3.4
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-fd6a92d0-c07e-4e14-a018-7f2d52c96c51')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7151f906-eb58-4da7-bc3c-6c8bc81121ec')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -3085,12 +3063,12 @@ Successfully installed indoNLP-0.3.4
 
       <script>
         const buttonEl =
-          document.querySelector('#df-fd6a92d0-c07e-4e14-a018-7f2d52c96c51 button.colab-df-convert');
+          document.querySelector('#df-7151f906-eb58-4da7-bc3c-6c8bc81121ec button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-fd6a92d0-c07e-4e14-a018-7f2d52c96c51');
+          const element = document.querySelector('#df-7151f906-eb58-4da7-bc3c-6c8bc81121ec');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3277,7 +3255,7 @@ Successfully installed indoNLP-0.3.4
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-2fe36d66-4856-4345-bb57-0396d7bda521">
+  <div id="df-f441c89b-555b-4b58-b5e3-ec63b1a84cc9">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -3469,7 +3447,7 @@ Successfully installed indoNLP-0.3.4
 </table>
 <p>6 rows × 90 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-2fe36d66-4856-4345-bb57-0396d7bda521')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f441c89b-555b-4b58-b5e3-ec63b1a84cc9')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -3520,12 +3498,12 @@ Successfully installed indoNLP-0.3.4
 
       <script>
         const buttonEl =
-          document.querySelector('#df-2fe36d66-4856-4345-bb57-0396d7bda521 button.colab-df-convert');
+          document.querySelector('#df-f441c89b-555b-4b58-b5e3-ec63b1a84cc9 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-2fe36d66-4856-4345-bb57-0396d7bda521');
+          const element = document.querySelector('#df-f441c89b-555b-4b58-b5e3-ec63b1a84cc9');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
